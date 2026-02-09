@@ -1,0 +1,168 @@
+{
+  "period": "1983-1992",
+  "title": "MI FORMACION - ESPANA EDUCATIVA (1983-1992)",
+  "description": "Periodo de educacion primaria y secundaria durante la consolidacion democratica",
+
+  "kpis": {
+    "students": {
+      "value": "8.2M",
+      "label": "Alumnos totales",
+      "description": "Media de estudiantes en el sistema",
+      "trend": "+12%"
+    },
+    "schools": {
+      "value": "27K",
+      "label": "Centros educativos",
+      "description": "Colegios e institutos",
+      "trend": "+8%"
+    },
+    "literacy": {
+      "value": "96%",
+      "label": "Alfabetizacion",
+      "description": "Tasa en 1992",
+      "trend": "+6%"
+    },
+    "dropout": {
+      "value": "35%",
+      "label": "Abandono escolar",
+      "description": "Tasa media del periodo",
+      "trend": "alto"
+    }
+  },
+
+  "educationalModels": {
+    "LGE": {
+      "name": "Ley General de Educacion (LGE)",
+      "year": 1970,
+      "vigente": "1970-1990",
+      "description": "Ley Villar Palasi. Establecio la EGB (Educacion General Basica) obligatoria hasta los 14 anos",
+      "structure": [
+        {"nivel": "Preescolar", "edad": "2-5 anos", "obligatorio": false},
+        {"nivel": "EGB (1º-8º)", "edad": "6-14 anos", "obligatorio": true},
+        {"nivel": "BUP (1º-3º)", "edad": "14-17 anos", "obligatorio": false},
+        {"nivel": "COU", "edad": "17-18 anos", "obligatorio": false},
+        {"nivel": "FP I y II", "edad": "14-18 anos", "obligatorio": false}
+      ]
+    },
+    "LOGSE": {
+      "name": "Ley de Ordenacion General del Sistema Educativo (LOGSE)",
+      "year": 1990,
+      "vigente": "1990-2006",
+      "description": "Amplio la educacion obligatoria hasta los 16 anos. Introdujo la ESO",
+      "structure": [
+        {"nivel": "Educacion Infantil", "edad": "0-6 anos", "obligatorio": false},
+        {"nivel": "Educacion Primaria", "edad": "6-12 anos", "obligatorio": true},
+        {"nivel": "ESO", "edad": "12-16 anos", "obligatorio": true},
+        {"nivel": "Bachillerato", "edad": "16-18 anos", "obligatorio": false},
+        {"nivel": "FP Grado Medio/Superior", "edad": "16+", "obligatorio": false}
+      ]
+    }
+  },
+
+  "studentEvolution": {
+    "years": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992],
+    "totalStudents": [7850000, 7920000, 8010000, 8150000, 8280000, 8350000, 8400000, 8320000, 8250000, 8180000],
+    "egb": [5600000, 5650000, 5700000, 5750000, 5780000, 5800000, 5750000, 5680000, 5600000, 5500000],
+    "bup_cou": [1100000, 1150000, 1200000, 1280000, 1350000, 1400000, 1480000, 1520000, 1550000, 1580000],
+    "fp": [650000, 680000, 710000, 750000, 780000, 800000, 820000, 850000, 870000, 880000]
+  },
+
+  "dropoutRates": {
+    "years": [1983, 1985, 1987, 1989, 1991, 1992],
+    "rates": [42, 40, 38, 36, 34, 33],
+    "europeAvg": [25, 24, 23, 22, 21, 20]
+  },
+
+  "teacherStudentRatio": {
+    "years": [1983, 1986, 1989, 1992],
+    "egb": [28, 26, 24, 22],
+    "bup": [18, 17, 16, 15]
+  },
+
+  "publicVsPrivate": {
+    "years": [1983, 1987, 1992],
+    "public": [65, 67, 68],
+    "private": [35, 33, 32]
+  },
+
+  "keyMilestones": [
+    {
+      "year": 1983,
+      "event": "LODE - Ley Organica del Derecho a la Educacion",
+      "description": "Regulo la participacion de la comunidad educativa y los conciertos con centros privados"
+    },
+    {
+      "year": 1985,
+      "event": "Ingreso en la CEE",
+      "description": "Espana entra en la Comunidad Economica Europea, impulsando reformas educativas"
+    },
+    {
+      "year": 1986,
+      "event": "Reforma experimental del Bachillerato",
+      "description": "Pruebas piloto de nuevos curriculos en centros seleccionados"
+    },
+    {
+      "year": 1990,
+      "event": "Aprobacion de la LOGSE",
+      "description": "Nueva ley que extiende la educacion obligatoria hasta los 16 anos"
+    }
+  ],
+
+  "myEducation": {
+    "timeline": [
+      {"year": "1983-1984", "nivel": "Preescolar", "edad": "5 anos", "centro": "Colegio"},
+      {"year": "1984-1985", "nivel": "1º EGB", "edad": "6 anos", "centro": "Colegio"},
+      {"year": "1985-1986", "nivel": "2º EGB", "edad": "7 anos", "centro": "Colegio"},
+      {"year": "1986-1987", "nivel": "3º EGB", "edad": "8 anos", "centro": "Colegio"},
+      {"year": "1987-1988", "nivel": "4º EGB", "edad": "9 anos", "centro": "Colegio"},
+      {"year": "1988-1989", "nivel": "5º EGB", "edad": "10 anos", "centro": "Colegio"},
+      {"year": "1989-1990", "nivel": "6º EGB", "edad": "11 anos", "centro": "Colegio"},
+      {"year": "1990-1991", "nivel": "7º EGB", "edad": "12 anos", "centro": "Colegio"},
+      {"year": "1991-1992", "nivel": "8º EGB", "edad": "13 anos", "centro": "Colegio"}
+    ]
+  },
+
+  "contextData": {
+    "presidentesGobierno": [
+      {"nombre": "Felipe Gonzalez (PSOE)", "periodo": "1982-1996"}
+    ],
+    "ministrosEducacion": [
+      {"nombre": "Jose Maria Maravall", "periodo": "1982-1988"},
+      {"nombre": "Javier Solana", "periodo": "1988-1992"},
+      {"nombre": "Alfredo Perez Rubalcaba", "periodo": "1992-1993"}
+    ],
+    "inversionEducativa": {
+      "1983": 3.2,
+      "1987": 3.8,
+      "1992": 4.4
+    }
+  },
+
+  "comparison2024": {
+    "obligatoryAge": {
+      "1983": "6-14 anos (EGB)",
+      "2024": "6-16 anos (Primaria+ESO)"
+    },
+    "dropoutRate": {
+      "1983": "42%",
+      "2024": "13.9%"
+    },
+    "universityAccess": {
+      "1983": "24%",
+      "2024": "45%"
+    },
+    "publicSpending": {
+      "1983": "3.2% PIB",
+      "2024": "4.3% PIB"
+    }
+  },
+
+  "funFacts": [
+    "El cuaderno Rubio era el metodo de caligrafia mas usado",
+    "La Enciclopedia Alvarez era el libro de texto por excelencia",
+    "Las clases de 'pretecnologia' incluin trabajos manuales",
+    "La gimnasia se llamaba 'Educacion Fisica' desde la LGE",
+    "Los examenes de septiembre eran la ultima oportunidad",
+    "El 'recreo' duraba 30 minutos y era sagrado"
+  ]
+}

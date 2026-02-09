@@ -1,0 +1,205 @@
+{
+  "year": 1978,
+  "birthDate": "03/03/1978",
+  "country": "Spain",
+  "title": "ESPANA EN 1978 - CONTEXTO DE MI NACIMIENTO",
+
+  "kpis": {
+    "population": {
+      "value": "36.7M",
+      "label": "Poblacion",
+      "description": "Habitantes en Espana",
+      "icon": "users"
+    },
+    "births": {
+      "value": "656K",
+      "label": "Nacimientos",
+      "description": "Nacidos ese ano",
+      "icon": "baby"
+    },
+    "lifeExpectancy": {
+      "value": "73.3",
+      "label": "Esperanza de vida",
+      "description": "Anos promedio",
+      "icon": "heart"
+    },
+    "inflation": {
+      "value": "19.8%",
+      "label": "Inflacion",
+      "description": "IPC anual",
+      "icon": "chart"
+    }
+  },
+
+  "demographics": {
+    "population": 36700000,
+    "births": 656000,
+    "deaths": 296000,
+    "naturalGrowth": 360000,
+    "lifeExpectancy": 73.3,
+    "lifeExpectancyMen": 70.4,
+    "lifeExpectancyWomen": 76.2,
+    "fertilityRate": 2.54,
+    "infantMortality": 15.3
+  },
+
+  "economy": {
+    "gdpBillionUSD": 205,
+    "gdpPerCapitaUSD": 5585,
+    "inflation": 19.8,
+    "unemployment": 7.1,
+    "minimumWagePesetas": 15000,
+    "minimumWageEuros": 90,
+    "currency": "Peseta",
+    "exchangeRate": 166.386
+  },
+
+  "prices1978": {
+    "gasoline": {
+      "pesetas": 35,
+      "euros": 0.21,
+      "unit": "litro"
+    },
+    "bread": {
+      "pesetas": 15,
+      "euros": 0.09,
+      "unit": "kg"
+    },
+    "milk": {
+      "pesetas": 28,
+      "euros": 0.17,
+      "unit": "litro"
+    },
+    "coffee": {
+      "pesetas": 25,
+      "euros": 0.15,
+      "unit": "taza"
+    },
+    "newspaper": {
+      "pesetas": 15,
+      "euros": 0.09,
+      "unit": "ejemplar"
+    },
+    "cinema": {
+      "pesetas": 100,
+      "euros": 0.60,
+      "unit": "entrada"
+    },
+    "averageRent": {
+      "pesetas": 5000,
+      "euros": 30,
+      "unit": "mes"
+    }
+  },
+
+  "prices2024": {
+    "gasoline": {
+      "euros": 1.65,
+      "unit": "litro"
+    },
+    "bread": {
+      "euros": 3.20,
+      "unit": "kg"
+    },
+    "milk": {
+      "euros": 0.95,
+      "unit": "litro"
+    },
+    "coffee": {
+      "euros": 1.80,
+      "unit": "taza"
+    },
+    "newspaper": {
+      "euros": 1.80,
+      "unit": "ejemplar"
+    },
+    "cinema": {
+      "euros": 9.50,
+      "unit": "entrada"
+    },
+    "averageRent": {
+      "euros": 850,
+      "unit": "mes"
+    }
+  },
+
+  "historical": {
+    "president": "Adolfo Suarez",
+    "government": "UCD (Union de Centro Democratico)",
+    "monarch": "Juan Carlos I",
+    "keyEvents": [
+      {
+        "date": "1978-12-06",
+        "event": "Aprobacion de la Constitucion Espanola",
+        "description": "Referendum constitucional con 87.78% de votos a favor"
+      },
+      {
+        "date": "1978-01-01",
+        "event": "Autonomia previa para Cataluna y Pais Vasco",
+        "description": "Inicio del proceso de descentralizacion"
+      },
+      {
+        "date": "1978-10-25",
+        "event": "Pactos de la Moncloa",
+        "description": "Acuerdos economicos y politicos firmados en 1977, implementados en 1978"
+      }
+    ],
+    "context": "Espana en plena Transicion democratica tras la dictadura franquista (1939-1975)"
+  },
+
+  "comparison2024": {
+    "population": {
+      "1978": 36700000,
+      "2024": 48200000,
+      "change": "+31.3%"
+    },
+    "lifeExpectancy": {
+      "1978": 73.3,
+      "2024": 83.3,
+      "change": "+10 anos"
+    },
+    "births": {
+      "1978": 656000,
+      "2024": 329000,
+      "change": "-49.8%"
+    },
+    "minimumWage": {
+      "1978euros": 90,
+      "2024euros": 1134,
+      "change": "+1160%"
+    },
+    "inflation": {
+      "1978": 19.8,
+      "2024": 3.4,
+      "change": "-82.8%"
+    }
+  },
+
+  "charts": {
+    "populationEvolution": {
+      "title": "Evolucion Poblacion Espana",
+      "years": [1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024],
+      "values": [33.8, 35.5, 37.4, 38.4, 39.0, 39.4, 40.5, 43.4, 46.6, 46.4, 47.4, 48.2]
+    },
+    "lifeExpectancyEvolution": {
+      "title": "Esperanza de Vida",
+      "years": [1978, 1990, 2000, 2010, 2024],
+      "values": [73.3, 76.9, 79.3, 81.5, 83.3]
+    },
+    "priceComparison": {
+      "title": "Comparativa Precios 1978 vs 2024",
+      "items": ["Gasolina", "Pan", "Leche", "Cafe", "Cine", "Alquiler"],
+      "values1978": [0.21, 0.09, 0.17, 0.15, 0.60, 30],
+      "values2024": [1.65, 3.20, 0.95, 1.80, 9.50, 850],
+      "multiplier": [7.9, 35.6, 5.6, 12.0, 15.8, 28.3]
+    }
+  },
+
+  "funFacts": [
+    "El 3 de marzo de 1978 era viernes",
+    "La seleccion espanola de futbol se preparaba para el Mundial de Argentina 1978",
+    "SEAT Panda y Renault 5 eran los coches mas vendidos",
+    "La television en color empezaba a popularizarse",
+    "El programa 'Un, dos, tres' era el mas visto en TVE"
+  ]
+}

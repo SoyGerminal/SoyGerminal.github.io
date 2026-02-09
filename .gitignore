@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+nul
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
