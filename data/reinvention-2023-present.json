@@ -1,0 +1,199 @@
+{
+  "period": "2023-present",
+  "title": "REINVENTION - THE DATA-DRIVEN CHAPTER (2023-Present)",
+  "description": "Career reinvention at 45: from entrepreneur to Amazon leadership and Data Science studies during the AI revolution",
+
+  "kpis": {
+    "leadershipRoles": {
+      "value": "3 Roles",
+      "label": "Leadership Roles in 2 Years",
+      "description": "Rapid progression at Amazon",
+      "icon": "rocket"
+    },
+    "aiInvestment": {
+      "value": "$200B+",
+      "label": "Global AI Investment",
+      "description": "2024 - unprecedented growth",
+      "icon": "brain"
+    },
+    "dataScienceDemand": {
+      "value": "Top 3",
+      "label": "Most Demanded Skill",
+      "description": "Data Science career demand",
+      "icon": "chart"
+    },
+    "newBeginning": {
+      "value": "Age 45",
+      "label": "New Beginning",
+      "description": "Proving it is never too late",
+      "icon": "refresh"
+    }
+  },
+
+  "myCareer": {
+    "timeline": [
+      {"year": "Dec 2023", "event": "Joined Amazon as Sortation Team Leader", "role": "Sortation TL", "age": "45 years", "description": "Entered Amazon's logistics operations, leading sortation processes and teams"},
+      {"year": "May 2024", "event": "Promoted to Flow Team Leader", "role": "Flow TL", "age": "46 years", "description": "Advanced to Flow operations, managing end-to-end package flow and team coordination"},
+      {"year": "Sep 2025", "event": "Started Data Science Degree at UNIR", "role": "Student (concurrent)", "age": "47 years", "description": "Enrolled in Bachelor's Degree in Data Science at Universidad Internacional de La Rioja while working full-time"},
+      {"year": "Jan 2026", "event": "Moved to ICQA Team Leader", "role": "ICQA TL", "age": "47 years", "description": "Transitioned to Inventory Control & Quality Assurance, combining data analysis with operations management"}
+    ],
+    "amazonProgression": {
+      "company": "Amazon",
+      "sector": "Logistics & Operations",
+      "roles": [
+        {"title": "Sortation Team Leader", "period": "Dec 2023 - May 2024", "focus": "Package sortation operations"},
+        {"title": "Flow Team Leader", "period": "May 2024 - Jan 2026", "focus": "End-to-end flow management"},
+        {"title": "ICQA Team Leader", "period": "Jan 2026 - Present", "focus": "Inventory control and quality assurance"}
+      ],
+      "keySkills": ["Team Leadership", "Operations Management", "Process Optimization", "Data-Driven Decision Making", "KPI Tracking", "Continuous Improvement"]
+    },
+    "education": {
+      "degree": "Bachelor's Degree in Data Science",
+      "university": "UNIR - Universidad Internacional de La Rioja",
+      "startDate": "September 2025",
+      "mode": "Online (while working full-time at Amazon)",
+      "motivation": "Combining operational experience with data analytics to drive career transformation"
+    }
+  },
+
+  "aiRevolution": {
+    "title": "The AI Revolution Context",
+    "description": "The period of the greatest technological disruption since the internet, transforming every industry",
+    "milestones": [
+      {"year": 2023, "event": "ChatGPT reaches 100M users in 2 months, fastest adoption ever"},
+      {"year": 2023, "event": "GPT-4 launches, demonstrating near-human reasoning"},
+      {"year": 2024, "event": "AI integration everywhere: coding, design, writing, analysis"},
+      {"year": 2024, "event": "Companies invest $200B+ in AI infrastructure"},
+      {"year": 2025, "event": "AI agents begin handling complex multi-step tasks autonomously"},
+      {"year": 2025, "event": "Data literacy becomes essential skill across all industries"}
+    ]
+  },
+
+  "charts": {
+    "aiInvestment": {
+      "title": "Global AI Investment (Billions USD)",
+      "years": [2020, 2021, 2022, 2023, 2024, 2025],
+      "values": [40, 70, 100, 150, 200, 280],
+      "unit": "billion USD"
+    },
+    "dataScienceJobDemand": {
+      "title": "Data Science Job Demand Index (2020 = 100)",
+      "years": [2020, 2021, 2022, 2023, 2024, 2025],
+      "values": [100, 125, 155, 190, 230, 270],
+      "unit": "index"
+    },
+    "careerChangersByAge": {
+      "title": "Career Changers by Age Group (%)",
+      "ageGroups": ["25-30", "30-35", "35-40", "40-45", "45-50", "50+"],
+      "percentage": [32, 28, 22, 12, 5, 1],
+      "successRate": [78, 75, 70, 65, 60, 52],
+      "description": "Distribution of career changers and their success rates by age"
+    },
+    "techSkillsDemand": {
+      "title": "Most In-Demand Tech Skills 2024-2025",
+      "skills": ["AI/ML", "Data Science", "Cloud Computing", "Cybersecurity", "DevOps", "Data Engineering"],
+      "demandIndex": [100, 92, 85, 80, 72, 70],
+      "salaryPremium": [45, 38, 32, 35, 28, 30],
+      "unit": "relative index"
+    }
+  },
+
+  "keyEvents": [
+    {
+      "year": 2023,
+      "event": "ChatGPT explosion",
+      "description": "Generative AI becomes mainstream; ChatGPT reaches 100M users; every company scrambles to integrate AI"
+    },
+    {
+      "year": 2024,
+      "event": "AI integration everywhere",
+      "description": "AI becomes embedded in daily work tools; Microsoft Copilot, Google Gemini, and Claude transform productivity"
+    },
+    {
+      "year": 2025,
+      "event": "Data Science degree begins",
+      "description": "At 47, starting a university degree in Data Science at UNIR - proving reinvention has no age limit"
+    }
+  ],
+
+  "reinventionContext": {
+    "title": "Career Reinvention at 45+",
+    "statistics": {
+      "averageCareerChanges": "12 job changes in a lifetime (modern worker)",
+      "midCareerChangers": "33% of workers over 40 consider major career shifts",
+      "successFactors": ["Previous management experience", "Transferable soft skills", "Continuous learning mindset", "Industry connections"],
+      "growingSectors": ["AI & Machine Learning", "Data Science & Analytics", "Cloud Computing", "Green Energy", "Healthcare Tech"]
+    },
+    "personalAdvantages": [
+      "20+ years of professional experience across multiple industries",
+      "Entrepreneurial mindset: problem-solving, adaptability, resilience",
+      "Creative background enables unique data visualization perspective",
+      "Leadership experience managing teams and operations",
+      "Real-world business understanding that pure tech graduates lack"
+    ]
+  },
+
+  "comparison2024": {
+    "traditional": {
+      "label": "Traditional Career Path",
+      "approach": "Single career, linear progression",
+      "education": "One degree, done at 22",
+      "techSkills": "Optional, learned on the job",
+      "adaptability": "Stay in your lane"
+    },
+    "dataDriven": {
+      "label": "Data-Driven Career Path",
+      "approach": "Multiple pivots, portfolio career",
+      "education": "Lifelong learning, degree at any age",
+      "techSkills": "Essential, continuously updated",
+      "adaptability": "Reinvent or become obsolete"
+    },
+    "keyInsight": "The most valuable professionals in 2024+ combine domain expertise with data literacy - exactly the path being built here"
+  },
+
+  "dataEconomy": {
+    "title": "The Data Economy",
+    "globalDataCreated": {
+      "years": [2020, 2021, 2022, 2023, 2024, 2025],
+      "zettabytes": [64, 79, 97, 120, 147, 181],
+      "description": "Global data creation in zettabytes per year"
+    },
+    "dataScienceSalaries": {
+      "spain": {
+        "junior": "28,000-35,000 EUR",
+        "mid": "40,000-55,000 EUR",
+        "senior": "60,000-85,000 EUR",
+        "lead": "80,000-120,000 EUR"
+      },
+      "growth": "+15% year-over-year salary growth in Spain"
+    },
+    "skillsGap": {
+      "description": "Spain needs 120,000+ data professionals by 2026",
+      "currentShortfall": "65%",
+      "topEmployers": ["Amazon", "Telefonica", "BBVA", "Santander", "Inditex", "Cabify"]
+    }
+  },
+
+  "amazonContext": {
+    "title": "Amazon Operations - Where Data Meets Action",
+    "description": "Amazon's fulfillment centers are among the most data-intensive environments in the world",
+    "dataPoints": [
+      "Every package tracked through 20+ data checkpoints",
+      "Real-time dashboards drive operational decisions every 15 minutes",
+      "Predictive models optimize staffing, routing, and inventory",
+      "Machine learning algorithms manage millions of SKUs daily"
+    ],
+    "relevanceToDataScience": "Working at Amazon provides firsthand experience with data-driven operations at massive scale - the perfect complement to academic Data Science studies"
+  },
+
+  "funFacts": [
+    "Starting a university degree at 47 means being older than most professors",
+    "The AI tools used to build this portfolio did not exist 2 years ago",
+    "Amazon processes more data in one day than most companies do in a year",
+    "A career spanning design, entrepreneurship, and data science is surprisingly coherent - it is all about finding patterns",
+    "The average data scientist spends 80% of their time cleaning data - entrepreneurship was good preparation for messy reality",
+    "UNIR online classes at midnight after Amazon shifts is the definition of commitment",
+    "At Amazon, the phrase 'the data says' wins more arguments than any opinion",
+    "Going from pesetas to euros to Bitcoin to AI tokens - one lifetime, four economic paradigms"
+  ]
+}

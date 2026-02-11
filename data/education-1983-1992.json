@@ -1,60 +1,60 @@
 {
   "period": "1983-1992",
-  "title": "MI FORMACION - ESPANA EDUCATIVA (1983-1992)",
-  "description": "Periodo de educacion primaria y secundaria durante la consolidacion democratica",
+  "title": "MY EDUCATION — SPAIN'S SCHOOL SYSTEM (1983–1992)",
+  "description": "Period of primary and secondary education during the democratic consolidation",
 
   "kpis": {
     "students": {
       "value": "8.2M",
-      "label": "Alumnos totales",
-      "description": "Media de estudiantes en el sistema",
+      "label": "Total students",
+      "description": "Average number of students in the system",
       "trend": "+12%"
     },
     "schools": {
       "value": "27K",
-      "label": "Centros educativos",
-      "description": "Colegios e institutos",
+      "label": "Educational centers",
+      "description": "Schools and high schools",
       "trend": "+8%"
     },
     "literacy": {
       "value": "96%",
-      "label": "Alfabetizacion",
-      "description": "Tasa en 1992",
+      "label": "Literacy",
+      "description": "Rate in 1992",
       "trend": "+6%"
     },
     "dropout": {
       "value": "35%",
-      "label": "Abandono escolar",
-      "description": "Tasa media del periodo",
-      "trend": "alto"
+      "label": "School dropout",
+      "description": "Average rate for the period",
+      "trend": "high"
     }
   },
 
   "educationalModels": {
     "LGE": {
-      "name": "Ley General de Educacion (LGE)",
+      "name": "General Education Act (LGE)",
       "year": 1970,
       "vigente": "1970-1990",
-      "description": "Ley Villar Palasi. Establecio la EGB (Educacion General Basica) obligatoria hasta los 14 anos",
+      "description": "Villar Palasi Act. Established the EGB (General Basic Education) as mandatory until age 14",
       "structure": [
-        {"nivel": "Preescolar", "edad": "2-5 anos", "obligatorio": false},
-        {"nivel": "EGB (1º-8º)", "edad": "6-14 anos", "obligatorio": true},
-        {"nivel": "BUP (1º-3º)", "edad": "14-17 anos", "obligatorio": false},
-        {"nivel": "COU", "edad": "17-18 anos", "obligatorio": false},
-        {"nivel": "FP I y II", "edad": "14-18 anos", "obligatorio": false}
+        {"nivel": "Preschool (Preescolar)", "edad": "2-5 years", "obligatorio": false},
+        {"nivel": "EGB (1st-8th)", "edad": "6-14 years", "obligatorio": true},
+        {"nivel": "BUP (1st-3rd)", "edad": "14-17 years", "obligatorio": false},
+        {"nivel": "COU", "edad": "17-18 years", "obligatorio": false},
+        {"nivel": "FP I and II (Vocational Training)", "edad": "14-18 years", "obligatorio": false}
       ]
     },
     "LOGSE": {
-      "name": "Ley de Ordenacion General del Sistema Educativo (LOGSE)",
+      "name": "General Organization of the Educational System Act (LOGSE)",
       "year": 1990,
       "vigente": "1990-2006",
-      "description": "Amplio la educacion obligatoria hasta los 16 anos. Introdujo la ESO",
+      "description": "Extended mandatory education to age 16. Introduced the ESO (Compulsory Secondary Education)",
       "structure": [
-        {"nivel": "Educacion Infantil", "edad": "0-6 anos", "obligatorio": false},
-        {"nivel": "Educacion Primaria", "edad": "6-12 anos", "obligatorio": true},
-        {"nivel": "ESO", "edad": "12-16 anos", "obligatorio": true},
-        {"nivel": "Bachillerato", "edad": "16-18 anos", "obligatorio": false},
-        {"nivel": "FP Grado Medio/Superior", "edad": "16+", "obligatorio": false}
+        {"nivel": "Early Childhood Education (Educacion Infantil)", "edad": "0-6 years", "obligatorio": false},
+        {"nivel": "Primary Education (Educacion Primaria)", "edad": "6-12 years", "obligatorio": true},
+        {"nivel": "ESO (Compulsory Secondary Education)", "edad": "12-16 years", "obligatorio": true},
+        {"nivel": "Bachillerato (Upper Secondary)", "edad": "16-18 years", "obligatorio": false},
+        {"nivel": "Vocational Training (FP) Intermediate/Advanced", "edad": "16+", "obligatorio": false}
       ]
     }
   },
@@ -88,37 +88,37 @@
   "keyMilestones": [
     {
       "year": 1983,
-      "event": "LODE - Ley Organica del Derecho a la Educacion",
-      "description": "Regulo la participacion de la comunidad educativa y los conciertos con centros privados"
+      "event": "LODE - Organic Law on the Right to Education",
+      "description": "Regulated the participation of the educational community and agreements with private schools"
     },
     {
       "year": 1985,
-      "event": "Ingreso en la CEE",
-      "description": "Espana entra en la Comunidad Economica Europea, impulsando reformas educativas"
+      "event": "Accession to the EEC",
+      "description": "Spain joins the European Economic Community, driving educational reforms"
     },
     {
       "year": 1986,
-      "event": "Reforma experimental del Bachillerato",
-      "description": "Pruebas piloto de nuevos curriculos en centros seleccionados"
+      "event": "Experimental Bachillerato reform",
+      "description": "Pilot tests of new curricula in selected schools"
     },
     {
       "year": 1990,
-      "event": "Aprobacion de la LOGSE",
-      "description": "Nueva ley que extiende la educacion obligatoria hasta los 16 anos"
+      "event": "Approval of the LOGSE",
+      "description": "New law extending mandatory education to age 16"
     }
   ],
 
   "myEducation": {
     "timeline": [
-      {"year": "1983-1984", "nivel": "Preescolar", "edad": "5 anos", "centro": "Colegio"},
-      {"year": "1984-1985", "nivel": "1º EGB", "edad": "6 anos", "centro": "Colegio"},
-      {"year": "1985-1986", "nivel": "2º EGB", "edad": "7 anos", "centro": "Colegio"},
-      {"year": "1986-1987", "nivel": "3º EGB", "edad": "8 anos", "centro": "Colegio"},
-      {"year": "1987-1988", "nivel": "4º EGB", "edad": "9 anos", "centro": "Colegio"},
-      {"year": "1988-1989", "nivel": "5º EGB", "edad": "10 anos", "centro": "Colegio"},
-      {"year": "1989-1990", "nivel": "6º EGB", "edad": "11 anos", "centro": "Colegio"},
-      {"year": "1990-1991", "nivel": "7º EGB", "edad": "12 anos", "centro": "Colegio"},
-      {"year": "1991-1992", "nivel": "8º EGB", "edad": "13 anos", "centro": "Colegio"}
+      {"year": "1983-1984", "nivel": "Preschool (Preescolar)", "edad": "5 years old", "centro": "School"},
+      {"year": "1984-1985", "nivel": "1st EGB", "edad": "6 years old", "centro": "School"},
+      {"year": "1985-1986", "nivel": "2nd EGB", "edad": "7 years old", "centro": "School"},
+      {"year": "1986-1987", "nivel": "3rd EGB", "edad": "8 years old", "centro": "School"},
+      {"year": "1987-1988", "nivel": "4th EGB", "edad": "9 years old", "centro": "School"},
+      {"year": "1988-1989", "nivel": "5th EGB", "edad": "10 years old", "centro": "School"},
+      {"year": "1989-1990", "nivel": "6th EGB", "edad": "11 years old", "centro": "School"},
+      {"year": "1990-1991", "nivel": "7th EGB", "edad": "12 years old", "centro": "School"},
+      {"year": "1991-1992", "nivel": "8th EGB", "edad": "13 years old", "centro": "School"}
     ]
   },
 
@@ -140,8 +140,8 @@
 
   "comparison2024": {
     "obligatoryAge": {
-      "1983": "6-14 anos (EGB)",
-      "2024": "6-16 anos (Primaria+ESO)"
+      "1983": "6-14 years (EGB)",
+      "2024": "6-16 years (Primary+ESO)"
     },
     "dropoutRate": {
       "1983": "42%",
@@ -152,17 +152,17 @@
       "2024": "45%"
     },
     "publicSpending": {
-      "1983": "3.2% PIB",
-      "2024": "4.3% PIB"
+      "1983": "3.2% GDP",
+      "2024": "4.3% GDP"
     }
   },
 
   "funFacts": [
-    "El cuaderno Rubio era el metodo de caligrafia mas usado",
-    "La Enciclopedia Alvarez era el libro de texto por excelencia",
-    "Las clases de 'pretecnologia' incluin trabajos manuales",
-    "La gimnasia se llamaba 'Educacion Fisica' desde la LGE",
-    "Los examenes de septiembre eran la ultima oportunidad",
-    "El 'recreo' duraba 30 minutos y era sagrado"
+    "The Rubio notebook was the most widely used handwriting method",
+    "The Alvarez Encyclopedia was the quintessential textbook",
+    "The 'pre-technology' classes included handicrafts",
+    "Gymnastics was called 'Physical Education' since the LGE",
+    "September exams were the last chance to pass",
+    "Recess lasted 30 minutes and was sacred"
   ]
 }

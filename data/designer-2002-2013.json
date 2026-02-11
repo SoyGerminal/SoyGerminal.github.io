@@ -1,0 +1,192 @@
+{
+  "period": "2002-2013",
+  "title": "THE DESIGNER - CREATIVE CAREER THROUGH BOOM AND BUST (2002-2013)",
+  "description": "From graphic designer at Kopybasa through the housing bubble burst and Spain's deepest economic crisis",
+
+  "kpis": {
+    "housingBubble": {
+      "value": "+197%",
+      "label": "Housing Price Bubble",
+      "description": "Peak price index 2007 vs 2000",
+      "icon": "home"
+    },
+    "unemployment": {
+      "value": "8%→27%",
+      "label": "Unemployment Swing",
+      "description": "From boom to bust",
+      "icon": "users"
+    },
+    "crisisGdp": {
+      "value": "-3.8%",
+      "label": "2009 GDP Crash",
+      "description": "Worst recession in decades",
+      "icon": "chart"
+    },
+    "kopybasa": {
+      "value": "9 Years",
+      "label": "At Kopybasa",
+      "description": "Graphic Designer & Printer",
+      "icon": "briefcase"
+    }
+  },
+
+  "myCareer": {
+    "timeline": [
+      {"year": "Nov 2002", "event": "Joined Kopybasa", "role": "Graphic Designer & Printer", "age": "24 years", "description": "Started professional career in graphic design and printing"},
+      {"year": "2003-2005", "event": "Growth years at Kopybasa", "role": "Graphic Designer & Printer", "description": "Mastered design tools, print production, client relations during economic boom"},
+      {"year": "2006-2007", "event": "Peak business years", "role": "Graphic Designer & Printer", "description": "Print industry thriving, high demand for marketing materials during housing boom"},
+      {"year": "2008-2009", "event": "Crisis hits", "role": "Graphic Designer & Printer", "description": "Financial crisis severely impacts print and design industry, clients cut budgets"},
+      {"year": "2010-2011", "event": "Surviving the downturn", "role": "Graphic Designer & Printer", "description": "Adapting to reduced demand, learning to do more with less"},
+      {"year": "Dec 2011", "event": "Left Kopybasa", "role": "End of era", "age": "33 years", "description": "After 9 years, time for a new chapter"},
+      {"year": "2012", "event": "Transition year", "role": "Planning next move", "age": "34 years", "description": "Spain at 25% unemployment, planning entrepreneurial leap"},
+      {"year": "Apr 2013", "event": "Co-founded Clownfish", "role": "Co-founder", "age": "35 years", "description": "Launched own creative agency in the middle of Spain's worst crisis"}
+    ],
+    "skillsAcquired": [
+      "Adobe Creative Suite mastery (Photoshop, Illustrator, InDesign)",
+      "Print production and pre-press techniques",
+      "Client management and creative direction",
+      "Brand identity design",
+      "Large format printing and finishing",
+      "Budget management during crisis"
+    ]
+  },
+
+  "spainContext": {
+    "phases": [
+      {
+        "period": "2002-2007",
+        "name": "The Boom",
+        "description": "Spain builds 800,000 homes/year, more than France, Germany, and UK combined. Easy credit, speculation, and 'brick economy' dominate."
+      },
+      {
+        "period": "2008-2010",
+        "name": "The Crash",
+        "description": "Lehman Brothers collapses, credit freezes, housing bubble bursts. Spain enters its worst recession. Unemployment skyrockets."
+      },
+      {
+        "period": "2011-2013",
+        "name": "The Austerity",
+        "description": "European debt crisis, bank bailout, severe austerity measures. 6 million unemployed. Youth exodus (brain drain)."
+      }
+    ],
+    "governments": [
+      {"name": "Jose Maria Aznar (PP)", "period": "1996-2004", "context": "Presided over the economic boom"},
+      {"name": "Jose Luis Rodriguez Zapatero (PSOE)", "period": "2004-2011", "context": "Managed the crisis onset, denied it initially"},
+      {"name": "Mariano Rajoy (PP)", "period": "2011-2018", "context": "Austerity and bank bailout"}
+    ]
+  },
+
+  "charts": {
+    "housingPriceIndex": {
+      "title": "Housing Price Index (2002 = 100)",
+      "years": [2002, 2004, 2006, 2007, 2008, 2010, 2013],
+      "values": [100, 140, 180, 197, 185, 155, 120],
+      "unit": "index"
+    },
+    "unemploymentRate": {
+      "title": "Spain Unemployment Rate (%)",
+      "years": [2002, 2004, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+      "values": [11.5, 10.6, 8.5, 8.3, 11.3, 18.0, 20.1, 21.6, 25.0, 26.1],
+      "unit": "percentage"
+    },
+    "gdpGrowth": {
+      "title": "Spain GDP Growth Rate (%)",
+      "years": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+      "values": [2.7, 3.1, 3.3, 3.6, 4.1, 3.5, 0.9, -3.8, 0.2, -0.8, -3.0, -1.4],
+      "unit": "percentage"
+    },
+    "constructionEmployment": {
+      "title": "Construction Sector Employment (millions)",
+      "years": [2002, 2004, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+      "values": [1.9, 2.2, 2.7, 2.8, 2.4, 1.8, 1.5, 1.3, 1.1, 0.9],
+      "unit": "millions"
+    }
+  },
+
+  "keyEvents": [
+    {
+      "year": 2004,
+      "event": "Madrid train bombings (11-M)",
+      "description": "192 people killed in coordinated terrorist attacks, 3 days before general election; changed political landscape"
+    },
+    {
+      "year": 2005,
+      "event": "Housing boom peak frenzy",
+      "description": "Spain building more houses than any EU country; prices doubling every 5 years; mortgage frenzy"
+    },
+    {
+      "year": 2008,
+      "event": "Lehman Brothers collapse",
+      "description": "Global financial crisis triggers Spain's housing bubble burst; credit markets freeze overnight"
+    },
+    {
+      "year": 2010,
+      "event": "Spain sovereign debt crisis",
+      "description": "Bond yields spike, EU questions Spain's solvency; first austerity measures introduced"
+    },
+    {
+      "year": 2012,
+      "event": "Bank bailout",
+      "description": "Spain requests 41.3 billion EUR EU bailout for banking sector; unemployment reaches 25%; mass protests"
+    }
+  ],
+
+  "printIndustryImpact": {
+    "title": "Print & Design Industry During the Crisis",
+    "description": "The graphic design and print industry was devastated by the economic crisis",
+    "metrics": {
+      "printRevenue": {
+        "years": [2007, 2009, 2011, 2013],
+        "values": [100, 72, 58, 45],
+        "unit": "index (2007=100)"
+      },
+      "companiesClosed": {
+        "description": "Over 30% of print shops closed between 2008-2013",
+        "percentage": 30
+      },
+      "digitalShift": {
+        "description": "Digital advertising surpassed print advertising by 2012",
+        "year": 2012
+      }
+    }
+  },
+
+  "comparison2024": {
+    "unemployment": {
+      "2013": "26.1%",
+      "2024": "11.3%",
+      "change": "-56.7%"
+    },
+    "housingPrices": {
+      "2013": "Index 120 (post-crash low)",
+      "2024": "Index 165 (recovering)",
+      "change": "+37.5%"
+    },
+    "printVsDigital": {
+      "2013": "Print still 45% of ad spend",
+      "2024": "Digital is 75% of ad spend",
+      "change": "Complete digital transformation"
+    },
+    "gdpGrowth": {
+      "2013": "-1.4%",
+      "2024": "+2.5%",
+      "change": "Recovery complete"
+    },
+    "youthEmigration": {
+      "2013": "Peak brain drain year",
+      "2024": "Many returned, but 400K still abroad",
+      "change": "Generation scarred by crisis"
+    }
+  },
+
+  "funFacts": [
+    "At the peak, Spain was building more homes per year than Germany, France, and UK combined",
+    "The phrase 'Spain is different' took on a grim new meaning during the crisis",
+    "Banks offered 110% mortgages - lending more than the home was worth",
+    "The word 'mileurista' (earning 1000 EUR/month) became the symbol of a generation",
+    "Ghost towns of empty apartments became the visual icon of the bubble burst",
+    "During the boom, everyone joked that Spain had more cranes than the rest of Europe",
+    "The print industry went from 'we need it yesterday' rush jobs to crickets practically overnight",
+    "Adobe Creative Suite went from a luxury to a survival tool for freelance designers"
+  ]
+}

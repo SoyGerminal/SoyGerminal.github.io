@@ -1,0 +1,211 @@
+{
+  "period": "2013-2022",
+  "title": "THE ENTREPRENEUR - BUILDING BUSINESSES THROUGH RECOVERY AND PANDEMIC (2013-2022)",
+  "description": "Co-founding Clownfish creative agency and Koralium organic food, navigating recovery, political upheaval, and COVID-19",
+
+  "kpis": {
+    "clownfish": {
+      "value": "9+ Years",
+      "label": "Clownfish Agency",
+      "description": "100+ projects completed",
+      "icon": "briefcase"
+    },
+    "koralium": {
+      "value": "500+",
+      "label": "Koralium SKUs",
+      "description": "Organic food supermarket",
+      "icon": "store"
+    },
+    "covidGdp": {
+      "value": "-11.3%",
+      "label": "COVID GDP Impact",
+      "description": "Spain 2020 - worst in EU",
+      "icon": "chart"
+    },
+    "ecommerce": {
+      "value": "+36%",
+      "label": "E-Commerce Growth",
+      "description": "2020 digital acceleration",
+      "icon": "cart"
+    }
+  },
+
+  "myCareer": {
+    "timeline": [
+      {"year": "Apr 2013", "event": "Co-founded Clownfish", "role": "Co-founder & Creative Director", "age": "35 years", "description": "Launched creative agency specializing in branding, web design, and marketing during Spain's worst crisis"},
+      {"year": "2013-2014", "event": "Clownfish early days", "role": "Co-founder", "description": "Building client base from scratch in a devastated market, hustling for every project"},
+      {"year": "2015", "event": "Co-founded Koralium", "role": "Co-founder", "age": "37 years", "description": "Launched organic food supermarket, diversifying into retail alongside the agency"},
+      {"year": "2015-2019", "event": "Dual business growth", "role": "Entrepreneur", "description": "Managing two businesses simultaneously: creative services and organic retail"},
+      {"year": "2017-2019", "event": "Peak activity", "role": "Entrepreneur", "description": "Clownfish surpasses 100+ projects; Koralium reaches 500+ SKUs; Spain's economy recovering"},
+      {"year": "Mar 2020", "event": "COVID-19 lockdown", "role": "Entrepreneur", "age": "42 years", "description": "Spain enters one of Europe's strictest lockdowns; both businesses severely impacted"},
+      {"year": "2020-2021", "event": "Pandemic survival", "role": "Entrepreneur", "description": "Pivoting to digital, adapting Koralium to delivery, Clownfish shifts to online marketing"},
+      {"year": "Sep 2022", "event": "Businesses wound down", "role": "End of entrepreneurial chapter", "age": "44 years", "description": "After 9 years of Clownfish and 7 years of Koralium, both businesses concluded"}
+    ],
+    "clownfishDetails": {
+      "founded": "April 2013",
+      "type": "Creative Agency",
+      "services": ["Branding & Identity", "Web Design & Development", "Marketing Campaigns", "Print Design", "Social Media Management"],
+      "projectsCompleted": "100+",
+      "yearsActive": "2013-2022"
+    },
+    "koraliumDetails": {
+      "founded": "2015",
+      "type": "Organic Food Supermarket",
+      "products": "500+ SKUs",
+      "categories": ["Fresh Organic Produce", "Organic Packaged Foods", "Natural Cosmetics", "Eco-friendly Products", "Dietary Supplements"],
+      "yearsActive": "2015-2022"
+    }
+  },
+
+  "spainContext": {
+    "phases": [
+      {
+        "period": "2013-2015",
+        "name": "Early Recovery",
+        "description": "Spain slowly emerges from crisis. Austerity continues. New political parties disrupt the system. Entrepreneurship grows out of necessity."
+      },
+      {
+        "period": "2016-2019",
+        "name": "Sustained Growth",
+        "description": "Tourism-driven recovery, job creation returns but precarious. Political instability with repeated elections. Catalonia crisis."
+      },
+      {
+        "period": "2020-2022",
+        "name": "Pandemic and Recovery",
+        "description": "COVID-19 devastates Spain's economy (-11.3% GDP). Strictest lockdown in Europe. Then rapid recovery fueled by EU funds."
+      }
+    ],
+    "governments": [
+      {"name": "Mariano Rajoy (PP)", "period": "2011-2018", "context": "Austerity, partial recovery, corruption scandals"},
+      {"name": "Pedro Sanchez (PSOE)", "period": "2018-present", "context": "Motion of no confidence, coalition government, pandemic management"}
+    ]
+  },
+
+  "charts": {
+    "gdpGrowth": {
+      "title": "Spain GDP Growth Rate (%)",
+      "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+      "values": [-1.4, 1.4, 3.8, 3.0, 2.9, 2.3, 2.0, -11.3, 5.5, 5.8],
+      "unit": "percentage"
+    },
+    "ecommerceGrowth": {
+      "title": "E-Commerce Revenue Growth in Spain (%)",
+      "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+      "values": [18, 22, 25, 21, 24, 27, 23, 36, 12, 15],
+      "unit": "percentage"
+    },
+    "smallBusinessSurvival": {
+      "title": "Small Business 5-Year Survival Rate in Spain (%)",
+      "years": [2013, 2015, 2017, 2019, 2021],
+      "values": [38, 41, 44, 47, 42],
+      "unit": "percentage"
+    },
+    "unemploymentRate": {
+      "title": "Spain Unemployment Rate (%)",
+      "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+      "values": [26.1, 24.4, 22.1, 19.6, 17.2, 15.3, 14.1, 15.5, 14.8, 12.9],
+      "unit": "percentage"
+    }
+  },
+
+  "keyEvents": [
+    {
+      "year": 2014,
+      "event": "King Juan Carlos I abdicates",
+      "description": "After 39 years, the king abdicates in favor of his son Felipe VI amid declining popularity and scandals"
+    },
+    {
+      "year": 2015,
+      "event": "Podemos and Ciudadanos rise",
+      "description": "New political parties shatter Spain's two-party system; end of bipartisanship between PP and PSOE"
+    },
+    {
+      "year": 2017,
+      "event": "Catalonia independence crisis",
+      "description": "Illegal referendum, declaration of independence, Article 155 invoked; Spain's biggest constitutional crisis in decades"
+    },
+    {
+      "year": 2020,
+      "event": "COVID-19 lockdown",
+      "description": "Spain enters state of alarm March 14; one of the strictest lockdowns worldwide; 98 days of confinement"
+    },
+    {
+      "year": 2021,
+      "event": "Vaccination campaign and recovery",
+      "description": "Spain achieves one of Europe's highest vaccination rates (90%+); economy rebounds 5.5%"
+    }
+  ],
+
+  "entrepreneurshipInSpain": {
+    "title": "Entrepreneurship Landscape During the Period",
+    "newCompaniesPerYear": {
+      "years": [2013, 2015, 2017, 2019, 2021],
+      "values": [93000, 101000, 108000, 113000, 98000],
+      "unit": "new companies"
+    },
+    "selfEmployed": {
+      "years": [2013, 2016, 2019, 2022],
+      "values": [3050000, 3180000, 3260000, 3340000],
+      "unit": "workers"
+    },
+    "challenges": [
+      "Spain consistently ranked among EU's hardest countries to start a business",
+      "Social security costs for self-employed (autonomos) averaged 280 EUR/month minimum",
+      "Average time to open a business: 14 bureaucratic steps",
+      "Access to credit nearly impossible for small businesses post-2008"
+    ]
+  },
+
+  "covidImpact": {
+    "title": "COVID-19 Impact on Spain",
+    "gdpDrop": "-11.3%",
+    "peakUnemployment": "16.3%",
+    "businessesClosed": "Over 100,000 businesses permanently closed",
+    "ERTEWorkers": "3.4 million workers on furlough schemes (ERTE)",
+    "sectorImpact": {
+      "hospitality": "-50.2%",
+      "retail": "-15.3%",
+      "creativeServices": "-28.7%",
+      "ecommerce": "+36%"
+    }
+  },
+
+  "comparison2024": {
+    "gdpGrowth": {
+      "2013": "-1.4%",
+      "2024": "+2.5%",
+      "change": "Full recovery achieved"
+    },
+    "unemployment": {
+      "2013": "26.1%",
+      "2024": "11.3%",
+      "change": "-56.7%"
+    },
+    "ecommerce": {
+      "2013": "14B EUR",
+      "2024": "72B EUR",
+      "change": "+414%"
+    },
+    "organicFoodMarket": {
+      "2015": "1.5B EUR",
+      "2024": "3.2B EUR",
+      "change": "+113%"
+    },
+    "selfEmployed": {
+      "2013": "3.05M",
+      "2024": "3.38M",
+      "change": "+10.8%"
+    }
+  },
+
+  "funFacts": [
+    "Starting a business in Spain during 26% unemployment was either brave or crazy - probably both",
+    "The phrase 'emprendedor' (entrepreneur) became Spain's most overused buzzword in 2013",
+    "Organic food went from 'hippie niche' to mainstream during this period",
+    "COVID turned every business owner into an improvised IT manager overnight",
+    "Spain's lockdown was so strict that children couldn't go outside for 42 consecutive days",
+    "The ERTE furlough scheme saved an estimated 3.4 million jobs during the pandemic",
+    "Zoom went from unknown to essential vocabulary in approximately 2 weeks",
+    "Running two businesses simultaneously meant the concept of 'weekends' was purely theoretical"
+  ]
+}

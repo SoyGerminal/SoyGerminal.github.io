@@ -1,0 +1,190 @@
+{
+  "period": "1997-2002",
+  "title": "FINDING DIRECTION - THE UNIVERSITY YEARS (1997-2002)",
+  "description": "University attempt at Universidad de Extremadura during Spain's internet revolution and economic boom",
+
+  "kpis": {
+    "universityStudents": {
+      "value": "1.6M",
+      "label": "University Students",
+      "description": "Enrolled in Spanish universities",
+      "icon": "graduation"
+    },
+    "internetPenetration": {
+      "value": "1%→20%",
+      "label": "Internet Penetration",
+      "description": "Explosive growth in 5 years",
+      "icon": "wifi"
+    },
+    "gdpGrowth": {
+      "value": "4.2%",
+      "label": "Avg GDP Growth",
+      "description": "Spain's economic boom years",
+      "icon": "chart"
+    },
+    "euroAdoption": {
+      "value": "2002",
+      "label": "Euro Adoption",
+      "description": "End of the peseta era",
+      "icon": "currency"
+    }
+  },
+
+  "myEducation": {
+    "timeline": [
+      {"year": "1997-1998", "level": "University - Year 1", "age": "19 years", "institution": "Universidad de Extremadura", "note": "First year, exploring options"},
+      {"year": "1998-1999", "level": "University - Year 2", "age": "20 years", "institution": "Universidad de Extremadura", "note": "Continued studies"},
+      {"year": "1999-2000", "level": "University - Year 3", "age": "21 years", "institution": "Universidad de Extremadura", "note": "Growing doubts about academic path"},
+      {"year": "2000-2001", "level": "Transition period", "age": "22 years", "institution": "Universidad de Extremadura", "note": "Struggling to find direction"},
+      {"year": "2001-2002", "level": "Final university year", "age": "23 years", "institution": "Universidad de Extremadura", "note": "Did not complete degree, pivoted to professional life"}
+    ],
+    "outcome": "Did not complete university degree - life had other plans",
+    "lessonsLearned": [
+      "Traditional academic paths are not for everyone",
+      "Failure is redirection, not a dead end",
+      "Self-taught skills can be just as valuable",
+      "Real-world experience sometimes outweighs formal education"
+    ]
+  },
+
+  "spainContext": {
+    "government": "Jose Maria Aznar (PP)",
+    "period": "1996-2004",
+    "description": "Economic liberalization, privatization of state companies, NATO integration, and preparation for Euro adoption",
+    "keyPolicies": [
+      "Privatization of Telefonica, Endesa, Repsol",
+      "Labor market reforms spurring job creation",
+      "Fiscal discipline to meet Maastricht criteria",
+      "Infrastructure investment boom (AVE expansion)"
+    ]
+  },
+
+  "internetRevolution": {
+    "title": "Spain's Internet Penetration Growth",
+    "years": [1997, 1998, 1999, 2000, 2001, 2002],
+    "penetration": [1.0, 3.0, 7.0, 12.0, 16.0, 20.0],
+    "milestones": [
+      {"year": 1997, "event": "Internet arrives in Spanish homes via dial-up"},
+      {"year": 1998, "event": "First Spanish e-commerce sites launch"},
+      {"year": 1999, "event": "Terra Networks IPO - Spain's dot-com star"},
+      {"year": 2000, "event": "Dot-com bubble peak, 1M broadband connections"},
+      {"year": 2001, "event": "Dot-com crash hits Spanish tech sector"},
+      {"year": 2002, "event": "ADSL becomes mainstream, 20% penetration reached"}
+    ]
+  },
+
+  "charts": {
+    "internetPenetration": {
+      "title": "Internet Penetration in Spain (%)",
+      "years": [1997, 1998, 1999, 2000, 2001, 2002],
+      "values": [1.0, 3.0, 7.0, 12.0, 16.0, 20.0],
+      "unit": "percentage"
+    },
+    "gdpGrowth": {
+      "title": "Spain GDP Growth Rate (%)",
+      "years": [1997, 1998, 1999, 2000, 2001, 2002],
+      "values": [3.9, 4.5, 4.7, 5.0, 3.7, 2.7],
+      "unit": "percentage"
+    },
+    "universityEnrollment": {
+      "title": "University Enrollment in Spain (thousands)",
+      "years": [1997, 1998, 1999, 2000, 2001, 2002],
+      "values": [1590, 1610, 1600, 1580, 1565, 1550],
+      "unit": "thousands"
+    },
+    "unemploymentRate": {
+      "title": "Spain Unemployment Rate (%)",
+      "years": [1997, 1998, 1999, 2000, 2001, 2002],
+      "values": [20.8, 18.8, 15.9, 13.9, 10.6, 11.5],
+      "unit": "percentage"
+    }
+  },
+
+  "keyEvents": [
+    {
+      "year": 1997,
+      "event": "Internet arrives in Spanish homes",
+      "description": "Dial-up connections begin spreading, Infovia by Telefonica becomes the main gateway"
+    },
+    {
+      "year": 1998,
+      "event": "Google founded",
+      "description": "Larry Page and Sergey Brin launch Google, revolutionizing how we access information"
+    },
+    {
+      "year": 1999,
+      "event": "Euro announced",
+      "description": "The Euro becomes the official currency for electronic transactions; physical coins and notes planned for 2002"
+    },
+    {
+      "year": 2000,
+      "event": "Dot-com bubble burst",
+      "description": "The NASDAQ crashes, wiping out trillions in tech valuations; Terra Networks loses 90% of its value"
+    },
+    {
+      "year": 2001,
+      "event": "September 11 attacks",
+      "description": "Terrorist attacks on the US reshape global geopolitics, security, and economy"
+    },
+    {
+      "year": 2002,
+      "event": "Euro coins and notes adopted",
+      "description": "Spain says goodbye to the peseta; 166.386 pesetas = 1 Euro becomes the defining conversion rate"
+    }
+  ],
+
+  "economicBoom": {
+    "title": "Spain's Late 90s Economic Boom",
+    "indicators": {
+      "jobsCreated": "3.5 million new jobs (1997-2002)",
+      "unemploymentDrop": "From 20.8% to 11.5%",
+      "housingStarts": "500,000+ new homes per year by 2002",
+      "foreignInvestment": "Spain becomes 8th largest economy in the world"
+    },
+    "sectors": [
+      {"name": "Construction", "growth": "+62%", "description": "Housing boom begins"},
+      {"name": "Tourism", "growth": "+45%", "description": "Spain becomes #2 tourist destination"},
+      {"name": "Telecommunications", "growth": "+180%", "description": "Mobile phone revolution"},
+      {"name": "Financial Services", "growth": "+55%", "description": "Banking expansion"}
+    ]
+  },
+
+  "comparison2024": {
+    "internetPenetration": {
+      "2002": "20%",
+      "2024": "95%",
+      "change": "+375%"
+    },
+    "gdpPerCapita": {
+      "2002": "17,300 EUR",
+      "2024": "30,400 EUR",
+      "change": "+75.7%"
+    },
+    "universityStudents": {
+      "2002": "1.55M",
+      "2024": "1.68M",
+      "change": "+8.4%"
+    },
+    "unemployment": {
+      "2002": "11.5%",
+      "2024": "11.3%",
+      "change": "Nearly identical, cyclical nature"
+    },
+    "currency": {
+      "2002": "Peseta → Euro transition",
+      "2024": "Euro (22 years later)",
+      "change": "From 166.386 PTA/EUR to digital payments"
+    }
+  },
+
+  "funFacts": [
+    "Connecting to the internet meant nobody could use the phone line",
+    "A 56Kbps modem was considered blazing fast",
+    "Downloading a single MP3 song took about 15 minutes",
+    "Nokia 3310 was the most coveted phone - and it was indestructible",
+    "The peseta-to-euro conversion (166.386) became everyone's mental math exercise",
+    "Napster changed music forever - and terrified the record industry",
+    "LAN parties were the social networks of the era",
+    "Yahoo and Altavista were the search engines before Google took over"
+  ]
+}

@@ -2,31 +2,31 @@
   "year": 1978,
   "birthDate": "03/03/1978",
   "country": "Spain",
-  "title": "ESPANA EN 1978 - CONTEXTO DE MI NACIMIENTO",
+  "title": "SPAIN IN 1978 — CONTEXT OF MY BIRTH",
 
   "kpis": {
     "population": {
       "value": "36.7M",
-      "label": "Poblacion",
-      "description": "Habitantes en Espana",
+      "label": "Population",
+      "description": "Inhabitants in Spain",
       "icon": "users"
     },
     "births": {
       "value": "656K",
-      "label": "Nacimientos",
-      "description": "Nacidos ese ano",
+      "label": "Births",
+      "description": "Born that year",
       "icon": "baby"
     },
     "lifeExpectancy": {
       "value": "73.3",
-      "label": "Esperanza de vida",
-      "description": "Anos promedio",
+      "label": "Life Expectancy",
+      "description": "Average years",
       "icon": "heart"
     },
     "inflation": {
       "value": "19.8%",
-      "label": "Inflacion",
-      "description": "IPC anual",
+      "label": "Inflation",
+      "description": "Annual CPI",
       "icon": "chart"
     }
   },
@@ -58,7 +58,7 @@
     "gasoline": {
       "pesetas": 35,
       "euros": 0.21,
-      "unit": "litro"
+      "unit": "liter"
     },
     "bread": {
       "pesetas": 15,
@@ -68,34 +68,34 @@
     "milk": {
       "pesetas": 28,
       "euros": 0.17,
-      "unit": "litro"
+      "unit": "liter"
     },
     "coffee": {
       "pesetas": 25,
       "euros": 0.15,
-      "unit": "taza"
+      "unit": "cup"
     },
     "newspaper": {
       "pesetas": 15,
       "euros": 0.09,
-      "unit": "ejemplar"
+      "unit": "copy"
     },
     "cinema": {
       "pesetas": 100,
       "euros": 0.60,
-      "unit": "entrada"
+      "unit": "ticket"
     },
     "averageRent": {
       "pesetas": 5000,
       "euros": 30,
-      "unit": "mes"
+      "unit": "month"
     }
   },
 
   "prices2024": {
     "gasoline": {
       "euros": 1.65,
-      "unit": "litro"
+      "unit": "liter"
     },
     "bread": {
       "euros": 3.20,
@@ -103,48 +103,48 @@
     },
     "milk": {
       "euros": 0.95,
-      "unit": "litro"
+      "unit": "liter"
     },
     "coffee": {
       "euros": 1.80,
-      "unit": "taza"
+      "unit": "cup"
     },
     "newspaper": {
       "euros": 1.80,
-      "unit": "ejemplar"
+      "unit": "copy"
     },
     "cinema": {
       "euros": 9.50,
-      "unit": "entrada"
+      "unit": "ticket"
     },
     "averageRent": {
       "euros": 850,
-      "unit": "mes"
+      "unit": "month"
     }
   },
 
   "historical": {
     "president": "Adolfo Suarez",
-    "government": "UCD (Union de Centro Democratico)",
+    "government": "UCD (Union of the Democratic Centre)",
     "monarch": "Juan Carlos I",
     "keyEvents": [
       {
         "date": "1978-12-06",
-        "event": "Aprobacion de la Constitucion Espanola",
-        "description": "Referendum constitucional con 87.78% de votos a favor"
+        "event": "Approval of the Spanish Constitution",
+        "description": "Constitutional referendum with 87.78% of votes in favor"
       },
       {
         "date": "1978-01-01",
-        "event": "Autonomia previa para Cataluna y Pais Vasco",
-        "description": "Inicio del proceso de descentralizacion"
+        "event": "Pre-autonomy for Catalonia and the Basque Country",
+        "description": "Beginning of the decentralization process"
       },
       {
         "date": "1978-10-25",
-        "event": "Pactos de la Moncloa",
-        "description": "Acuerdos economicos y politicos firmados en 1977, implementados en 1978"
+        "event": "Moncloa Pacts",
+        "description": "Economic and political agreements signed in 1977, implemented in 1978"
       }
     ],
-    "context": "Espana en plena Transicion democratica tras la dictadura franquista (1939-1975)"
+    "context": "Spain in the midst of the democratic transition after the Franco dictatorship (1939-1975)"
   },
 
   "comparison2024": {
@@ -156,7 +156,7 @@
     "lifeExpectancy": {
       "1978": 73.3,
       "2024": 83.3,
-      "change": "+10 anos"
+      "change": "+10 years"
     },
     "births": {
       "1978": 656000,
@@ -177,18 +177,18 @@
 
   "charts": {
     "populationEvolution": {
-      "title": "Evolucion Poblacion Espana",
+      "title": "Spain Population Evolution",
       "years": [1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024],
       "values": [33.8, 35.5, 37.4, 38.4, 39.0, 39.4, 40.5, 43.4, 46.6, 46.4, 47.4, 48.2]
     },
     "lifeExpectancyEvolution": {
-      "title": "Esperanza de Vida",
+      "title": "Life Expectancy",
       "years": [1978, 1990, 2000, 2010, 2024],
       "values": [73.3, 76.9, 79.3, 81.5, 83.3]
     },
     "priceComparison": {
-      "title": "Comparativa Precios 1978 vs 2024",
-      "items": ["Gasolina", "Pan", "Leche", "Cafe", "Cine", "Alquiler"],
+      "title": "Price Comparison 1978 vs 2024",
+      "items": ["Gasoline", "Bread", "Milk", "Coffee", "Cinema", "Rent"],
       "values1978": [0.21, 0.09, 0.17, 0.15, 0.60, 30],
       "values2024": [1.65, 3.20, 0.95, 1.80, 9.50, 850],
       "multiplier": [7.9, 35.6, 5.6, 12.0, 15.8, 28.3]
@@ -196,10 +196,10 @@
   },
 
   "funFacts": [
-    "El 3 de marzo de 1978 era viernes",
-    "La seleccion espanola de futbol se preparaba para el Mundial de Argentina 1978",
-    "SEAT Panda y Renault 5 eran los coches mas vendidos",
-    "La television en color empezaba a popularizarse",
-    "El programa 'Un, dos, tres' era el mas visto en TVE"
+    "March 3, 1978 was a Friday",
+    "The Spanish national football team was preparing for the 1978 World Cup in Argentina",
+    "SEAT Panda and Renault 5 were the best-selling cars",
+    "Color television was starting to become popular",
+    "The show 'Un, dos, tres' was the most watched on TVE"
   ]
 }

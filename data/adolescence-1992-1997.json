@@ -1,82 +1,82 @@
 {
   "period": "1992-1997",
-  "title": "ADOLESCENCIA - GENERACION X EN ESPANA (1992-1997)",
-  "description": "Periodo de BUP y COU durante los anos mas duros de la crisis del SIDA y las drogas en Espana",
+  "title": "ADOLESCENCE — GENERATION X IN SPAIN (1992–1997)",
+  "description": "Period of BUP and COU during the hardest years of the AIDS and drug crisis in Spain",
 
   "kpis": {
     "youthPopulation": {
       "value": "6.2M",
-      "label": "Jovenes 15-24",
-      "description": "Poblacion juvenil en Espana"
+      "label": "Youth 15-24",
+      "description": "Youth population in Spain"
     },
     "heroinDeaths": {
-      "value": "1.847",
-      "label": "Muertes heroina/ano",
-      "description": "Pico en 1991-1992"
+      "value": "1,847",
+      "label": "Heroin deaths/year",
+      "description": "Peak in 1991-1992"
     },
     "hivCases": {
-      "value": "7.200",
-      "label": "Nuevos casos VIH/ano",
-      "description": "Media anual del periodo"
+      "value": "7,200",
+      "label": "New HIV cases/year",
+      "description": "Annual average for the period"
     },
     "youthUnemployment": {
       "value": "42%",
-      "label": "Paro juvenil",
-      "description": "Tasa en 1994"
+      "label": "Youth unemployment",
+      "description": "Rate in 1994"
     }
   },
 
   "myEducation": {
     "timeline": [
-      {"year": "1992-1993", "nivel": "1º BUP", "edad": "14 anos", "ley": "LGE"},
-      {"year": "1993-1994", "nivel": "2º BUP", "edad": "15 anos", "ley": "LGE"},
-      {"year": "1994-1995", "nivel": "3º BUP", "edad": "16 anos", "ley": "LGE"},
-      {"year": "1995-1996", "nivel": "COU", "edad": "17 anos", "ley": "LGE"},
-      {"year": "1996-1997", "nivel": "COU (repetido)", "edad": "18 anos", "ley": "LGE", "highlight": true}
+      {"year": "1992-1993", "nivel": "1st BUP", "edad": "14 years old", "ley": "LGE"},
+      {"year": "1993-1994", "nivel": "2nd BUP", "edad": "15 years old", "ley": "LGE"},
+      {"year": "1994-1995", "nivel": "3rd BUP", "edad": "16 years old", "ley": "LGE"},
+      {"year": "1995-1996", "nivel": "COU", "edad": "17 years old", "ley": "LGE"},
+      {"year": "1996-1997", "nivel": "COU (repeated)", "edad": "18 years old", "ley": "LGE", "highlight": true}
     ],
     "bupStructure": {
-      "name": "Bachillerato Unificado Polivalente",
-      "duration": "3 anos (14-17)",
-      "access": "Tras aprobar 8º EGB",
-      "branches": ["Ciencias", "Letras", "Mixto"]
+      "name": "Unified Polyvalent Bachillerato (BUP)",
+      "duration": "3 years (14-17)",
+      "access": "After passing 8th EGB",
+      "branches": ["Sciences", "Humanities", "Mixed"]
     },
     "couStructure": {
-      "name": "Curso de Orientacion Universitaria",
-      "duration": "1 ano (17-18)",
-      "access": "Tras aprobar 3º BUP",
-      "selectividad": "Obligatoria para universidad"
+      "name": "University Orientation Course (COU)",
+      "duration": "1 year (17-18)",
+      "access": "After passing 3rd BUP",
+      "selectividad": "Mandatory for university admission"
     }
   },
 
   "drugConsumption": {
-    "title": "Consumo de drogas en jovenes (15-24 anos)",
+    "title": "Drug consumption among youth (15-24 years)",
     "years": [1992, 1993, 1994, 1995, 1996, 1997],
     "alcohol": {
-      "description": "Consumo ultimo mes (%)",
+      "description": "Last month consumption (%)",
       "total": [52, 54, 55, 56, 58, 60],
       "male": [58, 60, 62, 63, 65, 67],
       "female": [46, 48, 49, 50, 52, 54]
     },
     "tobacco": {
-      "description": "Fumadores diarios (%)",
+      "description": "Daily smokers (%)",
       "total": [32, 33, 34, 34, 35, 36],
       "male": [38, 38, 37, 36, 36, 35],
       "female": [26, 28, 30, 32, 34, 36]
     },
     "cannabis": {
-      "description": "Consumo ultimo ano (%)",
+      "description": "Last year consumption (%)",
       "total": [12, 14, 16, 18, 20, 22],
       "male": [16, 18, 20, 22, 25, 28],
       "female": [8, 10, 12, 14, 16, 17]
     },
     "cocaine": {
-      "description": "Consumo ultimo ano (%)",
+      "description": "Last year consumption (%)",
       "total": [1.8, 2.0, 2.2, 2.5, 2.8, 3.2],
       "male": [2.5, 2.8, 3.0, 3.4, 3.8, 4.2],
       "female": [1.1, 1.2, 1.4, 1.6, 1.8, 2.2]
     },
     "heroin": {
-      "description": "Consumo ultimo ano (%)",
+      "description": "Last year consumption (%)",
       "total": [0.8, 0.7, 0.6, 0.5, 0.4, 0.3],
       "male": [1.2, 1.0, 0.9, 0.7, 0.6, 0.5],
       "female": [0.4, 0.4, 0.3, 0.3, 0.2, 0.2]
@@ -84,8 +84,8 @@
   },
 
   "hivAids": {
-    "title": "Crisis del SIDA en Espana",
-    "description": "Espana tuvo la mayor tasa de SIDA de Europa Occidental",
+    "title": "AIDS Crisis in Spain",
+    "description": "Spain had the highest AIDS rate in Western Europe",
     "newCasesPerYear": {
       "years": [1992, 1993, 1994, 1995, 1996, 1997],
       "total": [7254, 7330, 7053, 6492, 5542, 4455],
@@ -104,12 +104,12 @@
     },
     "ageGroup1524": {
       "percentOfCases": 18,
-      "mainCause": "Uso de drogas inyectables (UDVP)"
+      "mainCause": "Injecting drug use (IDU)"
     }
   },
 
   "youthMortality": {
-    "title": "Mortalidad juvenil 15-24 anos",
+    "title": "Youth mortality ages 15-24",
     "years": [1992, 1993, 1994, 1995, 1996, 1997],
     "totalDeaths": {
       "total": [4850, 4720, 4580, 4450, 4120, 3890],
@@ -151,20 +151,20 @@
   },
 
   "stds": {
-    "title": "Enfermedades de transmision sexual (15-24 anos)",
+    "title": "Sexually transmitted diseases (15-24 years)",
     "years": [1992, 1994, 1996],
     "gonorrhea": {
       "casesPerYear": [8500, 6200, 4800],
-      "trend": "Descendente por campanas de prevencion"
+      "trend": "Declining due to prevention campaigns"
     },
     "syphilis": {
       "casesPerYear": [1200, 900, 700],
-      "trend": "Descendente"
+      "trend": "Declining"
     },
     "chlamydia": {
-      "note": "Subregistro importante, no era de declaracion obligatoria"
+      "note": "Significant underreporting, it was not a notifiable disease"
     },
-    "context": "El miedo al SIDA aumento significativamente el uso del preservativo"
+    "context": "Fear of AIDS significantly increased condom use"
   },
 
   "socialContext": {
@@ -174,57 +174,57 @@
       "general": [18.4, 22.7, 24.1, 22.9, 22.2, 20.8]
     },
     "culturalEvents": [
-      {"year": 1992, "event": "Expo Sevilla y JJOO Barcelona"},
-      {"year": 1993, "event": "Crisis economica severa"},
-      {"year": 1994, "event": "Pico del desempleo en Espana"},
-      {"year": 1995, "event": "Inicio de la recuperacion economica"},
-      {"year": 1996, "event": "Victoria del PP, fin era PSOE"},
-      {"year": 1997, "event": "Espana cumple criterios Maastricht"}
+      {"year": 1992, "event": "Seville Expo and Barcelona Olympics"},
+      {"year": 1993, "event": "Severe economic crisis"},
+      {"year": 1994, "event": "Peak unemployment in Spain"},
+      {"year": 1995, "event": "Beginning of economic recovery"},
+      {"year": 1996, "event": "PP victory, end of PSOE era"},
+      {"year": 1997, "event": "Spain meets Maastricht criteria"}
     ],
     "technology": [
-      "Primeros telefonos moviles (solo llamadas)",
-      "Windows 95 revoluciona la informatica",
-      "Internet empieza a llegar a hogares (1996-97)",
-      "La Game Boy y la PlayStation"
+      "First mobile phones (calls only)",
+      "Windows 95 revolutionizes computing",
+      "Internet begins reaching households (1996-97)",
+      "Game Boy and PlayStation"
     ],
     "music": [
       "Grunge (Nirvana, Pearl Jam)",
       "Britpop (Oasis, Blur)",
-      "Musica electronica (Prodigy, Chemical Brothers)",
-      "Pop espanol (Alejandro Sanz, La Oreja de Van Gogh)"
+      "Electronic music (Prodigy, Chemical Brothers)",
+      "Spanish pop (Alejandro Sanz, La Oreja de Van Gogh)"
     ]
   },
 
   "generationX": {
     "characteristics": [
-      "Primera generacion con acceso masivo a la universidad",
-      "Vivieron la transicion de la maquina de escribir al ordenador",
-      "Marcados por el SIDA y la heroina",
-      "Testigos del fin de la Guerra Fria",
-      "Juventud prolongada por alto desempleo"
+      "First generation with mass access to university",
+      "Lived the transition from typewriter to computer",
+      "Marked by AIDS and heroin",
+      "Witnesses to the end of the Cold War",
+      "Extended youth due to high unemployment"
     ],
     "nicknames": [
-      "Generacion X",
-      "Generacion de la heroina",
-      "Generacion perdida",
+      "Generation X",
+      "The heroin generation",
+      "The lost generation",
       "Baby busters"
     ]
   },
 
   "comparison2024": {
     "youthMortality": {
-      "1995": "71 por 100.000",
-      "2024": "28 por 100.000",
+      "1995": "71 per 100,000",
+      "2024": "28 per 100,000",
       "change": "-60%"
     },
     "trafficDeaths1524": {
-      "1995": "1.850",
+      "1995": "1,850",
       "2024": "290",
       "change": "-84%"
     },
     "hivNewCases": {
-      "1995": "6.500",
-      "2024": "2.900",
+      "1995": "6,500",
+      "2024": "2,900",
       "change": "-55%"
     },
     "youthUnemployment": {
@@ -235,13 +235,13 @@
   },
 
   "funFacts": [
-    "El 'botellon' se convirtio en fenomeno social",
-    "Los recreativos eran el punto de encuentro",
-    "El Movistar StarTAC costaba 150.000 pesetas",
-    "Internet se conectaba con sonido de modem",
-    "Las discotecas light eran para menores de 18",
-    "El carnet de conducir se sacaba a los 18",
-    "La mili todavia era obligatoria",
-    "Tamagotchi y yo-yos eran la sensacion"
+    "The 'botellon' (outdoor drinking gatherings) became a social phenomenon",
+    "Arcades were the main hangout spot",
+    "The Movistar StarTAC cost 150,000 pesetas",
+    "Internet connected with the sound of a modem",
+    "Light discos were for those under 18",
+    "You could get your driver's license at 18",
+    "Military service was still mandatory",
+    "Tamagotchi and yo-yos were all the rage"
   ]
 }

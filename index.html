@@ -1,1256 +1,1395 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Germinal Barrena | Data Science Portfolio</title>
+    <title>When Data Tells Us a Story — Germinal Barrena</title>
 
     <!-- SEO -->
-    <meta name="description" content="Portfolio de Germinal Barrena Sánchez — ICQA Team Lead en Amazon y estudiante de Data Science. +20 años de experiencia en operaciones, liderazgo y diseño.">
-    <meta name="keywords" content="Germinal Barrena, Data Science, Portfolio, Amazon, ICQA, Python, SQL, Data Visualization, Zaragoza">
+    <meta name="description" content="The life of Germinal Barrena told through data — from 1978 Spain to the AI age. A scroll-driven cinematic data narrative.">
+    <meta name="keywords" content="Germinal Barrena, Data Science, Portfolio, Data Storytelling, Amazon, ICQA, Python, SQL, Data Visualization">
     <meta name="author" content="Germinal Barrena Sánchez">
     <link rel="canonical" href="https://soygerminal.github.io/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Germinal Barrena | Data Science Portfolio">
-    <meta property="og:description" content="ICQA Team Lead en Amazon y estudiante de Data Science. +20 años de experiencia en operaciones, liderazgo y diseño.">
+    <meta property="og:title" content="When Data Tells Us a Story — Germinal Barrena">
+    <meta property="og:description" content="The life of Germinal Barrena told through data — from 1978 Spain to the AI age. A scroll-driven cinematic data narrative.">
     <meta property="og:url" content="https://soygerminal.github.io/">
-    <meta property="og:locale" content="es_ES">
-    <meta property="og:site_name" content="Germinal Barrena Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Germinal Barrena — Data Story">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Germinal Barrena | Data Science Portfolio">
-    <meta name="twitter:description" content="ICQA Team Lead en Amazon y estudiante de Data Science. +20 años de experiencia en operaciones, liderazgo y diseño.">
+    <meta name="twitter:title" content="When Data Tells Us a Story — Germinal Barrena">
+    <meta name="twitter:description" content="The life of Germinal Barrena told through data — from 1978 Spain to the AI age.">
 
     <!-- Theme -->
-    <meta name="theme-color" content="#0071e3">
+    <meta name="theme-color" content="#0a0a0a">
 
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="profile-section">
-                <div class="avatar">GB</div>
-                <div class="profile-info">
-                    <h1>Germinal Barrena Sánchez</h1>
-                    <p class="title">ICQA Team Lead @ Amazon | Data Science Student</p>
-                    <p class="location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        Zaragoza, España
-                    </p>
+
+    <!-- Navigation Progress -->
+    <nav class="nav-progress" aria-label="Story progress">
+        <div class="nav-progress__inner">
+            <a href="#hero" class="nav-dot active" data-chapter="0" aria-label="Hero"><span class="nav-dot__label">Start</span></a>
+            <a href="#chapter-1" class="nav-dot" data-chapter="1" aria-label="Chapter 1"><span class="nav-dot__label">1978</span></a>
+            <a href="#chapter-2" class="nav-dot" data-chapter="2" aria-label="Chapter 2"><span class="nav-dot__label">1983</span></a>
+            <a href="#chapter-3" class="nav-dot" data-chapter="3" aria-label="Chapter 3"><span class="nav-dot__label">1992</span></a>
+            <a href="#chapter-4" class="nav-dot" data-chapter="4" aria-label="Chapter 4"><span class="nav-dot__label">1997</span></a>
+            <a href="#chapter-5" class="nav-dot" data-chapter="5" aria-label="Chapter 5"><span class="nav-dot__label">2002</span></a>
+            <a href="#chapter-6" class="nav-dot" data-chapter="6" aria-label="Chapter 6"><span class="nav-dot__label">2013</span></a>
+            <a href="#chapter-7" class="nav-dot" data-chapter="7" aria-label="Chapter 7"><span class="nav-dot__label">2023</span></a>
+            <a href="#chapter-8" class="nav-dot" data-chapter="8" aria-label="Chapter 8"><span class="nav-dot__label">Now</span></a>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <section id="hero" class="hero" data-chapter="0">
+        <div class="hero__bg"></div>
+        <div class="hero__content">
+            <p class="hero__tagline">When Data Tells Us a Story</p>
+            <h1 class="hero__name">Germinal Barrena</h1>
+            <p class="hero__subtitle">A life told through data — from 1978 Spain to the AI age</p>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <span class="hero__stat-value" data-count="47">0</span>
+                    <span class="hero__stat-label">Years of Story</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-value" data-count="8">0</span>
+                    <span class="hero__stat-label">Chapters</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-value" data-count="20">0</span>
+                    <span class="hero__stat-label">Years of Experience</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-value" data-count="3">0</span>
+                    <span class="hero__stat-label">Companies Founded</span>
                 </div>
             </div>
-            <div class="social-links">
-                <a href="mailto:germinalbarrena@gmail.com" class="social-btn" title="Email">
+            <div class="hero__scroll-cue">
+                <span>Scroll to begin</span>
+                <div class="hero__scroll-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 1 — Born Into Democracy (1978) -->
+    <!-- ============================================================ -->
+    <section id="chapter-1" class="chapter chapter--birth" data-chapter="1" data-accent="#5eb0ff" style="--chapter-accent: #5eb0ff;">
+        <div class="chapter__header">
+            <span class="chapter__number">01</span>
+            <span class="chapter__date">March 3, 1978</span>
+            <h2 class="chapter__title">Born Into Democracy</h2>
+            <p class="chapter__lead">"Spain was just learning to breathe free when I took my first breath."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#128118;</span>
+                <span class="placeholder__text">Zaragoza, 1978</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="36.7" data-suffix="M">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Population</span>
+            </div>
+            <div class="kpi-card" data-value="656" data-suffix="K">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Births</span>
+            </div>
+            <div class="kpi-card" data-value="73.3" data-suffix="">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Life Expectancy</span>
+            </div>
+            <div class="kpi-card" data-value="19.8" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Inflation</span>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>On a Friday morning in Navalmoral de la Mata, I was born into a country in the middle of the most important transformation of the 20th century. Spain was transitioning from nearly four decades of dictatorship to democracy. The streets buzzed with hope and uncertainty in equal measure.</p>
+            <p>That same year, Spain would approve its Constitution — the document that guaranteed the freedoms my parents' generation had only dreamed of. The economy was turbulent: inflation at nearly 20%, but there was an optimism that couldn't be quantified.</p>
+        </div>
+
+        <div class="chapter__charts">
+            <div class="chart-container">
+                <h4 class="chart-container__title">Spain Population Evolution (millions)</h4>
+                <div id="chart-population" class="chart-box"></div>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-container__title">Price Multiplier: 1978 vs Today</h4>
+                <div id="chart-prices" class="chart-box"></div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>Historical Context</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">President</span>
+                    <span class="context-item__value">Adolfo Suárez (UCD)</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Monarch</span>
+                    <span class="context-item__value">Juan Carlos I</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Currency</span>
+                    <span class="context-item__value">Peseta (1 EUR = 166.386 ptas)</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Minimum Wage</span>
+                    <span class="context-item__value">15,000 ptas/month (~€90)</span>
+                </div>
+            </div>
+            <div class="context-event">
+                <span class="context-event__badge">Dec 6, 1978</span>
+                <p class="context-event__text"><strong>Spanish Constitution approved</strong> — Referendum with 87.78% votes in favor. Spain in full democratic transition.</p>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>Then vs Now</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Population</span>
+                    <span class="comparison-row__old">36.7M</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">48.2M</span>
+                    <span class="comparison-row__change positive">+31%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Life Expectancy</span>
+                    <span class="comparison-row__old">73.3</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">83.3</span>
+                    <span class="comparison-row__change positive">+10 yrs</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Births/year</span>
+                    <span class="comparison-row__old">656K</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">329K</span>
+                    <span class="comparison-row__change negative">-50%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Inflation</span>
+                    <span class="comparison-row__old">19.8%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">3.4%</span>
+                    <span class="comparison-row__change positive">-83%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>Fun Facts</h4>
+            <ul>
+                <li>March 3, 1978 was a Friday</li>
+                <li>Spain was preparing for the 1978 Argentina World Cup</li>
+                <li>SEAT Panda and Renault 5 were the best-selling cars</li>
+                <li>Color television was just becoming popular</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 2 — The Classroom Years (1983-1992) -->
+    <!-- ============================================================ -->
+    <section id="chapter-2" class="chapter chapter--education" data-chapter="2" data-accent="#af52de" style="--chapter-accent: #af52de;">
+        <div class="chapter__header">
+            <span class="chapter__number">02</span>
+            <span class="chapter__date">1983 — 1992</span>
+            <h2 class="chapter__title">The Classroom Years</h2>
+            <p class="chapter__lead">"From ABCs to algebra — nine years in Spain's evolving school system."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#128218;</span>
+                <span class="placeholder__text">School days, 1980s</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="8.2" data-suffix="M">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Students</span>
+            </div>
+            <div class="kpi-card" data-value="27" data-suffix="K">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Schools</span>
+            </div>
+            <div class="kpi-card" data-value="96" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Literacy Rate</span>
+            </div>
+            <div class="kpi-card" data-value="35" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Dropout Rate</span>
+            </div>
+        </div>
+
+        <div class="chapter__timeline-personal">
+            <h4>My Education Path</h4>
+            <div class="personal-timeline">
+                <div class="personal-timeline__step">
+                    <span class="step__year">1983-84</span>
+                    <span class="step__level">Preschool</span>
+                    <span class="step__age">Age 5</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1984-85</span>
+                    <span class="step__level">1st EGB</span>
+                    <span class="step__age">Age 6</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1985-86</span>
+                    <span class="step__level">2nd EGB</span>
+                    <span class="step__age">Age 7</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1986-87</span>
+                    <span class="step__level">3rd EGB</span>
+                    <span class="step__age">Age 8</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1987-88</span>
+                    <span class="step__level">4th EGB</span>
+                    <span class="step__age">Age 9</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1988-89</span>
+                    <span class="step__level">5th EGB</span>
+                    <span class="step__age">Age 10</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1989-90</span>
+                    <span class="step__level">6th EGB</span>
+                    <span class="step__age">Age 11</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1990-91</span>
+                    <span class="step__level">7th EGB</span>
+                    <span class="step__age">Age 12</span>
+                </div>
+                <div class="personal-timeline__step highlight">
+                    <span class="step__year">1991-92</span>
+                    <span class="step__level">8th EGB</span>
+                    <span class="step__age">Age 13</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>My school years coincided with one of the most ambitious educational reforms in Spanish history. Under the EGB system (Educación General Básica), I navigated from preschool through eight years of mandatory education while Spain was reinventing itself.</p>
+            <p>In 1985 Spain joined the European Economic Community, setting off waves of modernization. By 1990, the LOGSE law extended compulsory education to age 16 — a seismic shift. Spain's dropout rate, hovering around 40%, was nearly double the European average.</p>
+        </div>
+
+        <div class="chapter__charts">
+            <div class="chart-container">
+                <h4 class="chart-container__title">Student Enrollment by Level (millions)</h4>
+                <div id="chart-students" class="chart-box"></div>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-container__title">Dropout Rate: Spain vs Europe</h4>
+                <div id="chart-dropout" class="chart-box"></div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>Political-Educational Context</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">President</span>
+                    <span class="context-item__value">Felipe González (PSOE)</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Education Minister</span>
+                    <span class="context-item__value">J.M. Maravall / J. Solana</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Education Spending</span>
+                    <span class="context-item__value">3.2% → 4.4% GDP</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Milestone</span>
+                    <span class="context-item__value">EEC Entry (1986)</span>
+                </div>
+            </div>
+            <div class="context-event">
+                <span class="context-event__badge">1990</span>
+                <p class="context-event__text"><strong>LOGSE approved</strong> — New law extending compulsory education to age 16, transforming the Spanish education system.</p>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>Education: Then vs Now</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Compulsory Education</span>
+                    <span class="comparison-row__old">Ages 6-14</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">Ages 6-16</span>
+                    <span class="comparison-row__change positive">+2 yrs</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Dropout Rate</span>
+                    <span class="comparison-row__old">42%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">13.9%</span>
+                    <span class="comparison-row__change positive">-67%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">University Access</span>
+                    <span class="comparison-row__old">24%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">45%</span>
+                    <span class="comparison-row__change positive">+88%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Public Spending</span>
+                    <span class="comparison-row__old">3.2% GDP</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">4.3% GDP</span>
+                    <span class="comparison-row__change positive">+34%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>EGB Memories</h4>
+            <ul>
+                <li>Rubio notebooks were the go-to handwriting method</li>
+                <li>The Álvarez Encyclopedia was the textbook bible</li>
+                <li>"Pre-technology" classes included manual crafts</li>
+                <li>September exams were the last chance to pass</li>
+                <li>Recess lasted 30 minutes and was sacred</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 3 — Generation X (1992-1997) -->
+    <!-- ============================================================ -->
+    <section id="chapter-3" class="chapter chapter--adolescence" data-chapter="3" data-accent="#ff3b30" style="--chapter-accent: #ff3b30;">
+        <div class="chapter__header">
+            <span class="chapter__number">03</span>
+            <span class="chapter__date">1992 — 1997</span>
+            <h2 class="chapter__title">Generation X</h2>
+            <p class="chapter__lead">"The hardest years: AIDS, heroin, and record youth unemployment. We survived."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#127926;</span>
+                <span class="placeholder__text">The 90s, Spain</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="6.2" data-suffix="M">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Youth (15-24)</span>
+            </div>
+            <div class="kpi-card kpi-card--danger" data-value="1847" data-suffix="">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Heroin Deaths/yr</span>
+            </div>
+            <div class="kpi-card kpi-card--danger" data-value="7200" data-suffix="">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">New HIV Cases/yr</span>
+            </div>
+            <div class="kpi-card kpi-card--warning" data-value="42" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Youth Unemployment</span>
+            </div>
+        </div>
+
+        <div class="chapter__timeline-personal">
+            <h4>My Path: BUP &amp; COU</h4>
+            <div class="personal-timeline">
+                <div class="personal-timeline__step">
+                    <span class="step__year">1992-93</span>
+                    <span class="step__level">1st BUP</span>
+                    <span class="step__age">Age 14</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1993-94</span>
+                    <span class="step__level">2nd BUP</span>
+                    <span class="step__age">Age 15</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1994-95</span>
+                    <span class="step__level">3rd BUP</span>
+                    <span class="step__age">Age 16</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">1995-96</span>
+                    <span class="step__level">COU</span>
+                    <span class="step__age">Age 17</span>
+                </div>
+                <div class="personal-timeline__step highlight repeated">
+                    <span class="step__year">1996-97</span>
+                    <span class="step__level">COU</span>
+                    <span class="step__badge">Repeated</span>
+                    <span class="step__age">Age 18</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>My teenage years unfolded against the backdrop of Spain's darkest modern chapter. The country held the highest AIDS rate in Western Europe. Heroin had devastated an entire generation — nearly 2,000 deaths per year at its peak. Youth unemployment hit a staggering 42% in 1994.</p>
+            <p>Yet there was light: the 1992 Barcelona Olympics and Seville Expo put Spain on the world stage. Grunge music, early mobile phones, and Windows 95 arrived. I navigated BUP and COU (the pre-university system), repeated a year, and emerged into an uncertain world.</p>
+        </div>
+
+        <!-- Sub-section: Drug Consumption -->
+        <div class="chapter__subsection">
+            <h4 class="subsection__title">Substance Use Among Youth (15-24)</h4>
+            <div class="chapter__charts">
+                <div class="chart-container">
+                    <h4 class="chart-container__title">Alcohol (last month use)</h4>
+                    <div id="chart-alcohol" class="chart-box"></div>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-container__title">Cannabis (last year use)</h4>
+                    <div id="chart-cannabis" class="chart-box"></div>
+                </div>
+            </div>
+            <div class="chart-container chart-container--full">
+                <h4 class="chart-container__title">Heroin vs Cocaine Trends</h4>
+                <div id="chart-hard-drugs" class="chart-box"></div>
+            </div>
+        </div>
+
+        <!-- Sub-section: HIV/AIDS -->
+        <div class="chapter__subsection chapter__subsection--danger">
+            <h4 class="subsection__title">The AIDS Crisis in Spain</h4>
+            <span class="subsection__badge">Spain: highest rate in Western Europe</span>
+            <div class="aids-stats">
+                <div class="aids-stat">
+                    <span class="aids-stat__value">65%</span>
+                    <span class="aids-stat__label">of cases from injecting drug use</span>
+                </div>
+                <div class="aids-stat">
+                    <span class="aids-stat__value">5,654</span>
+                    <span class="aids-stat__label">AIDS deaths in 1995 (peak)</span>
+                </div>
+                <div class="aids-stat">
+                    <span class="aids-stat__value">18%</span>
+                    <span class="aids-stat__label">of cases in youth 15-24</span>
+                </div>
+            </div>
+            <div class="chapter__charts">
+                <div class="chart-container">
+                    <h4 class="chart-container__title">New AIDS Cases per Year</h4>
+                    <div id="chart-hiv-cases" class="chart-box"></div>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-container__title">AIDS Deaths by Sex</h4>
+                    <div id="chart-aids-deaths" class="chart-box"></div>
+                </div>
+            </div>
+            <div class="transmission-breakdown">
+                <h5>Transmission Route (1995)</h5>
+                <div class="transmission-bars">
+                    <div class="transmission-item">
+                        <span class="transmission-item__label">Injecting Drug Use</span>
+                        <div class="transmission-item__bar"><div class="bar-fill" style="--width: 56%"></div></div>
+                        <span class="transmission-item__value">56%</span>
+                    </div>
+                    <div class="transmission-item">
+                        <span class="transmission-item__label">Heterosexual</span>
+                        <div class="transmission-item__bar"><div class="bar-fill bar-fill--alt1" style="--width: 22%"></div></div>
+                        <span class="transmission-item__value">22%</span>
+                    </div>
+                    <div class="transmission-item">
+                        <span class="transmission-item__label">Homosexual</span>
+                        <div class="transmission-item__bar"><div class="bar-fill bar-fill--alt2" style="--width: 14%"></div></div>
+                        <span class="transmission-item__value">14%</span>
+                    </div>
+                    <div class="transmission-item">
+                        <span class="transmission-item__label">Other</span>
+                        <div class="transmission-item__bar"><div class="bar-fill bar-fill--alt3" style="--width: 8%"></div></div>
+                        <span class="transmission-item__value">8%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-section: Youth Mortality -->
+        <div class="chapter__subsection">
+            <h4 class="subsection__title">Youth Mortality (15-24)</h4>
+            <div class="mortality-highlight">
+                <div class="mortality-stat">
+                    <span class="mortality-stat__icon male">&#9794;</span>
+                    <span class="mortality-stat__value">120</span>
+                    <span class="mortality-stat__label">deaths/100K males</span>
+                </div>
+                <div class="mortality-stat">
+                    <span class="mortality-stat__icon female">&#9792;</span>
+                    <span class="mortality-stat__value">34</span>
+                    <span class="mortality-stat__label">deaths/100K females</span>
+                </div>
+                <div class="mortality-stat mortality-stat--ratio">
+                    <span class="mortality-stat__value">3.5x</span>
+                    <span class="mortality-stat__label">higher male mortality</span>
+                </div>
+            </div>
+            <div class="chapter__charts">
+                <div class="chart-container">
+                    <h4 class="chart-container__title">Causes of Youth Death (1995)</h4>
+                    <div id="chart-mortality-causes" class="chart-box"></div>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-container__title">Mortality Rate by Sex</h4>
+                    <div id="chart-mortality-sex" class="chart-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>Generation X Context</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">Government</span>
+                    <span class="context-item__value">PSOE → PP (1996)</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">1992 Milestone</span>
+                    <span class="context-item__value">Expo Seville + Olympics</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Crisis</span>
+                    <span class="context-item__value">Recession 1993-94</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Military Service</span>
+                    <span class="context-item__value">Still mandatory</span>
+                </div>
+            </div>
+            <div class="generation-tags">
+                <span class="gen-tag">Generation X</span>
+                <span class="gen-tag gen-tag--dark">The Heroin Generation</span>
+                <span class="gen-tag">Baby Busters</span>
+            </div>
+            <div class="context-two-col">
+                <div>
+                    <h5>Technology</h5>
+                    <ul>
+                        <li>Windows 95</li>
+                        <li>First mobile phones</li>
+                        <li>Dial-up internet</li>
+                        <li>PlayStation (1995)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Music</h5>
+                    <ul>
+                        <li>Grunge (Nirvana)</li>
+                        <li>Britpop (Oasis)</li>
+                        <li>Electronic (Prodigy)</li>
+                        <li>Spanish Pop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>90s Youth vs Today</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Youth Mortality</span>
+                    <span class="comparison-row__old">71/100K</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">28/100K</span>
+                    <span class="comparison-row__change positive">-60%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Traffic Deaths (15-24)</span>
+                    <span class="comparison-row__old">1,850</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">290</span>
+                    <span class="comparison-row__change positive">-84%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">New HIV Cases</span>
+                    <span class="comparison-row__old">6,500</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">2,900</span>
+                    <span class="comparison-row__change positive">-55%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Youth Unemployment</span>
+                    <span class="comparison-row__old">42%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">28%</span>
+                    <span class="comparison-row__change positive">-33%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>90s Memories</h4>
+            <ul>
+                <li>"Botellón" (outdoor drinking) became a social phenomenon</li>
+                <li>Arcades were the main hangout spot</li>
+                <li>A Movistar StarTAC cost 150,000 pesetas</li>
+                <li>Internet connected with that iconic modem sound</li>
+                <li>Tamagotchis and yo-yos were the craze</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 4 — Finding Direction (1997-2002) -->
+    <!-- ============================================================ -->
+    <section id="chapter-4" class="chapter chapter--university" data-chapter="4" data-accent="#5856d6" style="--chapter-accent: #5856d6;">
+        <div class="chapter__header">
+            <span class="chapter__number">04</span>
+            <span class="chapter__date">1997 — 2002</span>
+            <h2 class="chapter__title">Finding Direction</h2>
+            <p class="chapter__lead">"University years, the dot-com revolution, and the search for purpose."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#127891;</span>
+                <span class="placeholder__text">University of Extremadura</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="1.6" data-suffix="M">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">University Students</span>
+            </div>
+            <div class="kpi-card" data-value="20" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Internet Penetration</span>
+            </div>
+            <div class="kpi-card" data-value="4.2" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Avg GDP Growth</span>
+            </div>
+            <div class="kpi-card" data-value="2002" data-suffix="" data-no-decimal="true">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Euro Adoption</span>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>After repeating COU, I moved to Extremadura for university. Spain was experiencing an economic boom — GDP growth averaged 4.2% and the internet was transforming everything. From 1% penetration in 1997 to 20% by 2002, the digital revolution was rewriting the rules.</p>
+            <p>I explored university life but ultimately didn't complete my degree. What I found instead was a passion for design and visual communication that would define the next decade of my career. Sometimes the detour is the destination.</p>
+        </div>
+
+        <div class="chapter__charts">
+            <div class="chart-container">
+                <h4 class="chart-container__title">Internet Penetration in Spain</h4>
+                <div id="chart-internet" class="chart-box"></div>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-container__title">Spain GDP Growth (%)</h4>
+                <div id="chart-gdp-late90s" class="chart-box"></div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>Historical Context</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">President</span>
+                    <span class="context-item__value">José María Aznar (PP)</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">Economy</span>
+                    <span class="context-item__value">Boom years, Maastricht criteria met</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2000</span>
+                    <span class="context-item__value">Dot-com bubble burst</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2002</span>
+                    <span class="context-item__value">Euro replaces Peseta</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>Then vs Now</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Internet Users</span>
+                    <span class="comparison-row__old">1%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">95%</span>
+                    <span class="comparison-row__change positive">+9400%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">University Students</span>
+                    <span class="comparison-row__old">1.6M</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">1.8M</span>
+                    <span class="comparison-row__change positive">+13%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Avg Connection</span>
+                    <span class="comparison-row__old">56 Kbps</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">300 Mbps</span>
+                    <span class="comparison-row__change positive">5,357x</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>Turn of the Millennium</h4>
+            <ul>
+                <li>The Y2K bug had everyone worried</li>
+                <li>Napster changed music forever</li>
+                <li>Nokia 3310 was indestructible</li>
+                <li>MSN Messenger was social media before social media</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 5 — The Designer (2002-2013) -->
+    <!-- ============================================================ -->
+    <section id="chapter-5" class="chapter chapter--designer" data-chapter="5" data-accent="#34c759" style="--chapter-accent: #34c759;">
+        <div class="chapter__header">
+            <span class="chapter__number">05</span>
+            <span class="chapter__date">2002 — 2013</span>
+            <h2 class="chapter__title">The Designer</h2>
+            <p class="chapter__lead">"From print to pixels — building a creative career through boom and bust."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#127912;</span>
+                <span class="placeholder__text">Design studio, 2000s</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="197" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Housing Price Bubble</span>
+            </div>
+            <div class="kpi-card kpi-card--danger" data-value="27" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Peak Unemployment</span>
+            </div>
+            <div class="kpi-card kpi-card--danger" data-value="-3.8" data-suffix="%" data-allow-negative="true">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">2008 Crisis GDP</span>
+            </div>
+            <div class="kpi-card" data-value="9" data-suffix=" yrs">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">At Kopybasa</span>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>In November 2002, I joined Kopybasa as a graphic designer and printer. What followed was nine years of honing my craft — from brand identity to digital printing, managing clients and projects. I was building skills I didn't yet know would be the foundation for everything that came next.</p>
+            <p>Meanwhile, Spain rode the biggest housing bubble in its history. Prices surged 197%. When Lehman Brothers collapsed in 2008, the shockwave hit Spain particularly hard — unemployment rocketed from 8% to 27%. By the time I left Kopybasa in 2011, I was ready to bet on myself.</p>
+        </div>
+
+        <div class="chapter__charts">
+            <div class="chart-container">
+                <h4 class="chart-container__title">Spain Housing Price Index (2002=100)</h4>
+                <div id="chart-housing" class="chart-box"></div>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-container__title">Spain Unemployment Rate (%)</h4>
+                <div id="chart-unemployment-2000s" class="chart-box"></div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>Historical Context</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">2004</span>
+                    <span class="context-item__value">Madrid train bombings, PSOE wins</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2007</span>
+                    <span class="context-item__value">Housing bubble peaks</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2008</span>
+                    <span class="context-item__value">Global financial crisis</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2012</span>
+                    <span class="context-item__value">Spanish bank bailout</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>Then vs Now</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Unemployment</span>
+                    <span class="comparison-row__old">27%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">11.5%</span>
+                    <span class="comparison-row__change positive">-57%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Print Industry</span>
+                    <span class="comparison-row__old">Peak revenue</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">-45% decline</span>
+                    <span class="comparison-row__change negative">Digital shift</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Design Tools</span>
+                    <span class="comparison-row__old">Desktop software</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">AI-assisted</span>
+                    <span class="comparison-row__change neutral">Evolution</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>Design Era</h4>
+            <ul>
+                <li>Adobe Creative Suite was the industry bible</li>
+                <li>Smartphones arrived and changed design forever</li>
+                <li>Social media turned everyone into a "designer"</li>
+                <li>The crisis killed many small businesses — but not all</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 6 — The Entrepreneur (2013-2022) -->
+    <!-- ============================================================ -->
+    <section id="chapter-6" class="chapter chapter--entrepreneur" data-chapter="6" data-accent="#ff9500" style="--chapter-accent: #ff9500;">
+        <div class="chapter__header">
+            <span class="chapter__number">06</span>
+            <span class="chapter__date">2013 — 2022</span>
+            <h2 class="chapter__title">The Entrepreneur</h2>
+            <p class="chapter__lead">"Two businesses, a pandemic, and a decade of building from scratch."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#128640;</span>
+                <span class="placeholder__text">Clownfish Studio / Koralium</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="100" data-suffix="+">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Projects (Clownfish)</span>
+            </div>
+            <div class="kpi-card" data-value="500" data-suffix="+">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">SKUs (Koralium)</span>
+            </div>
+            <div class="kpi-card kpi-card--danger" data-value="-11.3" data-suffix="%" data-allow-negative="true">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">COVID GDP Impact</span>
+            </div>
+            <div class="kpi-card" data-value="36" data-suffix="%">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">E-Commerce Growth</span>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>In April 2013, in the depths of Spain's worst economic crisis, I co-founded Clownfish — a graphic design and digital studio. Most people thought I was crazy. Over 9 years, we delivered 100+ projects across branding, web design, and e-commerce. In 2015, I co-founded Koralium, an organic food supermarket managing 500+ SKUs.</p>
+            <p>Then COVID hit. Spain's GDP plummeted 11.3% in 2020, the worst contraction in modern history. But e-commerce surged 36%, validating the digital skills we'd been building. By September 2022, after nearly a decade, I wound down both businesses — not from failure, but ready for the next chapter.</p>
+        </div>
+
+        <div class="chapter__charts">
+            <div class="chart-container">
+                <h4 class="chart-container__title">Spain GDP Growth (%)</h4>
+                <div id="chart-gdp-2010s" class="chart-box"></div>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-container__title">E-Commerce Revenue Growth in Spain</h4>
+                <div id="chart-ecommerce" class="chart-box"></div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>Historical Context</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">2014</span>
+                    <span class="context-item__value">King Felipe VI, new political era</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2017</span>
+                    <span class="context-item__value">Catalonia independence crisis</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2020</span>
+                    <span class="context-item__value">COVID-19 lockdown</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2021</span>
+                    <span class="context-item__value">Vaccination campaign</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>Then vs Now</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">E-Commerce Share</span>
+                    <span class="comparison-row__old">5%</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">25%</span>
+                    <span class="comparison-row__change positive">5x growth</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Organic Food Market</span>
+                    <span class="comparison-row__old">€1B</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">€2.8B</span>
+                    <span class="comparison-row__change positive">+180%</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Freelancer Economy</span>
+                    <span class="comparison-row__old">2M</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">3.4M</span>
+                    <span class="comparison-row__change positive">+70%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>Entrepreneur Life</h4>
+            <ul>
+                <li>Running two businesses simultaneously is exactly as hard as it sounds</li>
+                <li>COVID made us all Zoom experts overnight</li>
+                <li>Managing 500+ organic product SKUs taught me data before I knew it</li>
+                <li>Closing a business isn't failure — it's a strategic decision</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 7 — Reinvention (2023-present) -->
+    <!-- ============================================================ -->
+    <section id="chapter-7" class="chapter chapter--reinvention" data-chapter="7" data-accent="#0071e3" style="--chapter-accent: #0071e3;">
+        <div class="chapter__header">
+            <span class="chapter__number">07</span>
+            <span class="chapter__date">2023 — Present</span>
+            <h2 class="chapter__title">Reinvention</h2>
+            <p class="chapter__lead">"At 45, most people settle. I started over — and found data."</p>
+        </div>
+
+        <div class="chapter__image-placeholder">
+            <div class="placeholder__content">
+                <span class="placeholder__icon">&#128202;</span>
+                <span class="placeholder__text">Amazon ZAZ1 / UNIR</span>
+            </div>
+        </div>
+
+        <div class="chapter__kpis">
+            <div class="kpi-card" data-value="3" data-suffix="">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Leadership Roles in 2 Years</span>
+            </div>
+            <div class="kpi-card" data-value="200" data-suffix="B+">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">AI Investment ($)</span>
+            </div>
+            <div class="kpi-card" data-value="3" data-suffix="">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Data Science: Top Demanded</span>
+            </div>
+            <div class="kpi-card" data-value="45" data-suffix="">
+                <span class="kpi-card__value">0</span>
+                <span class="kpi-card__label">Age: New Beginning</span>
+            </div>
+        </div>
+
+        <div class="chapter__timeline-personal">
+            <h4>My Career at Amazon</h4>
+            <div class="personal-timeline">
+                <div class="personal-timeline__step">
+                    <span class="step__year">Dec 2023</span>
+                    <span class="step__level">Sortation Team Lead</span>
+                    <span class="step__age">Amazon ZAZ1</span>
+                </div>
+                <div class="personal-timeline__step">
+                    <span class="step__year">May 2024</span>
+                    <span class="step__level">Flow Team Lead</span>
+                    <span class="step__age">Amazon ZAZ1</span>
+                </div>
+                <div class="personal-timeline__step highlight">
+                    <span class="step__year">Jan 2026</span>
+                    <span class="step__level">ICQA Team Lead</span>
+                    <span class="step__age">Amazon ZAZ1</span>
+                </div>
+                <div class="personal-timeline__step highlight">
+                    <span class="step__year">Sep 2025</span>
+                    <span class="step__level">Data Science Degree</span>
+                    <span class="step__age">UNIR</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__narrative">
+            <p>In late 2023, I joined Amazon as a Sortation Team Lead. Within two years, I held three leadership roles — Sortation, Flow, and ICQA — each one building on data-driven decision making. In September 2025, I enrolled in a Data Science degree at UNIR.</p>
+            <p>The world around me was transforming too. ChatGPT had exploded onto the scene, AI investment surpassed $200 billion, and Data Science became one of the top 3 most demanded fields globally. At 45, I wasn't just changing jobs — I was reinventing my entire career around data.</p>
+        </div>
+
+        <div class="chapter__charts">
+            <div class="chart-container">
+                <h4 class="chart-container__title">Global AI Investment ($B)</h4>
+                <div id="chart-ai-investment" class="chart-box"></div>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-container__title">Data Science Job Demand Index</h4>
+                <div id="chart-ds-demand" class="chart-box"></div>
+            </div>
+        </div>
+
+        <div class="chapter__context">
+            <h4>The AI Age</h4>
+            <div class="context-grid">
+                <div class="context-item">
+                    <span class="context-item__label">2023</span>
+                    <span class="context-item__value">ChatGPT changes everything</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2024</span>
+                    <span class="context-item__value">AI integration everywhere</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2025</span>
+                    <span class="context-item__value">Data Science degree begins</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-item__label">2026</span>
+                    <span class="context-item__value">ICQA Team Lead — data meets operations</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__comparison">
+            <h4>Traditional vs Data Career</h4>
+            <div class="comparison-grid">
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Decision Making</span>
+                    <span class="comparison-row__old">Gut feeling</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">Data-driven</span>
+                    <span class="comparison-row__change positive">Evolved</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Tools</span>
+                    <span class="comparison-row__old">Spreadsheets</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">Python, SQL, ML</span>
+                    <span class="comparison-row__change positive">Upgraded</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-row__label">Career Path</span>
+                    <span class="comparison-row__old">Linear</span>
+                    <span class="comparison-row__arrow">&rarr;</span>
+                    <span class="comparison-row__new">Non-linear</span>
+                    <span class="comparison-row__change neutral">Redefined</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter__footnotes">
+            <h4>Reinvention Notes</h4>
+            <ul>
+                <li>It's never too late to learn — data science proves it daily</li>
+                <li>20 years of managing people is the best dataset I have</li>
+                <li>Amazon taught me that data and operations are inseparable</li>
+                <li>This portfolio? Built with the skills I'm still learning</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 8 — The Story Continues (Closing) -->
+    <!-- ============================================================ -->
+    <section id="chapter-8" class="chapter chapter--closing" data-chapter="8" data-accent="#c77dff" style="--chapter-accent: #c77dff;">
+        <div class="chapter__header">
+            <span class="chapter__number">08</span>
+            <span class="chapter__date">The Present</span>
+            <h2 class="chapter__title">The Story Continues</h2>
+            <p class="chapter__lead">"Every data point is a moment. Every visualization, a memory made visible."</p>
+        </div>
+
+        <!-- Skills Radar -->
+        <div class="closing__skills">
+            <h4>Technical Skills</h4>
+            <div id="chart-skills-radar" class="chart-box chart-box--radar"></div>
+        </div>
+
+        <!-- Competencies -->
+        <div class="closing__competencies">
+            <h4>Core Competencies</h4>
+            <div class="competency-bars">
+                <div class="competency-bar">
+                    <div class="competency-bar__header">
+                        <span>Team Leadership</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="competency-bar__track">
+                        <div class="competency-bar__fill" style="--width: 95%"></div>
+                    </div>
+                </div>
+                <div class="competency-bar">
+                    <div class="competency-bar__header">
+                        <span>Operations Management</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="competency-bar__track">
+                        <div class="competency-bar__fill" style="--width: 90%"></div>
+                    </div>
+                </div>
+                <div class="competency-bar">
+                    <div class="competency-bar__header">
+                        <span>Data Analysis</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="competency-bar__track">
+                        <div class="competency-bar__fill" style="--width: 85%"></div>
+                    </div>
+                </div>
+                <div class="competency-bar">
+                    <div class="competency-bar__header">
+                        <span>Continuous Improvement (5S/Lean)</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="competency-bar__track">
+                        <div class="competency-bar__fill" style="--width: 85%"></div>
+                    </div>
+                </div>
+                <div class="competency-bar">
+                    <div class="competency-bar__header">
+                        <span>Graphic/Digital Design</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="competency-bar__track">
+                        <div class="competency-bar__fill" style="--width: 80%"></div>
+                    </div>
+                </div>
+                <div class="competency-bar">
+                    <div class="competency-bar__header">
+                        <span>Problem Solving</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="competency-bar__track">
+                        <div class="competency-bar__fill" style="--width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="closing__projects">
+            <h4>Key Projects</h4>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card__icon" style="--project-color: #0071e3;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <span class="project-card__type">Entrepreneurship</span>
+                    <h5 class="project-card__title">Clownfish Studio</h5>
+                    <p class="project-card__desc">Graphic design and digital studio specializing in branding, web, and e-commerce.</p>
+                    <div class="project-card__metrics">
+                        <div class="metric"><span class="metric__value">9+</span><span class="metric__label">Years</span></div>
+                        <div class="metric"><span class="metric__value">100+</span><span class="metric__label">Projects</span></div>
+                    </div>
+                    <div class="project-card__tags">
+                        <span>Branding</span><span>Web Design</span><span>SEO</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__icon" style="--project-color: #34c759;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <span class="project-card__type">Retail</span>
+                    <h5 class="project-card__title">Koralium</h5>
+                    <p class="project-card__desc">Organic food supermarket. Full management of purchasing, suppliers, and rotation analysis.</p>
+                    <div class="project-card__metrics">
+                        <div class="metric"><span class="metric__value">7+</span><span class="metric__label">Years</span></div>
+                        <div class="metric"><span class="metric__value">500+</span><span class="metric__label">SKUs</span></div>
+                    </div>
+                    <div class="project-card__tags">
+                        <span>Retail</span><span>Inventory</span><span>Finance</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__icon" style="--project-color: #ff9500;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <span class="project-card__type">Data Science</span>
+                    <h5 class="project-card__title">Data Science Portfolio</h5>
+                    <p class="project-card__desc">Data analysis, machine learning, and visualization projects as part of the degree.</p>
+                    <div class="project-card__metrics">
+                        <div class="metric"><span class="metric__value">WIP</span><span class="metric__label">Status</span></div>
+                    </div>
+                    <div class="project-card__tags">
+                        <span>Python</span><span>SQL</span><span>ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education & Certs -->
+        <div class="closing__education">
+            <div class="closing__education-col">
+                <h4>Education</h4>
+                <div class="education-item">
+                    <div class="education-item__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h5>Data Science Degree</h5>
+                        <p>UNIR — Universidad Internacional de La Rioja</p>
+                        <span class="education-item__date">Sep 2025 — Present</span>
+                        <span class="education-item__status">In progress</span>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-item__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h5>University Studies</h5>
+                        <p>Universidad de Extremadura</p>
+                    </div>
+                </div>
+            </div>
+            <div class="closing__education-col">
+                <h4>Certifications</h4>
+                <div class="education-item">
+                    <div class="education-item__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h5>Crash Course on Python</h5>
+                        <p>Google / Coursera</p>
+                    </div>
+                </div>
+                <h4>Languages</h4>
+                <div class="languages-list">
+                    <div class="language-item">
+                        <span class="language-item__name">Spanish</span>
+                        <div class="language-item__dots">
+                            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+                        </div>
+                        <span class="language-item__level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-item__name">English</span>
+                        <div class="language-item__dots">
+                            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <span class="language-item__level">Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="closing__contact">
+            <h4>Let's Connect</h4>
+            <div class="contact-links">
+                <a href="mailto:germinalbarrena@gmail.com" class="contact-link" title="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
+                    <span>germinalbarrena@gmail.com</span>
                 </a>
-                <a href="https://www.linkedin.com/in/germinal-barrena-sánchez-a0287929" target="_blank" class="social-btn" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/germinal-barrena-sánchez-a0287929" target="_blank" class="contact-link" title="LinkedIn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
                     </svg>
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://www.behance.net/soygerminal" target="_blank" class="social-btn" title="Behance">
+                <a href="https://www.behance.net/soygerminal" target="_blank" class="contact-link" title="Behance">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 7h-7v2h7V7z"></path>
                         <path d="M18.5 15c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm0-5c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5z"></path>
                         <path d="M6.5 15H3V9h3.5c1.38 0 2.5 1.12 2.5 2.5S7.88 15 6.5 15zM3 7h3c1.1 0 2 .9 2 2s-.9 2-2 2H3V7z"></path>
                     </svg>
+                    <span>Behance</span>
                 </a>
-                <a href="https://www.clownfish.es" target="_blank" class="social-btn" title="Portfolio">
+                <a href="curriculum.pdf" target="_blank" class="contact-link" title="CV">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
                     </svg>
+                    <span>Download CV</span>
                 </a>
             </div>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Stats Cards -->
-        <section class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon blue">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    </svg>
-                </div>
-                <div class="stat-info">
-                    <span class="stat-value">+20</span>
-                    <span class="stat-label">Años de Experiencia</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon green">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                </div>
-                <div class="stat-info">
-                    <span class="stat-value">3</span>
-                    <span class="stat-label">Empresas Fundadas</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon purple">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                </div>
-                <div class="stat-info">
-                    <span class="stat-value">4</span>
-                    <span class="stat-label">Roles de Liderazgo</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon orange">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                    </svg>
-                </div>
-                <div class="stat-info">
-                    <span class="stat-value">En curso</span>
-                    <span class="stat-label">Grado Ciencia de Datos</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section card">
-            <h2>Sobre mí</h2>
-            <p>Profesional multidisciplinar con más de 20 años de experiencia integrando <strong>liderazgo de equipos</strong>, <strong>operaciones logísticas</strong> y <strong>diseño digital</strong>. Actualmente ICQA Team Lead en Amazon, donde dirijo equipos multifuncionales en entornos de alta presión y volumen variable.</p>
-            <p>Mi experiencia empresarial incluye la gestión integral de negocios propios en alimentación ecológica y diseño gráfico/web. Actualmente me especializo en <strong>Ciencia de Datos y Analítica Avanzada</strong>, con formación técnica en Python, SQL y herramientas de visualización.</p>
-        </section>
-
-        <!-- Personal Data Section with Interactive Dashboard -->
-        <section class="personal-data-section">
-            <div class="data-item clickable-data" data-dashboard="birth" tabindex="0" role="button" aria-expanded="false" aria-controls="birth-dashboard">
-                <div class="data-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                </div>
-                <div class="data-content">
-                    <span class="data-label">Fecha de nacimiento</span>
-                    <span class="data-value">03/03/1978</span>
-                </div>
-                <div class="data-expand-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Expandable Dashboard Container -->
-            <div id="birth-dashboard" class="dashboard-container" aria-hidden="true">
-                <div class="dashboard-content">
-                    <div class="dashboard-header">
-                        <h3>ESPANA EN 1978 - CONTEXTO DE MI NACIMIENTO</h3>
-                        <button class="dashboard-close" aria-label="Cerrar dashboard">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- KPI Cards -->
-                    <div class="kpi-grid">
-                        <div class="kpi-card">
-                            <div class="kpi-icon users">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">36.7M</div>
-                            <div class="kpi-label">Poblacion</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-icon baby">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="8" r="5"></circle>
-                                    <path d="M20 21a8 8 0 0 0-16 0"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">656K</div>
-                            <div class="kpi-label">Nacimientos</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-icon heart">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">73.3</div>
-                            <div class="kpi-label">Esperanza de vida</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-icon chart">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="16"></line>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">19.8%</div>
-                            <div class="kpi-label">Inflacion</div>
-                        </div>
-                    </div>
-
-                    <!-- Charts Grid -->
-                    <div class="charts-grid">
-                        <div class="chart-card">
-                            <h4>Evolucion Poblacion Espana (millones)</h4>
-                            <div id="population-chart" class="apex-chart"></div>
-                        </div>
-                        <div class="chart-card">
-                            <h4>Comparativa Precios: Factor de incremento</h4>
-                            <div id="prices-chart" class="apex-chart"></div>
-                        </div>
-                    </div>
-
-                    <!-- Historical Context -->
-                    <div class="historical-context">
-                        <h4>Contexto Historico</h4>
-                        <div class="context-grid">
-                            <div class="context-item">
-                                <span class="context-label">Presidente</span>
-                                <span class="context-value">Adolfo Suarez (UCD)</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Monarca</span>
-                                <span class="context-value">Juan Carlos I</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Moneda</span>
-                                <span class="context-value">Peseta (1EUR = 166.386 ptas)</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Salario minimo</span>
-                                <span class="context-value">15,000 ptas/mes (~90EUR)</span>
-                            </div>
-                        </div>
-                        <div class="key-event">
-                            <div class="event-badge">6 Dic 1978</div>
-                            <div class="event-text">
-                                <strong>Constitucion Espanola</strong> - Referendum con 87.78% de votos a favor. Espana en plena Transicion democratica.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Comparison Section -->
-                    <div class="comparison-section">
-                        <h4>Entonces vs Ahora</h4>
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <div class="comparison-label">Poblacion</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">36.7M</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">48.2M</span>
-                                    <span class="change positive">+31%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Esperanza de vida</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">73.3</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">83.3</span>
-                                    <span class="change positive">+10 anos</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Nacimientos/ano</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">656K</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">329K</span>
-                                    <span class="change negative">-50%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Inflacion</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">19.8%</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">3.4%</span>
-                                    <span class="change positive">-83%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fun Facts -->
-                    <div class="fun-facts">
-                        <h4>Curiosidades de 1978</h4>
-                        <ul>
-                            <li>El 3 de marzo de 1978 era viernes</li>
-                            <li>La seleccion espanola se preparaba para el Mundial de Argentina</li>
-                            <li>SEAT Panda y Renault 5 eran los coches mas vendidos</li>
-                            <li>La television en color empezaba a popularizarse</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education Period Clickable -->
-            <div class="data-item clickable-data" data-dashboard="education" tabindex="0" role="button" aria-expanded="false" aria-controls="education-dashboard">
-                <div class="data-icon education-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                    </svg>
-                </div>
-                <div class="data-content">
-                    <span class="data-label">Periodo formativo (EGB)</span>
-                    <span class="data-value">1983 - 1992</span>
-                </div>
-                <div class="data-expand-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Education Dashboard Container -->
-            <div id="education-dashboard" class="dashboard-container" aria-hidden="true">
-                <div class="dashboard-content">
-                    <div class="dashboard-header">
-                        <h3>MI FORMACION - ESPANA EDUCATIVA (1983-1992)</h3>
-                        <button class="dashboard-close" aria-label="Cerrar dashboard">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- KPI Cards -->
-                    <div class="kpi-grid">
-                        <div class="kpi-card">
-                            <div class="kpi-icon students">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">8.2M</div>
-                            <div class="kpi-label">Alumnos en Espana</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-icon schools">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">27K</div>
-                            <div class="kpi-label">Centros educativos</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-icon literacy">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">96%</div>
-                            <div class="kpi-label">Alfabetizacion (1992)</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-icon dropout">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">35%</div>
-                            <div class="kpi-label">Abandono escolar</div>
-                        </div>
-                    </div>
-
-                    <!-- My Education Timeline -->
-                    <div class="my-education-timeline">
-                        <h4>Mi trayectoria educativa</h4>
-                        <div class="education-path">
-                            <div class="edu-step">
-                                <span class="edu-year">1983-84</span>
-                                <span class="edu-level">Preescolar</span>
-                                <span class="edu-age">5 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1984-85</span>
-                                <span class="edu-level">1º EGB</span>
-                                <span class="edu-age">6 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1985-86</span>
-                                <span class="edu-level">2º EGB</span>
-                                <span class="edu-age">7 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1986-87</span>
-                                <span class="edu-level">3º EGB</span>
-                                <span class="edu-age">8 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1987-88</span>
-                                <span class="edu-level">4º EGB</span>
-                                <span class="edu-age">9 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1988-89</span>
-                                <span class="edu-level">5º EGB</span>
-                                <span class="edu-age">10 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1989-90</span>
-                                <span class="edu-level">6º EGB</span>
-                                <span class="edu-age">11 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1990-91</span>
-                                <span class="edu-level">7º EGB</span>
-                                <span class="edu-age">12 anos</span>
-                            </div>
-                            <div class="edu-step highlight">
-                                <span class="edu-year">1991-92</span>
-                                <span class="edu-level">8º EGB</span>
-                                <span class="edu-age">13 anos</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Charts Grid -->
-                    <div class="charts-grid">
-                        <div class="chart-card">
-                            <h4>Evolucion del alumnado en Espana</h4>
-                            <div id="students-chart" class="apex-chart"></div>
-                        </div>
-                        <div class="chart-card">
-                            <h4>Tasa de abandono escolar: Espana vs Europa</h4>
-                            <div id="dropout-chart" class="apex-chart"></div>
-                        </div>
-                    </div>
-
-                    <!-- Educational Models -->
-                    <div class="edu-models-section">
-                        <h4>Modelos Educativos</h4>
-                        <div class="models-grid">
-                            <div class="model-card active-model">
-                                <div class="model-header">
-                                    <span class="model-badge">1970-1990</span>
-                                    <h5>LGE - Ley General de Educacion</h5>
-                                </div>
-                                <p class="model-desc">Ley Villar Palasi. Establecio la EGB obligatoria hasta los 14 anos.</p>
-                                <div class="model-structure">
-                                    <div class="structure-item"><span class="level">Preescolar</span><span class="ages">2-5 anos</span></div>
-                                    <div class="structure-item mandatory"><span class="level">EGB (1º-8º)</span><span class="ages">6-14 anos</span></div>
-                                    <div class="structure-item"><span class="level">BUP + COU</span><span class="ages">14-18 anos</span></div>
-                                    <div class="structure-item"><span class="level">FP I y II</span><span class="ages">14-18 anos</span></div>
-                                </div>
-                            </div>
-                            <div class="model-card">
-                                <div class="model-header">
-                                    <span class="model-badge new">1990-2006</span>
-                                    <h5>LOGSE</h5>
-                                </div>
-                                <p class="model-desc">Amplio la educacion obligatoria hasta los 16 anos. Introdujo la ESO.</p>
-                                <div class="model-structure">
-                                    <div class="structure-item"><span class="level">Ed. Infantil</span><span class="ages">0-6 anos</span></div>
-                                    <div class="structure-item mandatory"><span class="level">Ed. Primaria</span><span class="ages">6-12 anos</span></div>
-                                    <div class="structure-item mandatory"><span class="level">ESO</span><span class="ages">12-16 anos</span></div>
-                                    <div class="structure-item"><span class="level">Bachillerato</span><span class="ages">16-18 anos</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Historical Context -->
-                    <div class="historical-context">
-                        <h4>Contexto Politico-Educativo</h4>
-                        <div class="context-grid">
-                            <div class="context-item">
-                                <span class="context-label">Presidente</span>
-                                <span class="context-value">Felipe Gonzalez (PSOE)</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Min. Educacion</span>
-                                <span class="context-value">J.M. Maravall / J. Solana</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Inversion educativa</span>
-                                <span class="context-value">3.2% → 4.4% PIB</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Hito</span>
-                                <span class="context-value">Entrada CEE (1986)</span>
-                            </div>
-                        </div>
-                        <div class="key-event">
-                            <div class="event-badge">1990</div>
-                            <div class="event-text">
-                                <strong>Aprobacion LOGSE</strong> - Nueva ley que extiende la educacion obligatoria hasta los 16 anos, transformando el sistema educativo espanol.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Comparison Section -->
-                    <div class="comparison-section">
-                        <h4>Sistema educativo: Entonces vs Ahora</h4>
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <div class="comparison-label">Educacion obligatoria</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">6-14 anos</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">6-16 anos</span>
-                                    <span class="change positive">+2 anos</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Abandono escolar</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">42%</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">13.9%</span>
-                                    <span class="change positive">-67%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Acceso universidad</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">24%</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">45%</span>
-                                    <span class="change positive">+88%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Gasto publico</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">3.2% PIB</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">4.3% PIB</span>
-                                    <span class="change positive">+34%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fun Facts -->
-                    <div class="fun-facts">
-                        <h4>Recuerdos de la EGB</h4>
-                        <ul>
-                            <li>El cuaderno Rubio era el metodo de caligrafia mas usado</li>
-                            <li>La Enciclopedia Alvarez era el libro de texto por excelencia</li>
-                            <li>Las clases de "pretecnologia" incluian trabajos manuales</li>
-                            <li>Los examenes de septiembre eran la ultima oportunidad</li>
-                            <li>El recreo duraba 30 minutos y era sagrado</li>
-                            <li>El uniforme era obligatorio en muchos centros</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Adolescence Period Clickable -->
-            <div class="data-item clickable-data" data-dashboard="adolescence" tabindex="0" role="button" aria-expanded="false" aria-controls="adolescence-dashboard">
-                <div class="data-icon adolescence-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 6v6l4 2"></path>
-                    </svg>
-                </div>
-                <div class="data-content">
-                    <span class="data-label">Adolescencia (BUP + COU)</span>
-                    <span class="data-value">1992 - 1997</span>
-                </div>
-                <div class="data-expand-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Adolescence Dashboard Container -->
-            <div id="adolescence-dashboard" class="dashboard-container" aria-hidden="true">
-                <div class="dashboard-content dashboard-complex">
-                    <div class="dashboard-header">
-                        <h3>GENERACION X EN ESPANA (1992-1997)</h3>
-                        <button class="dashboard-close" aria-label="Cerrar dashboard">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <p class="dashboard-subtitle">Los anos mas duros: crisis del SIDA, heroina y desempleo juvenil record</p>
-
-                    <!-- KPI Cards -->
-                    <div class="kpi-grid">
-                        <div class="kpi-card">
-                            <div class="kpi-icon youth">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">6.2M</div>
-                            <div class="kpi-label">Jovenes 15-24 anos</div>
-                        </div>
-                        <div class="kpi-card kpi-danger">
-                            <div class="kpi-icon danger">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">1.847</div>
-                            <div class="kpi-label">Muertes heroina/ano</div>
-                        </div>
-                        <div class="kpi-card kpi-danger">
-                            <div class="kpi-icon danger">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">7.200</div>
-                            <div class="kpi-label">Nuevos casos VIH/ano</div>
-                        </div>
-                        <div class="kpi-card kpi-warning">
-                            <div class="kpi-icon warning">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="1" x2="12" y2="23"></line>
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                </svg>
-                            </div>
-                            <div class="kpi-value">42%</div>
-                            <div class="kpi-label">Paro juvenil (1994)</div>
-                        </div>
-                    </div>
-
-                    <!-- My Education Timeline -->
-                    <div class="my-education-timeline">
-                        <h4>Mi trayectoria: BUP y COU</h4>
-                        <div class="education-path">
-                            <div class="edu-step">
-                                <span class="edu-year">1992-93</span>
-                                <span class="edu-level">1º BUP</span>
-                                <span class="edu-age">14 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1993-94</span>
-                                <span class="edu-level">2º BUP</span>
-                                <span class="edu-age">15 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1994-95</span>
-                                <span class="edu-level">3º BUP</span>
-                                <span class="edu-age">16 anos</span>
-                            </div>
-                            <div class="edu-step">
-                                <span class="edu-year">1995-96</span>
-                                <span class="edu-level">COU</span>
-                                <span class="edu-age">17 anos</span>
-                            </div>
-                            <div class="edu-step highlight repeated">
-                                <span class="edu-year">1996-97</span>
-                                <span class="edu-level">COU</span>
-                                <span class="edu-badge">Repetido</span>
-                                <span class="edu-age">18 anos</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section: Drug & Alcohol -->
-                    <div class="dashboard-section">
-                        <div class="section-header">
-                            <h4>Consumo de sustancias en jovenes (15-24 anos)</h4>
-                            <div class="legend-inline">
-                                <span class="legend-item male"><span class="dot"></span> Hombres</span>
-                                <span class="legend-item female"><span class="dot"></span> Mujeres</span>
-                            </div>
-                        </div>
-                        <div class="charts-grid">
-                            <div class="chart-card">
-                                <h5>Alcohol (consumo ultimo mes)</h5>
-                                <div id="alcohol-chart" class="apex-chart"></div>
-                            </div>
-                            <div class="chart-card">
-                                <h5>Cannabis (consumo ultimo ano)</h5>
-                                <div id="cannabis-chart" class="apex-chart"></div>
-                            </div>
-                        </div>
-                        <div class="chart-card full-width">
-                            <h5>Evolucion heroina vs cocaina</h5>
-                            <div id="hard-drugs-chart" class="apex-chart"></div>
-                        </div>
-                    </div>
-
-                    <!-- Section: HIV/AIDS Crisis -->
-                    <div class="dashboard-section section-danger">
-                        <div class="section-header">
-                            <h4>Crisis del SIDA en Espana</h4>
-                            <span class="section-badge danger">Espana: mayor tasa de Europa Occidental</span>
-                        </div>
-                        <div class="aids-stats">
-                            <div class="aids-stat">
-                                <div class="aids-value">65%</div>
-                                <div class="aids-label">de casos por drogas inyectables</div>
-                            </div>
-                            <div class="aids-stat">
-                                <div class="aids-value">5.654</div>
-                                <div class="aids-label">muertes por SIDA en 1995 (pico)</div>
-                            </div>
-                            <div class="aids-stat">
-                                <div class="aids-value">18%</div>
-                                <div class="aids-label">de casos en jovenes 15-24</div>
-                            </div>
-                        </div>
-                        <div class="charts-grid">
-                            <div class="chart-card">
-                                <h5>Nuevos casos de SIDA por ano</h5>
-                                <div id="hiv-cases-chart" class="apex-chart"></div>
-                            </div>
-                            <div class="chart-card">
-                                <h5>Muertes por SIDA (por sexo)</h5>
-                                <div id="aids-deaths-chart" class="apex-chart"></div>
-                            </div>
-                        </div>
-                        <div class="transmission-breakdown">
-                            <h5>Via de transmision (1995)</h5>
-                            <div class="transmission-bars">
-                                <div class="transmission-item">
-                                    <span class="transmission-label">Drogas inyectables</span>
-                                    <div class="transmission-bar"><div class="bar-fill" style="--width: 56%"></div></div>
-                                    <span class="transmission-value">56%</span>
-                                </div>
-                                <div class="transmission-item">
-                                    <span class="transmission-label">Heterosexual</span>
-                                    <div class="transmission-bar"><div class="bar-fill hetero" style="--width: 22%"></div></div>
-                                    <span class="transmission-value">22%</span>
-                                </div>
-                                <div class="transmission-item">
-                                    <span class="transmission-label">Homosexual</span>
-                                    <div class="transmission-bar"><div class="bar-fill homo" style="--width: 14%"></div></div>
-                                    <span class="transmission-value">14%</span>
-                                </div>
-                                <div class="transmission-item">
-                                    <span class="transmission-label">Otros</span>
-                                    <div class="transmission-bar"><div class="bar-fill other" style="--width: 8%"></div></div>
-                                    <span class="transmission-value">8%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section: Youth Mortality -->
-                    <div class="dashboard-section">
-                        <div class="section-header">
-                            <h4>Mortalidad juvenil (15-24 anos)</h4>
-                        </div>
-                        <div class="mortality-highlight">
-                            <div class="mortality-stat">
-                                <span class="mort-icon male">&#9794;</span>
-                                <span class="mort-value">120</span>
-                                <span class="mort-label">muertes/100.000 hombres</span>
-                            </div>
-                            <div class="mortality-stat">
-                                <span class="mort-icon female">&#9792;</span>
-                                <span class="mort-value">34</span>
-                                <span class="mort-label">muertes/100.000 mujeres</span>
-                            </div>
-                            <div class="mortality-stat ratio">
-                                <span class="mort-value">3.5x</span>
-                                <span class="mort-label">mas mortalidad masculina</span>
-                            </div>
-                        </div>
-                        <div class="charts-grid">
-                            <div class="chart-card">
-                                <h5>Causas de muerte juvenil (1995)</h5>
-                                <div id="mortality-causes-chart" class="apex-chart"></div>
-                            </div>
-                            <div class="chart-card">
-                                <h5>Evolucion mortalidad por sexo</h5>
-                                <div id="mortality-sex-chart" class="apex-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section: Social Context -->
-                    <div class="historical-context generation-context">
-                        <h4>Contexto de la Generacion X</h4>
-                        <div class="context-grid">
-                            <div class="context-item">
-                                <span class="context-label">Gobierno</span>
-                                <span class="context-value">PSOE → PP (1996)</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Hito 1992</span>
-                                <span class="context-value">Expo Sevilla + JJOO</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Crisis</span>
-                                <span class="context-value">Recesion 1993-94</span>
-                            </div>
-                            <div class="context-item">
-                                <span class="context-label">Mili</span>
-                                <span class="context-value">Todavia obligatoria</span>
-                            </div>
-                        </div>
-                        <div class="generation-tags">
-                            <span class="gen-tag">Generacion X</span>
-                            <span class="gen-tag dark">Generacion de la heroina</span>
-                            <span class="gen-tag">Baby busters</span>
-                        </div>
-                        <div class="tech-music-grid">
-                            <div class="tech-section">
-                                <h5>Tecnologia</h5>
-                                <ul>
-                                    <li>Windows 95</li>
-                                    <li>Primeros moviles</li>
-                                    <li>Internet por modem</li>
-                                    <li>PlayStation (1995)</li>
-                                </ul>
-                            </div>
-                            <div class="music-section">
-                                <h5>Musica</h5>
-                                <ul>
-                                    <li>Grunge (Nirvana)</li>
-                                    <li>Britpop (Oasis)</li>
-                                    <li>Electronica (Prodigy)</li>
-                                    <li>Pop espanol</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Comparison Section -->
-                    <div class="comparison-section">
-                        <h4>Juventud de los 90 vs Actualidad</h4>
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <div class="comparison-label">Mortalidad juvenil</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">71/100K</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">28/100K</span>
-                                    <span class="change positive">-60%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Muertes trafico (15-24)</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">1.850</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">290</span>
-                                    <span class="change positive">-84%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Nuevos casos VIH</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">6.500</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">2.900</span>
-                                    <span class="change positive">-55%</span>
-                                </div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-label">Paro juvenil</div>
-                                <div class="comparison-values">
-                                    <span class="old-value">42%</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-value">28%</span>
-                                    <span class="change positive">-33%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fun Facts -->
-                    <div class="fun-facts">
-                        <h4>Recuerdos de los 90</h4>
-                        <ul>
-                            <li>El botellon se convirtio en fenomeno social</li>
-                            <li>Los recreativos eran el punto de encuentro</li>
-                            <li>El Movistar StarTAC costaba 150.000 pesetas</li>
-                            <li>Internet se conectaba con sonido de modem</li>
-                            <li>Las discotecas light eran para menores de 18</li>
-                            <li>Tamagotchi y yo-yos eran la sensacion</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Two Column Layout -->
-        <div class="two-columns">
-            <!-- Skills Chart -->
-            <section class="card skills-section">
-                <h2>Skills Técnicos</h2>
-                <div class="chart-container">
-                    <canvas id="skillsChart"></canvas>
-                </div>
-            </section>
-
-            <!-- Soft Skills -->
-            <section class="card">
-                <h2>Competencias Clave</h2>
-                <div class="skills-bars">
-                    <div class="skill-bar">
-                        <div class="skill-header">
-                            <span>Liderazgo de Equipos</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-fill" style="--width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-header">
-                            <span>Gestión de Operaciones</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-fill" style="--width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-header">
-                            <span>Análisis de Datos</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-fill" style="--width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-header">
-                            <span>Mejora Continua (5S/Lean)</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-fill" style="--width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-header">
-                            <span>Diseño Gráfico/Digital</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-fill" style="--width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-header">
-                            <span>Resolución de Problemas</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-fill" style="--width: 90%"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Experience Timeline -->
-        <section class="card timeline-section">
-            <h2>Experiencia Profesional</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker amazon"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>ICQA Team Lead</h3>
-                            <span class="company">Amazon ZAZ1</span>
-                            <span class="date">Ene 2026 - Presente</span>
-                        </div>
-                        <p>Liderazgo del equipo de control de calidad de inventario. Coordinación de operaciones y análisis de métricas en tiempo real.</p>
-                        <div class="tags">
-                            <span class="tag">Quality Control</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Team Leadership</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker amazon"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Flow Team Lead</h3>
-                            <span class="company">Amazon ZAZ1</span>
-                            <span class="date">May 2024 - Ene 2026</span>
-                        </div>
-                        <p>Dirección de equipos multifuncionales optimizando flujos de trabajo. Toma de decisiones bajo presión y mejora continua en entornos de alto volumen.</p>
-                        <div class="tags">
-                            <span class="tag">Process Optimization</span>
-                            <span class="tag">Real-time Analytics</span>
-                            <span class="tag">Lean Management</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker amazon"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Sortation Team Lead</h3>
-                            <span class="company">Amazon ZAZ1</span>
-                            <span class="date">Dic 2023 - May 2024</span>
-                        </div>
-                        <p>Coordinación de operaciones de clasificación. Super User UIS y Peer Trainer.</p>
-                        <div class="tags">
-                            <span class="tag">Sortation</span>
-                            <span class="tag">Training</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker clownfish"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Cofundador & Director Creativo</h3>
-                            <span class="company">Clownfish S.L.</span>
-                            <span class="date">Abr 2013 - Sep 2022</span>
-                        </div>
-                        <p>Fundé y dirigí un estudio de diseño gráfico y digital. Gestión de proyectos de identidad visual, web y e-commerce. En 2015 también cofundé Koralium, supermercado de alimentación ecológica.</p>
-                        <div class="tags">
-                            <span class="tag">Entrepreneurship</span>
-                            <span class="tag">Design</span>
-                            <span class="tag">E-commerce</span>
-                            <span class="tag">Marketing Digital</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker kopybasa"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Diseñador Gráfico e Impresor</h3>
-                            <span class="company">Kopybasa</span>
-                            <span class="date">Nov 2002 - Dic 2011</span>
-                        </div>
-                        <p>Responsable del área de diseño gráfico e impresión digital. Coordinación de proyectos y gestión de clientes.</p>
-                        <div class="tags">
-                            <span class="tag">Graphic Design</span>
-                            <span class="tag">Print</span>
-                            <span class="tag">Client Management</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education & Certifications -->
-        <div class="two-columns">
-            <section class="card">
-                <h2>Educación</h2>
-                <div class="education-list">
-                    <div class="education-item">
-                        <div class="edu-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
-                        </div>
-                        <div class="edu-info">
-                            <h4>Grado en Ciencia de Datos</h4>
-                            <p>UNIR - Universidad Internacional de La Rioja</p>
-                            <span class="date">Sep 2025 - Presente</span>
-                            <span class="status in-progress">En curso</span>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="edu-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
-                        </div>
-                        <div class="edu-info">
-                            <h4>Formación Universitaria</h4>
-                            <p>Universidad de Extremadura</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="card">
-                <h2>Certificaciones</h2>
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                        </div>
-                        <div class="cert-info">
-                            <h4>Crash Course on Python</h4>
-                            <p>Google / Coursera</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="languages-section">
-                    <h3>Idiomas</h3>
-                    <div class="language-item">
-                        <span>Español</span>
-                        <div class="language-level">
-                            <span class="dot filled"></span>
-                            <span class="dot filled"></span>
-                            <span class="dot filled"></span>
-                            <span class="dot filled"></span>
-                            <span class="dot filled"></span>
-                        </div>
-                        <span class="level-text">Nativo</span>
-                    </div>
-                    <div class="language-item">
-                        <span>Inglés</span>
-                        <div class="language-level">
-                            <span class="dot filled"></span>
-                            <span class="dot filled"></span>
-                            <span class="dot filled"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                        <span class="level-text">Intermedio</span>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Projects Section -->
-        <section class="card projects-section">
-            <h2>Proyectos Destacados</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon blue">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            </svg>
-                        </div>
-                        <span class="project-type">Emprendimiento</span>
-                    </div>
-                    <h3>Clownfish Studio</h3>
-                    <p>Estudio de diseño gráfico y digital especializado en identidad visual, web y e-commerce.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">9+</span>
-                            <span class="metric-label">Años</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">100+</span>
-                            <span class="metric-label">Proyectos</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span>Branding</span>
-                        <span>Web Design</span>
-                        <span>SEO</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon green">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                <line x1="3" y1="6" x2="21" y2="6"></line>
-                                <path d="M16 10a4 4 0 0 1-8 0"></path>
-                            </svg>
-                        </div>
-                        <span class="project-type">Retail</span>
-                    </div>
-                    <h3>Koralium</h3>
-                    <p>Supermercado de alimentación ecológica. Gestión integral de compras, proveedores y análisis de rotación.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">7+</span>
-                            <span class="metric-label">Años</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">500+</span>
-                            <span class="metric-label">SKUs</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span>Retail</span>
-                        <span>Inventory</span>
-                        <span>Finance</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon orange">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="20" x2="18" y2="10"></line>
-                                <line x1="12" y1="20" x2="12" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="14"></line>
-                            </svg>
-                        </div>
-                        <span class="project-type">Data Science</span>
-                    </div>
-                    <h3>Portfolio Data Science</h3>
-                    <p>Proyectos de análisis de datos, machine learning y visualización en desarrollo como parte del Grado.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">WIP</span>
-                            <span class="metric-label">Estado</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>ML</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <p>Germinal Barrena Sánchez &copy; 2026</p>
-        <p class="footer-subtitle">Built with passion for data</p>
+        <p class="footer__subtitle">When data tells us a story — this was mine.</p>
     </footer>
 
     <script src="script.js"></script>
