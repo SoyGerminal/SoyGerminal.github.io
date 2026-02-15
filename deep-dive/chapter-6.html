@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: The Entrepreneur (2013–2022) — Germinal Barrena</title>
+
+    <meta name="description" content="Interactive infographic: Spain's recovery, entrepreneurship, COVID-19 pandemic, and building two businesses from scratch. International comparisons.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="deep-dive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dd-page">
+
+    <!-- NAV -->
+    <nav class="dd-nav">
+        <div class="dd-nav__inner">
+            <a href="../index.html#chapter-6" class="dd-nav__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <div class="dd-nav__breadcrumb">
+                <span class="dd-nav__chapter-num">06</span>
+                <span class="dd-nav__separator">/</span>
+                <span class="dd-nav__chapter-title">The Entrepreneur</span>
+                <span class="dd-nav__separator">—</span>
+                <span class="dd-nav__badge">Deep Dive</span>
+            </div>
+            <div class="dd-nav__arrows">
+                <a href="chapter-5.html" class="dd-nav__arrow" title="Prev: The Designer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+                <a href="chapter-7.html" class="dd-nav__arrow" title="Next: Reinvention">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="dd-hero">
+        <div class="dd-hero__bg"></div>
+        <div class="dd-hero__content">
+            <div class="dd-hero__number">06</div>
+            <h1 class="dd-hero__title">The Entrepreneur</h1>
+            <p class="dd-hero__subtitle">Two businesses, a pandemic, and a decade of building from scratch. Starting a company at 26% unemployment was either brave or crazy — probably both.</p>
+            <div class="dd-scope-toggle">
+                <button class="dd-scope-btn" data-scope="spain">Spain</button>
+                <button class="dd-scope-btn" data-scope="europe">Europe</button>
+                <button class="dd-scope-btn" data-scope="world">World</button>
+                <button class="dd-scope-btn active" data-scope="all">All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: Spain's Recovery -->
+    <section class="dd-section" id="spain-recovery">
+        <div class="dd-section__header">
+            <span class="dd-section__number">01</span>
+            <h2 class="dd-section__title">Spain's Recovery</h2>
+        </div>
+        <p class="dd-section__intro">Spain clawed back from 26% unemployment to 13% by 2022 — a remarkable recovery driven by tourism, exports, and EU funds. But the path was shattered by COVID-19, which caused Spain's worst GDP crash in history (-11.3%). Tourism arrivals collapsed from 84 million to 19 million overnight.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="5.8" data-suffix="%" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">GDP Rebound 2022</span>
+                <span class="dd-kpi-card__country">Spain</span>
+            </div>
+            <div class="dd-kpi-card" data-value="12.9" data-suffix="%" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Unemployment 2022</span>
+                <span class="dd-kpi-card__country">Down from 26% in 2013</span>
+            </div>
+            <div class="dd-kpi-card" data-value="83.7" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Peak Tourists</span>
+                <span class="dd-kpi-card__country">Spain, 2019</span>
+            </div>
+            <div class="dd-kpi-card" data-value="-11.3" data-suffix="%" data-decimals="1" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">COVID GDP Crash</span>
+                <span class="dd-kpi-card__country">Spain, 2020</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">GDP Growth (%, 2013–2022)</h3>
+                    <div class="dd-series-toggle" id="toggle-gdp">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-gdp"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Unemployment Rate (%, 2013–2022)</h3>
+                    <div class="dd-series-toggle" id="toggle-unemployment">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-unemployment"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">International Tourist Arrivals (millions)</h3>
+                    <div class="dd-series-toggle" id="toggle-tourism">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-tourism"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Entrepreneurship -->
+    <section class="dd-section" id="entrepreneurship">
+        <div class="dd-section__header">
+            <span class="dd-section__number">02</span>
+            <h2 class="dd-section__title">Entrepreneurship Landscape</h2>
+        </div>
+        <p class="dd-section__intro">Spain ranked among the EU's hardest countries to start a business — 14 bureaucratic steps, a minimum €280/month in social security costs, and a 5-year survival rate of just 38% in 2013. Yet necessity drove a wave of new entrepreneurs, and 3.3 million became self-employed.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">New Companies per Year (thousands)</h3>
+                    <div class="dd-series-toggle" id="toggle-companies">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-companies"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">5-Year Business Survival Rate (%)</h3>
+                    <div class="dd-series-toggle" id="toggle-survival">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-survival"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Self-Employed Workers (thousands)</h3>
+                    <div class="dd-series-toggle" id="toggle-selfempl">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-selfempl"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Self-Employed Monthly Costs ~2019 (EUR)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-autonomo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: COVID-19 -->
+    <section class="dd-section" id="covid-impact">
+        <div class="dd-section__header">
+            <span class="dd-section__number">03</span>
+            <h2 class="dd-section__title">The COVID-19 Impact</h2>
+        </div>
+        <p class="dd-section__intro">Spain enforced one of Europe's strictest lockdowns — 98 days of confinement. Children couldn't go outside for 42 consecutive days. The GDP plunged 11.3%, hospitality lost 50%, and 100,000+ businesses closed permanently. But Spain also achieved one of Europe's highest vaccination rates at 92%.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="98" data-suffix=" days" data-decimals="0" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Strict Lockdown</span>
+                <span class="dd-kpi-card__country">Spain, 2020</span>
+            </div>
+            <div class="dd-kpi-card" data-value="3.4" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">ERTE Furloughed</span>
+                <span class="dd-kpi-card__country">Peak Apr 2020</span>
+            </div>
+            <div class="dd-kpi-card" data-value="100" data-suffix="K+" data-decimals="0" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Businesses Closed</span>
+                <span class="dd-kpi-card__country">Permanently</span>
+            </div>
+            <div class="dd-kpi-card" data-value="92" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Vaccinated</span>
+                <span class="dd-kpi-card__country">Spain, end 2021</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">GDP Drop 2020 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-covid-gdp"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Sector Impact — Spain 2020 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-sectors"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Lockdown Strictness (days)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-lockdown"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Vaccination Rate End 2021 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-vaccination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: E-Commerce & Digital -->
+    <section class="dd-section" id="ecommerce-digital">
+        <div class="dd-section__header">
+            <span class="dd-section__number">04</span>
+            <h2 class="dd-section__title">E-Commerce & Digital Shift</h2>
+        </div>
+        <p class="dd-section__intro">E-commerce in Spain grew from €14B to €63B in a decade — and COVID accelerated it by years. The organic food market tripled. Digital transformation wasn't optional anymore: every business owner became an improvised IT manager overnight.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">E-Commerce Revenue (EUR billions)</h3>
+                    <div class="dd-series-toggle" id="toggle-ecommerce">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-ecommerce"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">E-Commerce as % of Retail</h3>
+                    <div class="dd-series-toggle" id="toggle-ecshare">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-ecshare"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Organic Food Market (EUR billions)</h3>
+                    <div class="dd-series-toggle" id="toggle-organic">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-organic"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Personal -->
+    <section class="dd-section" id="personal">
+        <div class="dd-section__header">
+            <span class="dd-section__number">05</span>
+            <h2 class="dd-section__title">Personal Connection</h2>
+        </div>
+        <p class="dd-section__intro">I co-founded Clownfish at 35 during 26% unemployment, then Koralium at 37. For nine years I ran two businesses simultaneously — the concept of 'weekends' was purely theoretical. COVID hit both businesses hard, and by September 2022, I closed the entrepreneurial chapter at 44.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="9" data-suffix=" yrs" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Clownfish</span>
+                <span class="dd-kpi-card__country">2013–2022</span>
+            </div>
+            <div class="dd-kpi-card" data-value="100" data-suffix="+" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Projects</span>
+                <span class="dd-kpi-card__country">Clownfish Agency</span>
+            </div>
+            <div class="dd-kpi-card" data-value="500" data-suffix="+" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">SKUs</span>
+                <span class="dd-kpi-card__country">Koralium Organic</span>
+            </div>
+            <div class="dd-kpi-card" data-value="2" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Businesses</span>
+                <span class="dd-kpi-card__country">Run simultaneously</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">My Business Journey vs Spain's Events</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--tall" id="chart-dd-mypath"></div>
+            </div>
+        </div>
+
+        <div class="dd-location-card">
+            <div class="dd-location-card__icon">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                    <circle cx="24" cy="24" r="4" fill="currentColor" class="dd-location-card__pulse"/>
+                </svg>
+            </div>
+            <div class="dd-location-card__info">
+                <span class="dd-location-card__name">Clownfish Studio & Koralium Organic</span>
+                <span class="dd-location-card__detail">2013–2022 &middot; Co-founder of both</span>
+                <span class="dd-location-card__note">"Starting a business in Spain during 26% unemployment was either brave or crazy — probably both."</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="dd-footer">
+        <div class="dd-footer__sources">
+            <h4>Data Sources &amp; References</h4>
+            <div class="dd-sources-grid">
+                <div class="dd-source">
+                    <span class="dd-source__section">Economy &amp; Labour</span>
+                    <ul>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" target="_blank" rel="noopener">World Bank — GDP growth</a></li>
+                        <li><a href="https://ec.europa.eu/eurostat/web/labour-market" target="_blank" rel="noopener">Eurostat — Labour Force Survey</a></li>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176918&menu=resultados&idp=1254735976595" target="_blank" rel="noopener">INE — Contabilidad Nacional</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Entrepreneurship</span>
+                    <ul>
+                        <li><a href="https://www.mites.gob.es/es/sec_trabajo/autonomos/economia-soc/autonomos/estadistica/index.htm" target="_blank" rel="noopener">Ministerio de Trabajo — Estadisticas de autonomos</a></li>
+                        <li><a href="https://ec.europa.eu/eurostat/web/structural-business-statistics" target="_blank" rel="noopener">Eurostat — Business Demography</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">COVID-19</span>
+                    <ul>
+                        <li><a href="https://www.ecdc.europa.eu/en" target="_blank" rel="noopener">ECDC — COVID-19 data</a></li>
+                        <li><a href="https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas.html" target="_blank" rel="noopener">SEPE — ERTE statistics</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">E-Commerce &amp; Digital</span>
+                    <ul>
+                        <li><a href="https://www.cnmc.es/ambitos-de-actuacion/telecomunicaciones/comercio-electronico" target="_blank" rel="noopener">CNMC — E-commerce reports</a></li>
+                        <li><a href="https://www.mapa.gob.es/es/alimentacion/temas/produccion-eco/" target="_blank" rel="noopener">MAPA — Organic food market</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dd-sources-note">Some figures are estimates or approximations based on the closest available data point. International comparisons use standardized indicators where possible. Historical data may have been revised by source institutions since original publication.</p>
+        </div>
+        <div class="dd-footer__nav">
+            <a href="../index.html#chapter-6" class="dd-footer__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <span class="dd-footer__copyright">Germinal Barrena &copy; 2026</span>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="deep-dive-core.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        var DATA = null;
+        var CC = DiveDeep.countryColors;
+        var CN = DiveDeep.countryNames;
+
+        CN['EU'] = 'EU Avg';
+        CC['EU'] = '#86868b';
+
+        fetch('../data/deep-dive-entrepreneur-2013-2022.json')
+            .then(function(r) { return r.json(); })
+            .then(function(json) {
+                DATA = json;
+                initPage();
+            })
+            .catch(function(err) {
+                console.error('Failed to load data:', err);
+                initPage();
+            });
+
+        function initPage() {
+            DiveDeep.initDiveDeep({
+                accentColor: '#ff9500',
+                accentRgb: '255,149,0'
+            });
+
+            if (DATA) {
+                initRecoveryCharts();
+                initEntrepreneurCharts();
+                initCovidCharts();
+                initEcommerceCharts();
+                initPersonalCharts();
+                initScopeUpdates();
+            }
+
+            initSeriesToggles();
+        }
+
+        // SECTION 1: Recovery
+        function initRecoveryCharts() {
+            var rec = DATA.spain_recovery;
+
+            var gdpSeries = [];
+            ['ES','FR','DE','UK','US','EU'].forEach(function(code) {
+                gdpSeries.push({ name: CN[code] || code, data: rec.gdp_growth_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-gdp', DiveDeep.getBaseChartConfig({
+                series: gdpSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 0 },
+                xaxis: { categories: rec.gdp_growth_trend.years },
+                yaxis: { min: -14, max: 9, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% GDP growth'; } } },
+                legend: { position: 'bottom' },
+                annotations: {
+                    yaxis: [{ y: 0, borderColor: 'rgba(255,255,255,0.2)', strokeDashArray: 0 }],
+                    xaxis: [{ x: 2020, borderColor: '#ff3b30', strokeDashArray: 0, label: { text: 'COVID-19', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } }]
+                }
+            }), gdpSeries);
+
+            var unempSeries = [];
+            ['ES','FR','DE','UK','US','EU'].forEach(function(code) {
+                unempSeries.push({ name: CN[code] || code, data: rec.unemployment_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-unemployment', DiveDeep.getBaseChartConfig({
+                series: unempSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 0 },
+                xaxis: { categories: rec.unemployment_trend.years },
+                yaxis: { min: 0, max: 30, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'bottom' }
+            }), unempSeries);
+
+            var tourSeries = [];
+            ['ES','FR','IT'].forEach(function(code) {
+                tourSeries.push({ name: CN[code], data: rec.tourism_arrivals.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-tourism', DiveDeep.getBaseChartConfig({
+                series: tourSeries,
+                chart: { type: 'area', height: 260 },
+                colors: ['ES','FR','IT'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: rec.tourism_arrivals.years },
+                yaxis: { labels: { formatter: function(v) { return v.toFixed(0) + 'M'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1) + ' million visitors'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 2020, borderColor: '#ff3b30', strokeDashArray: 0, label: { text: 'COVID collapse', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } }] }
+            }), tourSeries);
+        }
+
+        // SECTION 2: Entrepreneurship
+        function initEntrepreneurCharts() {
+            var ent = DATA.entrepreneurship;
+
+            var compSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                compSeries.push({ name: CN[code], data: ent.new_companies_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-companies', DiveDeep.getBaseChartConfig({
+                series: compSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: ent.new_companies_trend.years },
+                yaxis: { min: 60, max: 180, labels: { formatter: function(v) { return v + 'K'; } } },
+                tooltip: { y: { formatter: function(v) { return v + ' thousand'; } } },
+                legend: { position: 'bottom' }
+            }), compSeries);
+
+            var survSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                survSeries.push({ name: CN[code], data: ent.survival_rate_5yr.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-survival', DiveDeep.getBaseChartConfig({
+                series: survSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 4 },
+                xaxis: { categories: ent.survival_rate_5yr.years },
+                yaxis: { min: 30, max: 65, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% survival'; } } },
+                legend: { position: 'bottom' }
+            }), survSeries);
+
+            var seSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                seSeries.push({ name: CN[code], data: ent.self_employed_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-selfempl', DiveDeep.getBaseChartConfig({
+                series: seSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 4 },
+                xaxis: { categories: ent.self_employed_trend.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(1) + 'M'; } } },
+                tooltip: { y: { formatter: function(v) { return (v/1000).toFixed(1) + ' million'; } } },
+                legend: { position: 'bottom' }
+            }), seSeries);
+
+            var auto = ent.autonomo_costs_2019;
+            var autoColors = auto.countries.map(function(c) { return c === 'ES' ? '#ff9500' : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-autonomo', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Monthly EUR', data: auto.monthly_eur }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: autoColors,
+                xaxis: { categories: auto.labels, max: 480 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '11px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return '€' + v; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return '€' + v + '/month'; } } }
+            }));
+        }
+
+        // SECTION 3: COVID
+        function initCovidCharts() {
+            var cv = DATA.covid_impact;
+
+            var gdpColors = cv.gdp_drop_2020.countries.map(function(c) { return c === 'ES' ? '#ff3b30' : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-covid-gdp', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'GDP %', data: cv.gdp_drop_2020.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: gdpColors,
+                xaxis: { categories: cv.gdp_drop_2020.labels },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% GDP'; } } }
+            }));
+
+            var sec = cv.sector_impact_spain;
+            var secColors = sec.values.map(function(v) { return v < 0 ? '#ff3b30' : '#34c759'; });
+
+            DiveDeep.renderChart('#chart-dd-sectors', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Change %', data: sec.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '55%', distributed: true } },
+                colors: secColors,
+                xaxis: { categories: sec.categories },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return (v > 0 ? '+' : '') + v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return (v > 0 ? '+' : '') + v + '%'; } } }
+            }));
+
+            var lock = cv.lockdown_strictness;
+            var lockColors = lock.countries.map(function(c) { return c === 'ES' ? '#ff3b30' : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-lockdown', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Days', data: lock.days_strict }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: lockColors,
+                xaxis: { categories: lock.labels, max: 110 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '11px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + ' days'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + ' days of strict lockdown'; } } }
+            }));
+
+            var vac = cv.vaccination_rate_2021;
+            var vacColors = vac.countries.map(function(c) { return c === 'ES' ? '#34c759' : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-vaccination', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Vaccinated %', data: vac.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: vacColors,
+                xaxis: { categories: vac.labels, max: 100 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% fully vaccinated'; } } }
+            }));
+        }
+
+        // SECTION 4: E-Commerce
+        function initEcommerceCharts() {
+            var ecd = DATA.ecommerce_digital;
+
+            var ecSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                ecSeries.push({ name: CN[code], data: ecd.ecommerce_revenue.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-ecommerce', DiveDeep.getBaseChartConfig({
+                series: ecSeries,
+                chart: { type: 'area', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: ecd.ecommerce_revenue.years },
+                yaxis: { labels: { formatter: function(v) { return '€' + v + 'B'; } } },
+                tooltip: { y: { formatter: function(v) { return '€' + v + ' billion'; } } },
+                legend: { position: 'bottom' }
+            }), ecSeries);
+
+            var shareSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                shareSeries.push({ name: CN[code], data: ecd.ecommerce_share_retail.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-ecshare', DiveDeep.getBaseChartConfig({
+                series: shareSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 4 },
+                xaxis: { categories: ecd.ecommerce_share_retail.years },
+                yaxis: { min: 0, max: 32, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% of retail'; } } },
+                legend: { position: 'bottom' }
+            }), shareSeries);
+
+            var orgSeries = [];
+            ['ES','FR','DE'].forEach(function(code) {
+                orgSeries.push({ name: CN[code], data: ecd.organic_food_market.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-organic', DiveDeep.getBaseChartConfig({
+                series: orgSeries,
+                chart: { type: 'area', height: 260 },
+                colors: ['ES','FR','DE'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: ecd.organic_food_market.years },
+                yaxis: { labels: { formatter: function(v) { return '€' + v.toFixed(1) + 'B'; } } },
+                tooltip: { y: { formatter: function(v) { return '€' + v.toFixed(1) + ' billion'; } } },
+                legend: { position: 'bottom' }
+            }), orgSeries);
+        }
+
+        // SECTION 5: Personal
+        function initPersonalCharts() {
+            var p = DATA.personal.business_journey;
+
+            var annotations = p.spain_events.map(function(ev, i) {
+                return {
+                    x: p.years[i],
+                    borderColor: '#ff9500',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev,
+                        orientation: 'horizontal',
+                        position: i % 2 === 0 ? 'top' : 'bottom',
+                        style: { background: '#222', color: '#f0f0f0', fontSize: '9px', padding: { left: 4, right: 4, top: 2, bottom: 2 } }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-mypath', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'My Age', data: p.ages }],
+                chart: { type: 'area', height: 320 },
+                colors: ['#ff9500'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 6, hover: { size: 8 } },
+                xaxis: { categories: p.years, labels: { rotate: -45, style: { colors: '#f0f0f0', fontSize: '10px' } } },
+                yaxis: { min: 33, max: 46, labels: { formatter: function(v) { return 'Age ' + v; } } },
+                annotations: { xaxis: annotations },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#ff9500">' + p.years[i] + '</strong><br>' +
+                            '<span style="color:#f0f0f0;font-weight:600">' + p.levels[i] + '</span> (Age ' + p.ages[i] + ')<br>' +
+                            '<span style="color:#888;font-size:11px">' + p.spain_events[i] + '</span></div>';
+                    }
+                }
+            }));
+        }
+
+        // SERIES TOGGLES
+        function initSeriesToggles() {
+            DiveDeep.initSeriesToggle('#chart-dd-gdp', '#toggle-gdp');
+            DiveDeep.initSeriesToggle('#chart-dd-unemployment', '#toggle-unemployment');
+            DiveDeep.initSeriesToggle('#chart-dd-tourism', '#toggle-tourism');
+            DiveDeep.initSeriesToggle('#chart-dd-companies', '#toggle-companies');
+            DiveDeep.initSeriesToggle('#chart-dd-survival', '#toggle-survival');
+            DiveDeep.initSeriesToggle('#chart-dd-selfempl', '#toggle-selfempl');
+            DiveDeep.initSeriesToggle('#chart-dd-ecommerce', '#toggle-ecommerce');
+            DiveDeep.initSeriesToggle('#chart-dd-ecshare', '#toggle-ecshare');
+            DiveDeep.initSeriesToggle('#chart-dd-organic', '#toggle-organic');
+        }
+
+        // SCOPE CHANGE
+        function initScopeUpdates() {
+            DiveDeep.onScopeChange(function(scope, countries) {
+                var chartMap = {
+                    '#chart-dd-gdp': ['ES','FR','DE','UK','US','EU'],
+                    '#chart-dd-unemployment': ['ES','FR','DE','UK','US','EU'],
+                    '#chart-dd-tourism': ['ES','FR','IT'],
+                    '#chart-dd-companies': ['ES','FR','DE','UK'],
+                    '#chart-dd-survival': ['ES','FR','DE','UK'],
+                    '#chart-dd-selfempl': ['ES','FR','DE','UK'],
+                    '#chart-dd-ecommerce': ['ES','FR','DE','UK'],
+                    '#chart-dd-ecshare': ['ES','FR','DE','UK'],
+                    '#chart-dd-organic': ['ES','FR','DE']
+                };
+
+                var toggleMap = {
+                    '#chart-dd-gdp': '#toggle-gdp',
+                    '#chart-dd-unemployment': '#toggle-unemployment',
+                    '#chart-dd-tourism': '#toggle-tourism',
+                    '#chart-dd-companies': '#toggle-companies',
+                    '#chart-dd-survival': '#toggle-survival',
+                    '#chart-dd-selfempl': '#toggle-selfempl',
+                    '#chart-dd-ecommerce': '#toggle-ecommerce',
+                    '#chart-dd-ecshare': '#toggle-ecshare',
+                    '#chart-dd-organic': '#toggle-organic'
+                };
+
+                Object.keys(chartMap).forEach(function(sel) {
+                    var chart = DiveDeep.charts[sel];
+                    if (!chart) return;
+
+                    chartMap[sel].forEach(function(code) {
+                        var name = CN[code] || code;
+                        if (countries.indexOf(code) !== -1 || code === 'EU') {
+                            chart.showSeries(name);
+                        } else {
+                            chart.hideSeries(name);
+                        }
+                    });
+
+                    var toggleId = toggleMap[sel];
+                    if (toggleId) {
+                        var container = document.querySelector(toggleId);
+                        if (container) {
+                            container.querySelectorAll('.dd-series-btn').forEach(function(btn) {
+                                var seriesName = btn.dataset.series;
+                                var code = Object.keys(CN).find(function(k) { return CN[k] === seriesName; }) || seriesName;
+                                if (countries.indexOf(code) !== -1 || code === 'EU') {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>

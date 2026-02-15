@@ -1,0 +1,210 @@
+{
+    "chapter": 3,
+    "title": "Generation X",
+    "period": "1992–1997",
+
+    "youth_demographics": {
+        "youth_population_15_24": {
+            "years": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997],
+            "series": {
+                "ES": [6.50, 6.45, 6.38, 6.30, 6.22, 6.15, 6.08, 6.00],
+                "FR": [8.20, 8.15, 8.10, 8.02, 7.95, 7.88, 7.80, 7.72],
+                "DE": [9.40, 9.10, 8.80, 8.60, 8.50, 8.40, 8.35, 8.30],
+                "UK": [7.60, 7.50, 7.38, 7.25, 7.12, 7.00, 6.92, 6.85],
+                "IT": [8.10, 8.00, 7.88, 7.75, 7.60, 7.50, 7.38, 7.25]
+            },
+            "note": "Millions"
+        },
+        "youth_share_pct": {
+            "year": 1995,
+            "countries": ["ES", "FR", "DE", "UK", "IT", "US", "World"],
+            "values": [15.6, 13.6, 10.3, 12.1, 13.1, 14.2, 18.5],
+            "labels": ["Spain", "France", "Germany", "UK", "Italy", "USA", "World"]
+        },
+        "neet_rate_1995": {
+            "countries": ["ES", "FR", "DE", "UK", "IT", "EU"],
+            "values": [22, 13, 10, 15, 24, 15],
+            "labels": ["Spain", "France", "Germany", "UK", "Italy", "EU Avg"],
+            "note": "% of 15-24 Not in Education, Employment or Training"
+        }
+    },
+
+    "drug_crisis": {
+        "heroin_deaths_trend": {
+            "years": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000],
+            "series": {
+                "ES": [820, 1050, 1350, 1600, 1700, 1800, 1847, 1750, 1400, 980, 720, 580, 420],
+                "FR": [350, 390, 410, 480, 520, 530, 560, 500, 380, 280, 220, 190, 160],
+                "DE": [670, 780, 880, 1020, 1100, 1200, 1180, 1150, 1050, 920, 810, 750, 700],
+                "UK": [480, 520, 580, 650, 720, 780, 810, 830, 850, 860, 870, 880, 900],
+                "IT": [820, 940, 1080, 1200, 1230, 1250, 1180, 1050, 920, 780, 650, 560, 480]
+            }
+        },
+        "substance_use_youth_1995": {
+            "categories": ["Alcohol\n(last month)", "Cannabis\n(last year)", "Cocaine\n(last year)", "Heroin\n(ever tried)", "Tobacco\n(daily)"],
+            "series": {
+                "ES": [63, 22, 2.5, 0.5, 28],
+                "FR": [55, 18, 1.2, 0.3, 32],
+                "DE": [58, 15, 1.5, 0.4, 30],
+                "UK": [60, 25, 2.0, 0.6, 26],
+                "IT": [52, 20, 1.8, 0.8, 24],
+                "US": [52, 28, 3.0, 0.8, 22]
+            },
+            "note": "% of 15-24 population, approximate 1995 figures"
+        },
+        "alcohol_trend": {
+            "years": [1992, 1993, 1994, 1995, 1996, 1997],
+            "series": {
+                "male": [58, 60, 62, 63, 65, 67],
+                "female": [46, 48, 49, 50, 52, 54]
+            }
+        },
+        "cannabis_trend": {
+            "years": [1992, 1993, 1994, 1995, 1996, 1997],
+            "series": {
+                "male": [16, 18, 20, 22, 25, 28],
+                "female": [8, 10, 12, 14, 16, 17]
+            }
+        }
+    },
+
+    "hiv_aids": {
+        "new_aids_cases_trend": {
+            "years": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000],
+            "series": {
+                "ES": [3200, 4500, 5800, 6800, 7254, 7330, 7053, 6492, 5542, 4455, 3200, 2500, 2100],
+                "FR": [2800, 3200, 3600, 4000, 4200, 4100, 3800, 3500, 2800, 2200, 1800, 1500, 1300],
+                "DE": [1200, 1400, 1500, 1600, 1650, 1600, 1500, 1400, 1200, 1000, 900, 850, 800],
+                "UK": [1400, 1600, 1800, 2000, 2100, 2150, 2100, 2000, 1800, 1600, 1500, 1400, 1350],
+                "IT": [2600, 3100, 3700, 4200, 4500, 4600, 4300, 4000, 3400, 2800, 2300, 1900, 1600]
+            }
+        },
+        "aids_deaths_by_sex": {
+            "years": [1992, 1993, 1994, 1995, 1996, 1997],
+            "male": [3190, 3856, 4294, 4806, 4134, 2294],
+            "female": [562, 680, 758, 848, 729, 405]
+        },
+        "transmission_routes_1995": {
+            "categories": ["Injecting\nDrug Use", "Heterosexual", "Homosexual", "Other"],
+            "series": {
+                "ES": [56, 22, 14, 8],
+                "FR": [24, 30, 36, 10],
+                "DE": [12, 18, 58, 12],
+                "UK": [8, 22, 56, 14],
+                "IT": [62, 20, 12, 6]
+            },
+            "note": "% of cumulative AIDS cases by transmission route, ~1995"
+        },
+        "aids_rate_per_million_1995": {
+            "countries": ["ES", "FR", "IT", "UK", "DE", "US", "EU"],
+            "values": [166, 60, 70, 36, 19, 102, 45],
+            "labels": ["Spain", "France", "Italy", "UK", "Germany", "USA", "EU Avg"],
+            "note": "Cumulative AIDS cases per million population, ~1995"
+        }
+    },
+
+    "youth_employment": {
+        "youth_unemployment_trend": {
+            "years": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997],
+            "series": {
+                "ES": [30, 31, 34, 40, 42, 39, 38, 35],
+                "FR": [20, 21, 23, 25, 27, 26, 26, 25],
+                "DE": [5, 5, 6, 8, 9, 9, 10, 11],
+                "UK": [10, 14, 16, 18, 17, 16, 15, 14],
+                "IT": [28, 28, 30, 32, 33, 33, 32, 31],
+                "US": [11, 13, 14, 14, 13, 12, 12, 11],
+                "EU": [16, 17, 19, 22, 23, 22, 22, 21]
+            },
+            "note": "Unemployment rate for 15-24 age group (%)"
+        },
+        "gdp_growth": {
+            "years": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997],
+            "series": {
+                "ES": [3.8, 2.5, 0.9, -1.0, 2.4, 2.8, 2.4, 3.9],
+                "FR": [2.6, 1.0, 1.5, -0.7, 2.2, 2.1, 1.1, 2.2],
+                "DE": [5.3, 5.1, 1.5, -1.0, 2.5, 1.7, 0.8, 1.8],
+                "UK": [0.7, -1.4, 0.1, 2.5, 4.3, 2.9, 2.7, 3.3],
+                "EU": [3.0, 1.6, 1.0, -0.4, 2.7, 2.4, 1.7, 2.6]
+            },
+            "note": "Annual GDP growth (%)"
+        },
+        "minimum_wage_1997": {
+            "countries": ["ES", "FR", "UK", "US"],
+            "values_monthly_eur": [390, 980, 850, 720],
+            "labels": ["Spain\n66K ptas", "France\n6,665 FF", "UK\n£3.60/hr", "USA\n$5.15/hr"],
+            "note": "Approximate EUR equivalent, 1997"
+        }
+    },
+
+    "mortality": {
+        "youth_mortality_rate": {
+            "years": [1990, 1992, 1994, 1996],
+            "series": {
+                "ES_male": [130, 120, 112, 98],
+                "ES_female": [38, 34, 32, 28],
+                "FR_male": [105, 100, 95, 88],
+                "FR_female": [32, 30, 28, 26],
+                "DE_male": [78, 72, 68, 62],
+                "DE_female": [28, 26, 24, 22],
+                "UK_male": [82, 78, 74, 70],
+                "UK_female": [28, 26, 25, 24]
+            },
+            "note": "Deaths per 100K, age 15-24"
+        },
+        "causes_of_death_1995": {
+            "categories": ["Traffic\nAccidents", "Drug\nOverdose", "AIDS", "Suicide", "Other"],
+            "series": {
+                "ES": [39, 14, 16, 9, 22],
+                "FR": [42, 5, 4, 16, 33],
+                "DE": [38, 6, 2, 18, 36],
+                "UK": [35, 8, 2, 14, 41]
+            },
+            "note": "% of youth deaths (15-24), approximate 1995"
+        },
+        "traffic_deaths_trend": {
+            "years": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997],
+            "series": {
+                "ES": [2150, 2050, 1950, 1870, 1850, 1800, 1720, 1650],
+                "FR": [2300, 2200, 2100, 1980, 1900, 1850, 1780, 1700],
+                "DE": [2100, 2000, 1850, 1700, 1600, 1520, 1450, 1380],
+                "UK": [1200, 1100, 1050, 1000, 950, 920, 890, 860]
+            },
+            "note": "Traffic deaths in 15-29 age group"
+        }
+    },
+
+    "personal": {
+        "bup_cou_journey": {
+            "years": ["1992-93", "1993-94", "1994-95", "1995-96", "1996-97"],
+            "levels": ["1st BUP", "2nd BUP", "3rd BUP", "COU", "COU (repeated)"],
+            "ages": [14, 15, 16, 17, 18],
+            "spain_events": [
+                "Barcelona Olympics & Expo",
+                "Recession, 40% youth unemployment",
+                "Windows 95, first mobiles",
+                "Antiretrovirals arrive",
+                "PP wins elections"
+            ]
+        },
+        "generation_stats": {
+            "born_1975_1982_spain": 5200000,
+            "label": "Generation X Spain",
+            "military_service_abolished": 2001,
+            "first_internet_access_pct_1997": 2,
+            "avg_emancipation_age_1997": 29
+        }
+    },
+
+    "sources": [
+        "Plan Nacional sobre Drogas — Encuesta Domiciliaria (EDADES), Ministerio de Sanidad",
+        "Centro Nacional de Epidemiologia — Vigilancia Epidemiologica del SIDA en Espana (annual reports)",
+        "EMCDDA — European Monitoring Centre for Drugs and Drug Addiction",
+        "Eurostat — Labour Force Survey (youth unemployment)",
+        "INE — Defunciones segun causa de muerte (mortality by cause)",
+        "DGT — Direccion General de Trafico (traffic mortality)",
+        "OECD — Labour Force Statistics",
+        "World Bank — GDP growth, population data",
+        "UNAIDS — Global AIDS reports",
+        "WHO — European Health for All Database"
+    ]
+}

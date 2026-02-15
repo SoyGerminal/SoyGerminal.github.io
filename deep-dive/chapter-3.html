@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: Generation X (1992–1997) — Germinal Barrena</title>
+
+    <meta name="description" content="Interactive infographic: Spain's Generation X — the heroin crisis, AIDS epidemic, record youth unemployment, and surviving the 90s. International comparisons.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="deep-dive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dd-page">
+
+    <!-- ============================================================ -->
+    <!-- NAV -->
+    <!-- ============================================================ -->
+    <nav class="dd-nav">
+        <div class="dd-nav__inner">
+            <a href="../index.html#chapter-3" class="dd-nav__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <div class="dd-nav__breadcrumb">
+                <span class="dd-nav__chapter-num">03</span>
+                <span class="dd-nav__separator">/</span>
+                <span class="dd-nav__chapter-title">Generation X</span>
+                <span class="dd-nav__separator">—</span>
+                <span class="dd-nav__badge">Deep Dive</span>
+            </div>
+            <div class="dd-nav__arrows">
+                <a href="chapter-2.html" class="dd-nav__arrow" title="Prev: The Classroom Years">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+                <a href="chapter-4.html" class="dd-nav__arrow" title="Next: Finding Direction">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <header class="dd-hero">
+        <div class="dd-hero__bg"></div>
+        <div class="dd-hero__content">
+            <div class="dd-hero__number">03</div>
+            <h1 class="dd-hero__title">Generation X</h1>
+            <p class="dd-hero__subtitle">AIDS, heroin, 42% youth unemployment. Spain's darkest modern chapter — and we survived it.</p>
+            <div class="dd-scope-toggle">
+                <button class="dd-scope-btn" data-scope="spain">Spain</button>
+                <button class="dd-scope-btn" data-scope="europe">Europe</button>
+                <button class="dd-scope-btn" data-scope="world">World</button>
+                <button class="dd-scope-btn active" data-scope="all">All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: Youth Demographics -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="youth-demographics">
+        <div class="dd-section__header">
+            <span class="dd-section__number">01</span>
+            <h2 class="dd-section__title">Youth Demographics</h2>
+        </div>
+        <p class="dd-section__intro">Spain's youth population (15–24) was shrinking — from 6.5 million in 1990 to 6 million by 1997. But their share of the population remained high, and nearly 1 in 4 young Spaniards were NEET — not in education, employment or training.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="6.2" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Youth 15–24</span>
+                <span class="dd-kpi-card__country">Spain ~1995</span>
+            </div>
+            <div class="dd-kpi-card" data-value="15.6" data-suffix="%" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Youth Share</span>
+                <span class="dd-kpi-card__country">of total pop.</span>
+            </div>
+            <div class="dd-kpi-card" data-value="22" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">NEET Rate</span>
+                <span class="dd-kpi-card__country">Spain 1995</span>
+            </div>
+            <div class="dd-kpi-card" data-value="5.2" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Gen X Spain</span>
+                <span class="dd-kpi-card__country">Born 1975–1982</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Youth Population 15–24 (millions, 1990–1997)</h3>
+                    <div class="dd-series-toggle" id="toggle-youth-pop">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-youth-pop"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">NEET Rate 1995 (% of 15–24)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-neet"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: Drug Crisis -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="drug-crisis">
+        <div class="dd-section__header">
+            <span class="dd-section__number">02</span>
+            <h2 class="dd-section__title">The Drug Crisis</h2>
+        </div>
+        <p class="dd-section__intro">The heroin epidemic devastated a generation. Spain peaked at nearly 1,850 heroin deaths per year in 1994 — among the worst rates in Europe. Meanwhile, alcohol and cannabis use among youth climbed steadily throughout the decade.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="1847" data-suffix="" data-decimals="0" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Heroin Deaths/yr</span>
+                <span class="dd-kpi-card__country">Spain peak, 1994</span>
+            </div>
+            <div class="dd-kpi-card" data-value="63" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Youth Alcohol Use</span>
+                <span class="dd-kpi-card__country">Last month, 1995</span>
+            </div>
+            <div class="dd-kpi-card" data-value="22" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Cannabis Use</span>
+                <span class="dd-kpi-card__country">Last year, 1995</span>
+            </div>
+            <div class="dd-kpi-card" data-value="2.5" data-suffix="%" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Cocaine Use</span>
+                <span class="dd-kpi-card__country">Last year, 1995</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Heroin Deaths Trend (1988–2000)</h3>
+                    <div class="dd-series-toggle" id="toggle-heroin">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-heroin"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Substance Use Among Youth 1995 (%)</h3>
+                    <div class="dd-series-toggle" id="toggle-substance">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-substance"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Alcohol Use by Sex — Spain Youth (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-alcohol"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Cannabis Use by Sex — Spain Youth (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-cannabis"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: HIV/AIDS -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="hiv-aids">
+        <div class="dd-section__header">
+            <span class="dd-section__number">03</span>
+            <h2 class="dd-section__title">The AIDS Epidemic</h2>
+        </div>
+        <p class="dd-section__intro">Spain held the highest AIDS rate in Western Europe — 166 cumulative cases per million by 1995, nearly 4 times the EU average. Uniquely, 56% of Spanish AIDS cases were linked to injecting drug use, far higher than any other Western European country.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="7330" data-suffix="" data-decimals="0" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Peak AIDS Cases/yr</span>
+                <span class="dd-kpi-card__country">Spain, 1993</span>
+            </div>
+            <div class="dd-kpi-card" data-value="5654" data-suffix="" data-decimals="0" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">AIDS Deaths</span>
+                <span class="dd-kpi-card__country">Spain, 1995 (peak)</span>
+            </div>
+            <div class="dd-kpi-card" data-value="56" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">From Drug Injection</span>
+                <span class="dd-kpi-card__country">Spain transmission</span>
+            </div>
+            <div class="dd-kpi-card" data-value="166" data-suffix="" data-decimals="0" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Cases per Million</span>
+                <span class="dd-kpi-card__country">EU avg: 45</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">New AIDS Cases per Year (1988–2000)</h3>
+                    <div class="dd-series-toggle" id="toggle-aids">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-aids-cases"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">AIDS Rate per Million (1995)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-aids-rate"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Transmission Routes by Country (1995)</h3>
+                    <div class="dd-series-toggle" id="toggle-transmission">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-transmission"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Spain AIDS Deaths by Sex (1992–1997)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-aids-deaths"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: Youth Employment -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="youth-employment">
+        <div class="dd-section__header">
+            <span class="dd-section__number">04</span>
+            <h2 class="dd-section__title">Youth Employment</h2>
+        </div>
+        <p class="dd-section__intro">The 1993 recession pushed Spain's youth unemployment to a staggering 42% — more than double the EU average and four times Germany's rate. Economic recovery came slowly, and a generation learned that jobs were not guaranteed.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Youth Unemployment 15–24 (%, 1990–1997)</h3>
+                    <div class="dd-series-toggle" id="toggle-unemployment">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-unemployment"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">GDP Growth (%, 1990–1997)</h3>
+                    <div class="dd-series-toggle" id="toggle-gdp">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-gdp"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: Mortality -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="mortality">
+        <div class="dd-section__header">
+            <span class="dd-section__number">05</span>
+            <h2 class="dd-section__title">Youth Mortality</h2>
+        </div>
+        <p class="dd-section__intro">Young Spanish men died at 3.5 times the rate of young women — the widest gender gap in Western Europe. Traffic accidents were the leading cause, followed by AIDS and drug overdose. Spain's unique combination of road deaths and the heroin/AIDS crisis made it the deadliest country for young people in the EU.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Causes of Youth Death 1995 (%)</h3>
+                    <div class="dd-series-toggle" id="toggle-causes">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-causes"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Traffic Deaths 15–29 (1990–1997)</h3>
+                    <div class="dd-series-toggle" id="toggle-traffic">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-traffic"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Youth Mortality by Sex — Spain vs Europe (per 100K, 15–24)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-mortality-sex"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: Personal -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="personal">
+        <div class="dd-section__header">
+            <span class="dd-section__number">06</span>
+            <h2 class="dd-section__title">Personal Connection</h2>
+        </div>
+        <p class="dd-section__intro">I navigated BUP and COU from 1992 to 1997 — the entire arc of this crisis. I repeated COU and emerged at 18 into a world where nearly half my peers couldn't find work. These are the numbers that shaped my generation.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="5" data-suffix=" yrs" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">BUP + COU</span>
+                <span class="dd-kpi-card__country">inc. repeated year</span>
+            </div>
+            <div class="dd-kpi-card" data-value="29" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Avg Emancipation Age</span>
+                <span class="dd-kpi-card__country">Spain, 1997</span>
+            </div>
+            <div class="dd-kpi-card" data-value="2" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Internet Access</span>
+                <span class="dd-kpi-card__country">Spain, 1997</span>
+            </div>
+            <div class="dd-kpi-card" data-value="2001" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Military Abolished</span>
+                <span class="dd-kpi-card__country">Still mandatory in 1997</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">My BUP/COU Path vs Spain's Events</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--tall" id="chart-dd-mypath"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="dd-footer">
+        <div class="dd-footer__sources">
+            <h4>Data Sources &amp; References</h4>
+            <div class="dd-sources-grid">
+                <div class="dd-source">
+                    <span class="dd-source__section">Drug Crisis</span>
+                    <ul>
+                        <li><a href="https://pnsd.sanidad.gob.es/" target="_blank" rel="noopener">Plan Nacional sobre Drogas — EDADES survey</a> (substance use prevalence)</li>
+                        <li><a href="https://www.emcdda.europa.eu/" target="_blank" rel="noopener">EMCDDA — European Monitoring Centre for Drugs and Drug Addiction</a> (heroin deaths, international comparisons)</li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">HIV/AIDS</span>
+                    <ul>
+                        <li><a href="https://www.isciii.es/QueHacemos/Servicios/VigilanciaSaludPublicaRENAVE/EnfermedadesTransmisibles/Paginas/VIH-y-SIDA.aspx" target="_blank" rel="noopener">Centro Nacional de Epidemiologia — Vigilancia del SIDA en Espana</a></li>
+                        <li><a href="https://www.unaids.org/en/resources/documents" target="_blank" rel="noopener">UNAIDS — Global AIDS reports</a></li>
+                        <li><a href="https://gateway.euro.who.int/en/hfa-explorer/" target="_blank" rel="noopener">WHO — European Health for All Database</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Employment</span>
+                    <ul>
+                        <li><a href="https://ec.europa.eu/eurostat/web/labour-market" target="_blank" rel="noopener">Eurostat — Labour Force Survey</a> (youth unemployment)</li>
+                        <li><a href="https://stats.oecd.org/" target="_blank" rel="noopener">OECD — Labour Force Statistics</a></li>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" target="_blank" rel="noopener">World Bank — GDP growth</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Mortality</span>
+                    <ul>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176780&menu=resultados&idp=1254735573175" target="_blank" rel="noopener">INE — Defunciones segun causa de muerte</a></li>
+                        <li><a href="https://www.dgt.es/menusecundario/dgt-en-cifras/" target="_blank" rel="noopener">DGT — Direccion General de Trafico</a> (road fatalities)</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dd-sources-note">Some figures are estimates or approximations based on the closest available data point. International comparisons use standardized indicators where possible. Historical data may have been revised by source institutions since original publication.</p>
+        </div>
+        <div class="dd-footer__nav">
+            <a href="../index.html#chapter-3" class="dd-footer__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <span class="dd-footer__copyright">Germinal Barrena &copy; 2026</span>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================================ -->
+    <script src="deep-dive-core.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        var DATA = null;
+        var CC = DiveDeep.countryColors;
+        var CN = DiveDeep.countryNames;
+
+        CN['EU'] = 'EU Avg';
+        CC['EU'] = '#86868b';
+
+        fetch('../data/deep-dive-adolescence-1992-1997.json')
+            .then(function(r) { return r.json(); })
+            .then(function(json) {
+                DATA = json;
+                initPage();
+            })
+            .catch(function(err) {
+                console.error('Failed to load data:', err);
+                initPage();
+            });
+
+        function initPage() {
+            DiveDeep.initDiveDeep({
+                accentColor: '#ff3b30',
+                accentRgb: '255,59,48'
+            });
+
+            if (DATA) {
+                initYouthCharts();
+                initDrugCharts();
+                initAidsCharts();
+                initEmploymentCharts();
+                initMortalityCharts();
+                initPersonalCharts();
+                initScopeUpdates();
+            }
+
+            initSeriesToggles();
+        }
+
+        // ============================================================
+        // SECTION 1: Youth Demographics
+        // ============================================================
+        function initYouthCharts() {
+            var yd = DATA.youth_demographics;
+
+            // Youth population trend
+            var ypSeries = [];
+            ['ES','FR','DE','UK','IT'].forEach(function(code) {
+                ypSeries.push({
+                    name: CN[code],
+                    data: yd.youth_population_15_24.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-youth-pop', DiveDeep.getBaseChartConfig({
+                series: ypSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','IT'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: yd.youth_population_15_24.years },
+                yaxis: { min: 5, max: 10, labels: { formatter: function(v) { return v.toFixed(1) + 'M'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(2) + ' million'; } } },
+                legend: { position: 'bottom' }
+            }), ypSeries);
+
+            // NEET rate
+            var neet = yd.neet_rate_1995;
+            var neetColors = neet.countries.map(function(c) { return c === 'ES' ? CC.ES : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-neet', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'NEET Rate', data: neet.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: neetColors,
+                xaxis: { categories: neet.labels, max: 30 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% NEET'; } } }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 2: Drug Crisis
+        // ============================================================
+        function initDrugCharts() {
+            var dc = DATA.drug_crisis;
+
+            // Heroin deaths trend
+            var heroinSeries = [];
+            ['ES','FR','DE','UK','IT'].forEach(function(code) {
+                heroinSeries.push({
+                    name: CN[code],
+                    data: dc.heroin_deaths_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-heroin', DiveDeep.getBaseChartConfig({
+                series: heroinSeries,
+                chart: { type: 'area', height: 280 },
+                colors: ['ES','FR','DE','UK','IT'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: dc.heroin_deaths_trend.years },
+                yaxis: { labels: { formatter: function(v) { return v >= 1000 ? (v/1000).toFixed(1) + 'K' : v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString() + ' deaths'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1994, borderColor: '#ff3b30', strokeDashArray: 4, label: { text: 'Spain peak', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } }] }
+            }), heroinSeries);
+
+            // Substance use grouped bar
+            var sub = dc.substance_use_youth_1995;
+            var subSeries = [];
+            ['ES','FR','DE','UK','US'].forEach(function(code) {
+                subSeries.push({
+                    name: CN[code],
+                    data: sub.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-substance', DiveDeep.getBaseChartConfig({
+                series: subSeries,
+                chart: { type: 'bar', height: 280 },
+                colors: ['ES','FR','DE','UK','US'].map(function(c) { return CC[c]; }),
+                plotOptions: { bar: { horizontal: false, columnWidth: '70%', borderRadius: 3 } },
+                xaxis: { categories: sub.categories },
+                yaxis: { max: 70, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v + '% of youth'; } } }
+            }), subSeries);
+
+            // Alcohol by sex
+            var alc = dc.alcohol_trend;
+            DiveDeep.renderChart('#chart-dd-alcohol', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Male', data: alc.series.male },
+                    { name: 'Female', data: alc.series.female }
+                ],
+                chart: { type: 'line', height: 220 },
+                colors: ['#0071e3', '#ff6b6b'],
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 4 },
+                xaxis: { categories: alc.years },
+                yaxis: { min: 40, max: 70, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v + '%'; } } }
+            }));
+
+            // Cannabis by sex
+            var can = dc.cannabis_trend;
+            DiveDeep.renderChart('#chart-dd-cannabis', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Male', data: can.series.male },
+                    { name: 'Female', data: can.series.female }
+                ],
+                chart: { type: 'area', height: 220 },
+                colors: ['#0071e3', '#ff6b6b'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: can.years },
+                yaxis: { min: 5, max: 32, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v + '%'; } } }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 3: HIV/AIDS
+        // ============================================================
+        function initAidsCharts() {
+            var hiv = DATA.hiv_aids;
+
+            // AIDS cases trend
+            var aidsSeries = [];
+            ['ES','FR','DE','UK','IT'].forEach(function(code) {
+                aidsSeries.push({
+                    name: CN[code],
+                    data: hiv.new_aids_cases_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-aids-cases', DiveDeep.getBaseChartConfig({
+                series: aidsSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','IT'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: hiv.new_aids_cases_trend.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(1) + 'K'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString() + ' cases'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1996, borderColor: '#34c759', strokeDashArray: 0, label: { text: 'Antiretrovirals', style: { background: '#34c759', color: '#fff', fontSize: '9px' } } }] }
+            }), aidsSeries);
+
+            // AIDS rate per million
+            var rate = hiv.aids_rate_per_million_1995;
+            var rateColors = rate.countries.map(function(c) { return c === 'ES' ? '#ff3b30' : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-aids-rate', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Cases per million', data: rate.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: rateColors,
+                xaxis: { categories: rate.labels },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + ' per million population'; } } }
+            }));
+
+            // Transmission routes grouped bar
+            var trans = hiv.transmission_routes_1995;
+            var transSeries = [];
+            ['ES','FR','DE','UK','IT'].forEach(function(code) {
+                transSeries.push({
+                    name: CN[code],
+                    data: trans.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-transmission', DiveDeep.getBaseChartConfig({
+                series: transSeries,
+                chart: { type: 'bar', height: 280 },
+                colors: ['ES','FR','DE','UK','IT'].map(function(c) { return CC[c]; }),
+                plotOptions: { bar: { horizontal: false, columnWidth: '70%', borderRadius: 3 } },
+                xaxis: { categories: trans.categories },
+                yaxis: { max: 70, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v + '% of cases'; } } }
+            }), transSeries);
+
+            // AIDS deaths by sex
+            var deaths = hiv.aids_deaths_by_sex;
+            DiveDeep.renderChart('#chart-dd-aids-deaths', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Male', data: deaths.male },
+                    { name: 'Female', data: deaths.female }
+                ],
+                chart: { type: 'area', height: 280, stacked: true },
+                colors: ['#0071e3', '#ff6b6b'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.6, opacityTo: 0.2 } },
+                stroke: { curve: 'smooth', width: 2 },
+                xaxis: { categories: deaths.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(1) + 'K'; } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString() + ' deaths'; } } }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 4: Youth Employment
+        // ============================================================
+        function initEmploymentCharts() {
+            var emp = DATA.youth_employment;
+
+            // Youth unemployment
+            var unempSeries = [];
+            ['ES','FR','DE','UK','IT','US','EU'].forEach(function(code) {
+                unempSeries.push({
+                    name: CN[code] || code,
+                    data: emp.youth_unemployment_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-unemployment', DiveDeep.getBaseChartConfig({
+                series: unempSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','IT','US','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: emp.youth_unemployment_trend.years },
+                yaxis: { min: 0, max: 48, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% unemployment'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1993, borderColor: '#ff9500', strokeDashArray: 4, label: { text: 'Recession', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } }] }
+            }), unempSeries);
+
+            // GDP growth
+            var gdpSeries = [];
+            ['ES','FR','DE','UK','EU'].forEach(function(code) {
+                gdpSeries.push({
+                    name: CN[code] || code,
+                    data: emp.gdp_growth.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-gdp', DiveDeep.getBaseChartConfig({
+                series: gdpSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: emp.gdp_growth.years },
+                yaxis: { min: -2, max: 6, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% GDP growth'; } } },
+                legend: { position: 'bottom' },
+                annotations: {
+                    yaxis: [{ y: 0, borderColor: 'rgba(255,255,255,0.2)', strokeDashArray: 0 }],
+                    xaxis: [{ x: 1993, borderColor: '#ff3b30', strokeDashArray: 4, label: { text: 'Recession', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } }]
+                }
+            }), gdpSeries);
+        }
+
+        // ============================================================
+        // SECTION 5: Mortality
+        // ============================================================
+        function initMortalityCharts() {
+            var mort = DATA.mortality;
+
+            // Causes of death grouped bar
+            var causesSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                causesSeries.push({
+                    name: CN[code],
+                    data: mort.causes_of_death_1995.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-causes', DiveDeep.getBaseChartConfig({
+                series: causesSeries,
+                chart: { type: 'bar', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                plotOptions: { bar: { horizontal: false, columnWidth: '65%', borderRadius: 3 } },
+                xaxis: { categories: mort.causes_of_death_1995.categories },
+                yaxis: { max: 50, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v + '% of youth deaths'; } } }
+            }), causesSeries);
+
+            // Traffic deaths trend
+            var trafficSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                trafficSeries.push({
+                    name: CN[code],
+                    data: mort.traffic_deaths_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-traffic', DiveDeep.getBaseChartConfig({
+                series: trafficSeries,
+                chart: { type: 'area', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: mort.traffic_deaths_trend.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(1) + 'K'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString() + ' deaths'; } } },
+                legend: { position: 'bottom' }
+            }), trafficSeries);
+
+            // Mortality by sex — multi-series
+            var ms = mort.youth_mortality_rate;
+            DiveDeep.renderChart('#chart-dd-mortality-sex', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Spain Male', data: ms.series.ES_male },
+                    { name: 'Spain Female', data: ms.series.ES_female },
+                    { name: 'France Male', data: ms.series.FR_male },
+                    { name: 'France Female', data: ms.series.FR_female },
+                    { name: 'Germany Male', data: ms.series.DE_male },
+                    { name: 'Germany Female', data: ms.series.DE_female },
+                    { name: 'UK Male', data: ms.series.UK_male },
+                    { name: 'UK Female', data: ms.series.UK_female }
+                ],
+                chart: { type: 'line', height: 280 },
+                colors: [CC.ES, CC.ES, CC.FR, CC.FR, CC.DE, CC.DE, CC.UK, CC.UK],
+                stroke: {
+                    curve: 'smooth',
+                    width: [3, 1.5, 3, 1.5, 3, 1.5, 3, 1.5],
+                    dashArray: [0, 5, 0, 5, 0, 5, 0, 5]
+                },
+                markers: { size: 0 },
+                xaxis: { categories: ms.years },
+                yaxis: { min: 15, max: 140, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return v + ' per 100K'; } } },
+                legend: { position: 'bottom' }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 6: Personal
+        // ============================================================
+        function initPersonalCharts() {
+            var p = DATA.personal.bup_cou_journey;
+
+            var annotations = p.spain_events.map(function(ev, i) {
+                return {
+                    x: p.years[i],
+                    borderColor: '#ff3b30',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev,
+                        orientation: 'horizontal',
+                        position: i % 2 === 0 ? 'top' : 'bottom',
+                        style: {
+                            background: '#222',
+                            color: '#f0f0f0',
+                            fontSize: '9px',
+                            padding: { left: 4, right: 4, top: 2, bottom: 2 }
+                        }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-mypath', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'My Age', data: p.ages }],
+                chart: { type: 'area', height: 320 },
+                colors: ['#ff3b30'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 6, hover: { size: 8 } },
+                xaxis: { categories: p.years, labels: { rotate: -45, style: { colors: '#f0f0f0', fontSize: '10px' } } },
+                yaxis: { min: 12, max: 20, labels: { formatter: function(v) { return 'Age ' + v; } } },
+                annotations: { xaxis: annotations },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        var isRepeated = p.levels[i].indexOf('repeated') !== -1;
+                        var badge = isRepeated ? ' <span style="color:#ff9500;font-size:10px">(Repeated)</span>' : '';
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#ff3b30">' + p.years[i] + '</strong><br>' +
+                            '<span style="color:#f0f0f0;font-weight:600">' + p.levels[i] + '</span>' + badge + ' (Age ' + p.ages[i] + ')<br>' +
+                            '<span style="color:#888;font-size:11px">' + p.spain_events[i] + '</span></div>';
+                    }
+                }
+            }));
+        }
+
+        // ============================================================
+        // SERIES TOGGLES
+        // ============================================================
+        function initSeriesToggles() {
+            DiveDeep.initSeriesToggle('#chart-dd-youth-pop', '#toggle-youth-pop');
+            DiveDeep.initSeriesToggle('#chart-dd-heroin', '#toggle-heroin');
+            DiveDeep.initSeriesToggle('#chart-dd-substance', '#toggle-substance');
+            DiveDeep.initSeriesToggle('#chart-dd-aids-cases', '#toggle-aids');
+            DiveDeep.initSeriesToggle('#chart-dd-transmission', '#toggle-transmission');
+            DiveDeep.initSeriesToggle('#chart-dd-unemployment', '#toggle-unemployment');
+            DiveDeep.initSeriesToggle('#chart-dd-gdp', '#toggle-gdp');
+            DiveDeep.initSeriesToggle('#chart-dd-causes', '#toggle-causes');
+            DiveDeep.initSeriesToggle('#chart-dd-traffic', '#toggle-traffic');
+        }
+
+        // ============================================================
+        // SCOPE CHANGE HANDLER
+        // ============================================================
+        function initScopeUpdates() {
+            DiveDeep.onScopeChange(function(scope, countries) {
+                var chartMap = {
+                    '#chart-dd-youth-pop': ['ES','FR','DE','UK','IT'],
+                    '#chart-dd-heroin': ['ES','FR','DE','UK','IT'],
+                    '#chart-dd-substance': ['ES','FR','DE','UK','US'],
+                    '#chart-dd-aids-cases': ['ES','FR','DE','UK','IT'],
+                    '#chart-dd-transmission': ['ES','FR','DE','UK','IT'],
+                    '#chart-dd-unemployment': ['ES','FR','DE','UK','IT','US','EU'],
+                    '#chart-dd-gdp': ['ES','FR','DE','UK','EU'],
+                    '#chart-dd-causes': ['ES','FR','DE','UK'],
+                    '#chart-dd-traffic': ['ES','FR','DE','UK']
+                };
+
+                var toggleMap = {
+                    '#chart-dd-youth-pop': '#toggle-youth-pop',
+                    '#chart-dd-heroin': '#toggle-heroin',
+                    '#chart-dd-substance': '#toggle-substance',
+                    '#chart-dd-aids-cases': '#toggle-aids',
+                    '#chart-dd-transmission': '#toggle-transmission',
+                    '#chart-dd-unemployment': '#toggle-unemployment',
+                    '#chart-dd-gdp': '#toggle-gdp',
+                    '#chart-dd-causes': '#toggle-causes',
+                    '#chart-dd-traffic': '#toggle-traffic'
+                };
+
+                Object.keys(chartMap).forEach(function(sel) {
+                    var chart = DiveDeep.charts[sel];
+                    if (!chart) return;
+
+                    chartMap[sel].forEach(function(code) {
+                        var name = CN[code] || code;
+                        if (countries.indexOf(code) !== -1 || code === 'EU') {
+                            chart.showSeries(name);
+                        } else {
+                            chart.hideSeries(name);
+                        }
+                    });
+
+                    var toggleId = toggleMap[sel];
+                    if (toggleId) {
+                        var container = document.querySelector(toggleId);
+                        if (container) {
+                            container.querySelectorAll('.dd-series-btn').forEach(function(btn) {
+                                var seriesName = btn.dataset.series;
+                                var code = Object.keys(CN).find(function(k) { return CN[k] === seriesName; }) || seriesName;
+                                if (countries.indexOf(code) !== -1 || code === 'EU') {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>

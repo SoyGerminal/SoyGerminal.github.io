@@ -1,0 +1,145 @@
+{
+    "chapter": 7,
+    "title": "Reinvention",
+    "period": "2023–Present",
+
+    "ai_revolution": {
+        "ai_investment_trend": {
+            "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "series": {
+                "US": [12, 18, 25, 42, 60, 90, 120, 165],
+                "China": [5, 8, 10, 15, 20, 28, 38, 52],
+                "EU": [3, 4, 5, 8, 12, 18, 25, 35],
+                "UK": [2, 3, 4, 6, 8, 12, 17, 24],
+                "World": [25, 38, 50, 80, 110, 160, 215, 290]
+            },
+            "note": "AI investment (USD billions)"
+        },
+        "ai_adoption_rate": {
+            "year": 2024,
+            "countries": ["US", "UK", "DE", "FR", "ES", "JP", "World"],
+            "values": [72, 60, 55, 50, 38, 42, 45],
+            "labels": ["USA", "UK", "Germany", "France", "Spain", "Japan", "World Avg"],
+            "note": "% of companies using AI, 2024"
+        },
+        "chatgpt_growth": {
+            "months": ["Nov 22", "Jan 23", "Mar 23", "Jun 23", "Dec 23", "Jun 24", "Dec 24", "Jun 25"],
+            "users_millions": [1, 100, 170, 200, 250, 350, 500, 650],
+            "note": "ChatGPT monthly active users (millions)"
+        }
+    },
+
+    "data_economy": {
+        "data_creation_trend": {
+            "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "zettabytes": [33, 41, 64, 79, 97, 120, 147, 181],
+            "note": "Global data created per year (zettabytes)"
+        },
+        "ds_job_demand_index": {
+            "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "series": {
+                "ES": [40, 55, 70, 90, 115, 145, 185, 230],
+                "FR": [50, 65, 80, 100, 130, 160, 200, 245],
+                "DE": [60, 75, 90, 110, 140, 170, 210, 255],
+                "UK": [65, 80, 100, 125, 155, 190, 235, 275],
+                "US": [75, 90, 100, 125, 155, 190, 230, 270]
+            },
+            "note": "Data Science job demand index (2020 US=100)"
+        },
+        "ds_salaries_spain": {
+            "categories": ["Junior", "Mid-level", "Senior", "Lead"],
+            "values_k_eur": [32, 48, 72, 100],
+            "note": "Average Data Science salaries in Spain (K EUR), 2025"
+        },
+        "tech_skills_demand": {
+            "skills": ["AI / ML", "Data\nScience", "Cloud", "Cyber\nSecurity", "DevOps", "Data\nEngineering"],
+            "demand_index": [100, 92, 85, 80, 72, 70],
+            "salary_premium_pct": [45, 38, 32, 35, 28, 30],
+            "note": "Relative demand index and salary premium (%), 2024-2025"
+        },
+        "skills_gap_spain": {
+            "needed_2026": 120000,
+            "current_shortfall_pct": 65,
+            "top_employers": ["Amazon", "Telefonica", "BBVA", "Santander", "Inditex", "Cabify"]
+        }
+    },
+
+    "career_reinvention": {
+        "changers_by_age": {
+            "age_groups": ["25-30", "30-35", "35-40", "40-45", "45-50", "50+"],
+            "pct_of_changers": [32, 28, 22, 12, 5, 1],
+            "success_rate": [78, 75, 70, 65, 60, 52],
+            "note": "Career changers distribution and success rate (%)"
+        },
+        "lifelong_learning": {
+            "year": 2024,
+            "countries": ["ES", "FR", "DE", "UK", "US", "EU"],
+            "values": [12, 14, 10, 18, 16, 13],
+            "labels": ["Spain", "France", "Germany", "UK", "USA", "EU Avg"],
+            "note": "% of adults 25-64 in education/training"
+        },
+        "mid_career_degree": {
+            "age_groups": ["25-30", "30-35", "35-40", "40-45", "45+"],
+            "pct_enrolled": [15, 8, 5, 3, 1.5],
+            "note": "% of age group enrolled in university degree"
+        }
+    },
+
+    "amazon_operations": {
+        "amazon_workforce": {
+            "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "employees_k": [648, 798, 1298, 1608, 1541, 1525, 1556, 1600],
+            "note": "Amazon global employees (thousands)"
+        },
+        "logistics_data_points": {
+            "categories": ["Packages\nTracked/Day", "Data\nCheckpoints", "Decision\nCycles/Day", "SKUs\nManaged"],
+            "values": [35, 20, 96, 350],
+            "units": ["M", "", "", "M"],
+            "note": "Amazon logistics data intensity"
+        },
+        "spain_ecommerce_logistics": {
+            "years": [2020, 2021, 2022, 2023, 2024, 2025],
+            "parcels_millions": [680, 780, 850, 920, 1000, 1100],
+            "note": "Parcels delivered in Spain per year (millions)"
+        }
+    },
+
+    "personal": {
+        "amazon_journey": {
+            "years": ["Dec 2023", "May 2024", "Sep 2025", "Jan 2026"],
+            "levels": ["Sortation TL", "Flow TL", "Data Sci Degree", "ICQA TL"],
+            "ages": [45, 46, 47, 47],
+            "milestones": [
+                "Joined Amazon, leading sortation",
+                "Promoted to Flow operations",
+                "Enrolled at UNIR (while working)",
+                "ICQA — data meets operations"
+            ]
+        },
+        "career_arc": {
+            "decades": ["2002-11", "2013-22", "2023+"],
+            "roles": ["Designer", "Entrepreneur", "Data Leader"],
+            "skills_gained": ["Creative Suite, Print, Brand", "Business, Marketing, Retail", "Leadership, Data, Operations"],
+            "note": "Three acts of one career"
+        },
+        "reinvention_stats": {
+            "total_experience_years": 20,
+            "industries": 4,
+            "businesses_founded": 2,
+            "current_age": 47,
+            "degree_in_progress": true
+        }
+    },
+
+    "sources": [
+        "Stanford HAI — AI Index Report (annual, AI investment and adoption)",
+        "IDC — Global DataSphere (data creation forecasts)",
+        "LinkedIn — Jobs on the Rise, Skills demand reports",
+        "Eurostat — Adult learning, labour force statistics",
+        "INE — Encuesta de Poblacion Activa",
+        "ONTSI — Informe anual del sector TIC y contenidos",
+        "Amazon — Annual Report, Operations data",
+        "Statista — E-commerce, AI market size",
+        "OECD — Skills Outlook, Education at a Glance"
+    ]
+}

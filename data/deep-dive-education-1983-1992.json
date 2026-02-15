@@ -1,0 +1,172 @@
+{
+    "chapter": 2,
+    "title": "The Classroom Years",
+    "period": "1983–1992",
+
+    "education_system": {
+        "enrollment_trend": {
+            "years": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992],
+            "series": {
+                "EGB": [5.60, 5.65, 5.70, 5.75, 5.78, 5.80, 5.75, 5.68, 5.60, 5.50],
+                "BUP_COU": [1.10, 1.15, 1.20, 1.28, 1.35, 1.40, 1.48, 1.52, 1.55, 1.58],
+                "FP": [0.65, 0.68, 0.71, 0.75, 0.78, 0.80, 0.82, 0.85, 0.87, 0.88],
+                "University": [0.72, 0.76, 0.82, 0.88, 0.95, 1.02, 1.10, 1.18, 1.26, 1.35]
+            },
+            "labels": {
+                "EGB": "EGB (Primary, ages 6–14)",
+                "BUP_COU": "BUP/COU (Secondary)",
+                "FP": "FP (Vocational)",
+                "University": "University"
+            }
+        },
+        "school_infrastructure": {
+            "years": [1983, 1986, 1989, 1992],
+            "series": {
+                "public_schools": [18200, 19100, 19800, 20500],
+                "private_schools": [6800, 6600, 6500, 6400],
+                "teachers_thousands": [290, 320, 345, 370]
+            }
+        },
+        "pupil_teacher_ratio": {
+            "year": 1988,
+            "countries": ["ES", "FR", "DE", "UK", "IT", "US", "EU"],
+            "primary": [26, 19, 16, 22, 13, 20, 18],
+            "secondary": [18, 14, 14, 15, 11, 16, 14],
+            "labels": ["Spain", "France", "Germany", "UK", "Italy", "USA", "EU Avg"]
+        }
+    },
+
+    "international_comparison": {
+        "dropout_rate_trend": {
+            "years": [1983, 1985, 1987, 1989, 1991, 1992],
+            "series": {
+                "ES": [42, 40, 38, 36, 34, 33],
+                "FR": [22, 20, 19, 17, 16, 15],
+                "DE": [15, 14, 13, 13, 12, 12],
+                "UK": [20, 18, 17, 16, 15, 15],
+                "IT": [35, 33, 31, 29, 27, 26],
+                "EU": [25, 24, 23, 22, 21, 20]
+            }
+        },
+        "education_spending_gdp": {
+            "years": [1983, 1985, 1987, 1989, 1991, 1992],
+            "series": {
+                "ES": [3.2, 3.5, 3.8, 4.0, 4.2, 4.4],
+                "FR": [5.4, 5.5, 5.5, 5.6, 5.7, 5.8],
+                "DE": [4.6, 4.5, 4.4, 4.4, 4.5, 4.6],
+                "UK": [4.9, 4.8, 4.7, 4.7, 4.8, 5.0],
+                "IT": [4.3, 4.4, 4.2, 4.3, 4.5, 4.6],
+                "US": [5.0, 4.9, 5.0, 5.2, 5.3, 5.3],
+                "EU": [4.8, 4.8, 4.7, 4.8, 4.9, 5.0]
+            }
+        },
+        "literacy_rate_1990": {
+            "countries": ["ES", "FR", "DE", "UK", "IT", "US", "JP", "World"],
+            "values": [96, 99, 99, 99, 97, 99, 99, 76],
+            "labels": ["Spain", "France", "Germany", "UK", "Italy", "USA", "Japan", "World"]
+        },
+        "compulsory_education_age": {
+            "countries": ["ES (pre-1990)", "ES (post-LOGSE)", "FR", "DE", "UK", "IT", "US"],
+            "start_age": [6, 6, 6, 6, 5, 6, 6],
+            "end_age": [14, 16, 16, 18, 16, 14, 16],
+            "labels": ["Spain\n(pre-1990)", "Spain\n(post-LOGSE)", "France", "Germany", "UK", "Italy", "USA"]
+        }
+    },
+
+    "reform_era": {
+        "timeline": {
+            "events": [
+                {"year": 1983, "text": "LODE: school council reform", "type": "law"},
+                {"year": 1985, "text": "Spain joins EEC", "type": "milestone"},
+                {"year": 1986, "text": "EU funding for education begins", "type": "milestone"},
+                {"year": 1987, "text": "Erasmus programme launched", "type": "milestone"},
+                {"year": 1988, "text": "Education spending passes 4% GDP", "type": "milestone"},
+                {"year": 1990, "text": "LOGSE: compulsory to age 16", "type": "law"},
+                {"year": 1992, "text": "Barcelona Olympics / Expo Seville", "type": "milestone"}
+            ]
+        },
+        "spending_per_student": {
+            "years": [1983, 1985, 1987, 1989, 1991, 1992],
+            "series": {
+                "ES": [1200, 1480, 1780, 2100, 2450, 2700],
+                "FR": [2800, 3100, 3400, 3700, 4100, 4400],
+                "DE": [3200, 3400, 3600, 3800, 4200, 4500],
+                "UK": [2400, 2600, 2800, 3100, 3400, 3700],
+                "EU": [2700, 2900, 3100, 3400, 3800, 4100]
+            },
+            "note": "Approximate USD PPP per student, primary+secondary combined"
+        },
+        "eec_impact": {
+            "categories": ["Education\nfunding (€M)", "Erasmus\nstudents", "School\nrenovations", "Teacher\ntraining grants"],
+            "pre_eec_1984": [120, 0, 200, 500],
+            "post_eec_1990": [480, 5400, 1200, 3800]
+        }
+    },
+
+    "social_mobility": {
+        "university_access_trend": {
+            "years": [1975, 1980, 1985, 1990, 1992, 1995, 2000],
+            "series": {
+                "ES": [16, 20, 24, 30, 34, 38, 45],
+                "FR": [25, 30, 34, 38, 40, 42, 45],
+                "DE": [20, 22, 26, 30, 33, 35, 38],
+                "UK": [14, 18, 22, 28, 32, 36, 42],
+                "EU": [20, 24, 28, 32, 35, 38, 42]
+            },
+            "note": "% of 18-24 age group enrolled in higher education"
+        },
+        "parents_education_1990": {
+            "categories": ["No\neducation", "Primary\nonly", "Secondary", "University"],
+            "spain_parents": [18, 42, 28, 12],
+            "spain_children": [2, 22, 40, 36],
+            "note": "Distribution of educational attainment: generation of parents (born ~1950) vs their children (born ~1978)"
+        },
+        "female_enrollment": {
+            "years": [1983, 1985, 1987, 1989, 1991, 1992],
+            "series": {
+                "ES_female_pct": [48, 49, 50, 51, 52, 53],
+                "FR_female_pct": [50, 51, 51, 52, 52, 53],
+                "EU_female_pct": [49, 49, 50, 51, 51, 52]
+            },
+            "note": "% of total secondary enrollment that is female"
+        }
+    },
+
+    "personal": {
+        "egb_journey": {
+            "years": ["1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92"],
+            "levels": ["Preschool", "1st EGB", "2nd EGB", "3rd EGB", "4th EGB", "5th EGB", "6th EGB", "7th EGB", "8th EGB"],
+            "ages": [5, 6, 7, 8, 9, 10, 11, 12, 13],
+            "spain_events": [
+                "LODE reform begins",
+                "Spain joins NATO referendum",
+                "Spain enters EEC",
+                "Erasmus programme starts",
+                "Education spending at 4% GDP",
+                "LOGSE debate begins",
+                "LOGSE approved",
+                "Implementation starts",
+                "EGB final year"
+            ]
+        },
+        "cohort_stats": {
+            "students_in_class_avg": 32,
+            "hours_per_week": 25,
+            "subjects": 9,
+            "school_days_per_year": 175,
+            "total_school_hours_egb": "~11,000"
+        }
+    },
+
+    "sources": [
+        "Ministerio de Educacion y Ciencia — Estadisticas de la Educacion en Espana (annual reports 1983–1992)",
+        "INE — Encuesta de Poblacion Activa / Censo de Poblacion",
+        "Eurostat — Education and Training Statistics",
+        "OECD — Education at a Glance (historical editions)",
+        "UNESCO Institute for Statistics — Global education data",
+        "World Bank — Education indicators",
+        "European Commission — Erasmus programme statistics",
+        "BOE — Ley Organica 1/1990 (LOGSE)",
+        "BOE — Ley Organica 8/1985 (LODE)"
+    ]
+}

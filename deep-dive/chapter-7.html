@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: Reinvention (2023–Present) — Germinal Barrena</title>
+
+    <meta name="description" content="Interactive infographic: Career reinvention at 45, the AI revolution, Data Science, and Amazon leadership. The data-driven chapter begins.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="deep-dive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dd-page">
+
+    <!-- NAV -->
+    <nav class="dd-nav">
+        <div class="dd-nav__inner">
+            <a href="../index.html#chapter-7" class="dd-nav__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <div class="dd-nav__breadcrumb">
+                <span class="dd-nav__chapter-num">07</span>
+                <span class="dd-nav__separator">/</span>
+                <span class="dd-nav__chapter-title">Reinvention</span>
+                <span class="dd-nav__separator">—</span>
+                <span class="dd-nav__badge">Deep Dive</span>
+            </div>
+            <div class="dd-nav__arrows">
+                <a href="chapter-6.html" class="dd-nav__arrow" title="Prev: The Entrepreneur">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+                <span class="dd-nav__arrow dd-nav__arrow--disabled">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="dd-hero">
+        <div class="dd-hero__bg"></div>
+        <div class="dd-hero__content">
+            <div class="dd-hero__number">07</div>
+            <h1 class="dd-hero__title">Reinvention</h1>
+            <p class="dd-hero__subtitle">At 45, most people settle. I started over — and found data. The AI revolution, Amazon operations, and a Data Science degree happening simultaneously.</p>
+            <div class="dd-scope-toggle">
+                <button class="dd-scope-btn" data-scope="spain">Spain</button>
+                <button class="dd-scope-btn" data-scope="europe">Europe</button>
+                <button class="dd-scope-btn" data-scope="world">World</button>
+                <button class="dd-scope-btn active" data-scope="all">All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: AI Revolution -->
+    <section class="dd-section" id="ai-revolution">
+        <div class="dd-section__header">
+            <span class="dd-section__number">01</span>
+            <h2 class="dd-section__title">The AI Revolution</h2>
+        </div>
+        <p class="dd-section__intro">Global AI investment exploded from $25B to $290B in seven years — a 12x increase. ChatGPT reached 100 million users in two months, the fastest adoption of any technology in history. By 2024, 72% of US companies were using AI. Spain lagged at 38%, but the gap is closing fast.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="290" data-suffix="B$" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">AI Investment</span>
+                <span class="dd-kpi-card__country">Global, 2025</span>
+            </div>
+            <div class="dd-kpi-card" data-value="650" data-suffix="M" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">ChatGPT Users</span>
+                <span class="dd-kpi-card__country">Monthly, mid-2025</span>
+            </div>
+            <div class="dd-kpi-card" data-value="72" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">AI Adoption</span>
+                <span class="dd-kpi-card__country">US companies, 2024</span>
+            </div>
+            <div class="dd-kpi-card" data-value="38" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">AI Adoption</span>
+                <span class="dd-kpi-card__country">Spain, 2024</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">AI Investment (USD billions, 2018–2025)</h3>
+                    <div class="dd-series-toggle" id="toggle-ai">
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="China">CN</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="World">WLD</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-ai-invest"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">AI Adoption by Country (% of companies, 2024)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-ai-adoption"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">ChatGPT User Growth (millions)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-chatgpt"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Data Economy -->
+    <section class="dd-section" id="data-economy">
+        <div class="dd-section__header">
+            <span class="dd-section__number">02</span>
+            <h2 class="dd-section__title">The Data Economy</h2>
+        </div>
+        <p class="dd-section__intro">Humanity creates 181 zettabytes of data per year — up from 33 in 2018. Data Science job demand has grown 270% in five years, and Spain needs 120,000+ data professionals by 2026 but faces a 65% shortfall. The salary premium for AI/ML skills is 45% above market average.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="181" data-suffix=" ZB" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Data Created/yr</span>
+                <span class="dd-kpi-card__country">Global, 2025</span>
+            </div>
+            <div class="dd-kpi-card" data-value="120" data-suffix="K" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Data Pros Needed</span>
+                <span class="dd-kpi-card__country">Spain by 2026</span>
+            </div>
+            <div class="dd-kpi-card" data-value="65" data-suffix="%" data-decimals="0" style="--chapter-accent: #ff9500">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Skills Shortfall</span>
+                <span class="dd-kpi-card__country">Spain, current</span>
+            </div>
+            <div class="dd-kpi-card" data-value="45" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">AI/ML Salary Premium</span>
+                <span class="dd-kpi-card__country">Above market avg</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Data Science Job Demand Index (2018–2025)</h3>
+                    <div class="dd-series-toggle" id="toggle-ds-demand">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-ds-demand"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Data Science Salaries — Spain 2025 (K EUR)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-ds-salary"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Global Data Creation (zettabytes/year)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-data-created"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Top Tech Skills: Demand vs Salary Premium</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-skills-demand"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Career Reinvention -->
+    <section class="dd-section" id="career-reinvention">
+        <div class="dd-section__header">
+            <span class="dd-section__number">03</span>
+            <h2 class="dd-section__title">Career Reinvention</h2>
+        </div>
+        <p class="dd-section__intro">Only 5% of career changers are aged 45–50, with a 60% success rate. Starting a university degree at 47 means being older than most professors. But the modern worker averages 12 job changes in a lifetime — and the most valuable professionals combine domain expertise with data literacy.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Career Changers by Age: Distribution & Success Rate</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-changers"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Adults in Education/Training (%, 2024)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-lifelong"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">University Enrollment by Age Group (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-midcareer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Amazon & Operations -->
+    <section class="dd-section" id="amazon-operations">
+        <div class="dd-section__header">
+            <span class="dd-section__number">04</span>
+            <h2 class="dd-section__title">Amazon & Data-Driven Operations</h2>
+        </div>
+        <p class="dd-section__intro">Amazon employs 1.6 million people worldwide. Every package is tracked through 20+ data checkpoints. Real-time dashboards drive decisions every 15 minutes. Working here is the perfect complement to studying Data Science — theory meets massive-scale practice.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="1.6" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Employees</span>
+                <span class="dd-kpi-card__country">Amazon global, 2025</span>
+            </div>
+            <div class="dd-kpi-card" data-value="35" data-suffix="M" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Packages/Day</span>
+                <span class="dd-kpi-card__country">Tracked globally</span>
+            </div>
+            <div class="dd-kpi-card" data-value="350" data-suffix="M" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">SKUs Managed</span>
+                <span class="dd-kpi-card__country">Globally</span>
+            </div>
+            <div class="dd-kpi-card" data-value="96" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Decision Cycles/Day</span>
+                <span class="dd-kpi-card__country">Data-driven ops</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Amazon Global Workforce (thousands)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-amazon-workforce"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Spain Parcels Delivered/Year (millions)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-parcels"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Personal -->
+    <section class="dd-section" id="personal">
+        <div class="dd-section__header">
+            <span class="dd-section__number">05</span>
+            <h2 class="dd-section__title">Personal Connection</h2>
+        </div>
+        <p class="dd-section__intro">Three acts of one career: Designer, Entrepreneur, Data Leader. Twenty years of professional experience, four industries, two businesses founded — and now a Data Science degree at 47 while working full-time at Amazon. The most valuable path is rarely the straight one.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="3" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Amazon Roles</span>
+                <span class="dd-kpi-card__country">In 2 years</span>
+            </div>
+            <div class="dd-kpi-card" data-value="20" data-suffix="+" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Years Experience</span>
+                <span class="dd-kpi-card__country">Across industries</span>
+            </div>
+            <div class="dd-kpi-card" data-value="4" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Industries</span>
+                <span class="dd-kpi-card__country">Design, Business, Retail, Ops</span>
+            </div>
+            <div class="dd-kpi-card" data-value="47" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Age</span>
+                <span class="dd-kpi-card__country">New degree started</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">My Amazon Journey & Data Science Path</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--tall" id="chart-dd-mypath"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Three Career Acts</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-career-arc"></div>
+            </div>
+        </div>
+
+        <div class="dd-location-card">
+            <div class="dd-location-card__icon">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                    <circle cx="24" cy="24" r="4" fill="currentColor" class="dd-location-card__pulse"/>
+                </svg>
+            </div>
+            <div class="dd-location-card__info">
+                <span class="dd-location-card__name">Amazon ZAZ1 — ICQA Team Leader</span>
+                <span class="dd-location-card__detail">Jan 2026 – Present &middot; Data Science Degree at UNIR</span>
+                <span class="dd-location-card__note">"At Amazon, the phrase 'the data says' wins more arguments than any opinion."</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="dd-footer">
+        <div class="dd-footer__sources">
+            <h4>Data Sources &amp; References</h4>
+            <div class="dd-sources-grid">
+                <div class="dd-source">
+                    <span class="dd-source__section">AI &amp; Technology</span>
+                    <ul>
+                        <li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford HAI — AI Index Report</a></li>
+                        <li><a href="https://www.statista.com/topics/3104/artificial-intelligence-ai-worldwide/" target="_blank" rel="noopener">Statista — AI market size</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Data Economy</span>
+                    <ul>
+                        <li><a href="https://www.idc.com/getdoc.jsp?containerId=US51483024" target="_blank" rel="noopener">IDC — Global DataSphere</a> (data creation)</li>
+                        <li><a href="https://www.linkedin.com/pulse/jobs-on-the-rise/" target="_blank" rel="noopener">LinkedIn — Jobs on the Rise</a> (skills demand)</li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Career &amp; Education</span>
+                    <ul>
+                        <li><a href="https://ec.europa.eu/eurostat/web/education-and-training" target="_blank" rel="noopener">Eurostat — Adult learning</a></li>
+                        <li><a href="https://www.oecd.org/education/skills-beyond-school/" target="_blank" rel="noopener">OECD — Skills Outlook</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Amazon &amp; Logistics</span>
+                    <ul>
+                        <li><a href="https://ir.aboutamazon.com/annual-reports-proxies-and-shareholder-letters/default.aspx" target="_blank" rel="noopener">Amazon — Annual Report</a></li>
+                        <li><a href="https://www.ontsi.es/" target="_blank" rel="noopener">ONTSI — Informe anual del sector TIC</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dd-sources-note">Some figures are estimates or approximations based on the closest available data point. International comparisons use standardized indicators where possible. AI and data economy figures evolve rapidly and may differ from final published statistics.</p>
+        </div>
+        <div class="dd-footer__nav">
+            <a href="../index.html#chapter-7" class="dd-footer__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <span class="dd-footer__copyright">Germinal Barrena &copy; 2026</span>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="deep-dive-core.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        var DATA = null;
+        var CC = DiveDeep.countryColors;
+        var CN = DiveDeep.countryNames;
+
+        CN['EU'] = 'EU Avg';
+        CC['EU'] = '#86868b';
+        CN['China'] = 'China';
+        CC['China'] = '#ff6b6b';
+
+        fetch('../data/deep-dive-reinvention-2023-present.json')
+            .then(function(r) { return r.json(); })
+            .then(function(json) {
+                DATA = json;
+                initPage();
+            })
+            .catch(function(err) {
+                console.error('Failed to load data:', err);
+                initPage();
+            });
+
+        function initPage() {
+            DiveDeep.initDiveDeep({
+                accentColor: '#0071e3',
+                accentRgb: '0,113,227'
+            });
+
+            if (DATA) {
+                initAICharts();
+                initDataEconomyCharts();
+                initReinventionCharts();
+                initAmazonCharts();
+                initPersonalCharts();
+                initScopeUpdates();
+            }
+
+            initSeriesToggles();
+        }
+
+        // SECTION 1: AI Revolution
+        function initAICharts() {
+            var ai = DATA.ai_revolution;
+
+            var aiSeries = [];
+            ['US','China','EU','UK','World'].forEach(function(code) {
+                aiSeries.push({ name: CN[code] || code, data: ai.ai_investment_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-ai-invest', DiveDeep.getBaseChartConfig({
+                series: aiSeries,
+                chart: { type: 'area', height: 280 },
+                colors: [CC.US, CC.China, CC.EU, CC.UK, '#888'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.25, opacityTo: 0.02 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: ai.ai_investment_trend.years },
+                yaxis: { labels: { formatter: function(v) { return '$' + v + 'B'; } } },
+                tooltip: { y: { formatter: function(v) { return '$' + v + ' billion'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 2023, borderColor: '#0071e3', strokeDashArray: 0, label: { text: 'ChatGPT era', style: { background: '#0071e3', color: '#fff', fontSize: '9px' } } }] }
+            }), aiSeries);
+
+            var adopt = ai.ai_adoption_rate;
+            var adoptColors = adopt.countries.map(function(c) { return c === 'ES' ? CC.ES : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-ai-adoption', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'AI Adoption %', data: adopt.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: adoptColors,
+                xaxis: { categories: adopt.labels, max: 80 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% of companies'; } } }
+            }));
+
+            var cg = ai.chatgpt_growth;
+            DiveDeep.renderChart('#chart-dd-chatgpt', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Users (M)', data: cg.users_millions }],
+                chart: { type: 'area', height: 260 },
+                colors: ['#0071e3'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 5, hover: { size: 7 } },
+                xaxis: { categories: cg.months },
+                yaxis: { labels: { formatter: function(v) { return v + 'M'; } } },
+                tooltip: { y: { formatter: function(v) { return v + ' million users'; } } },
+                annotations: { xaxis: [{ x: 'Jan 23', borderColor: '#34c759', strokeDashArray: 0, label: { text: '100M in 2 months', style: { background: '#34c759', color: '#fff', fontSize: '9px' } } }] }
+            }));
+        }
+
+        // SECTION 2: Data Economy
+        function initDataEconomyCharts() {
+            var de = DATA.data_economy;
+
+            var dsSeries = [];
+            ['ES','FR','DE','UK','US'].forEach(function(code) {
+                dsSeries.push({ name: CN[code], data: de.ds_job_demand_index.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-ds-demand', DiveDeep.getBaseChartConfig({
+                series: dsSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: de.ds_job_demand_index.years },
+                yaxis: { min: 30, max: 290, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return 'Index ' + v; } } },
+                legend: { position: 'bottom' }
+            }), dsSeries);
+
+            var sal = de.ds_salaries_spain;
+            var salColors = ['#86868b', '#0071e3', '#34c759', '#ff9500'];
+
+            DiveDeep.renderChart('#chart-dd-ds-salary', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Salary (K EUR)', data: sal.values_k_eur }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '55%', distributed: true } },
+                colors: salColors,
+                xaxis: { categories: sal.categories, max: 120 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return '€' + v + 'K'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return '€' + v + ',000 average'; } } }
+            }));
+
+            DiveDeep.renderChart('#chart-dd-data-created', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Zettabytes', data: de.data_creation_trend.zettabytes }],
+                chart: { type: 'area', height: 280 },
+                colors: ['#0071e3'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 4 },
+                xaxis: { categories: de.data_creation_trend.years },
+                yaxis: { labels: { formatter: function(v) { return v + ' ZB'; } } },
+                tooltip: { y: { formatter: function(v) { return v + ' zettabytes'; } } }
+            }));
+
+            var sk = de.tech_skills_demand;
+            DiveDeep.renderChart('#chart-dd-skills-demand', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Demand Index', data: sk.demand_index },
+                    { name: 'Salary Premium %', data: sk.salary_premium_pct }
+                ],
+                chart: { type: 'bar', height: 280 },
+                colors: ['#0071e3', '#34c759'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '60%', borderRadius: 3 } },
+                xaxis: { categories: sk.skills },
+                yaxis: { max: 110, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v; } } }
+            }));
+        }
+
+        // SECTION 3: Career Reinvention
+        function initReinventionCharts() {
+            var cr = DATA.career_reinvention;
+
+            var ch = cr.changers_by_age;
+            DiveDeep.renderChart('#chart-dd-changers', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: '% of Changers', data: ch.pct_of_changers },
+                    { name: 'Success Rate %', data: ch.success_rate }
+                ],
+                chart: { type: 'bar', height: 280 },
+                colors: ['#0071e3', '#34c759'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '60%', borderRadius: 3 } },
+                xaxis: { categories: ch.age_groups },
+                yaxis: { max: 90, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v + '%'; } } },
+                annotations: { xaxis: [{ x: '45-50', borderColor: '#ff9500', strokeDashArray: 0, label: { text: 'My age group', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } }] }
+            }));
+
+            var ll = cr.lifelong_learning;
+            var llColors = ll.countries.map(function(c) { return c === 'ES' ? CC.ES : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-lifelong', DiveDeep.getBaseChartConfig({
+                series: [{ name: '% in Training', data: ll.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: llColors,
+                xaxis: { categories: ll.labels, max: 22 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% of adults 25-64'; } } }
+            }));
+
+            var mc = cr.mid_career_degree;
+            DiveDeep.renderChart('#chart-dd-midcareer', DiveDeep.getBaseChartConfig({
+                series: [{ name: '% Enrolled', data: mc.pct_enrolled }],
+                chart: { type: 'bar', height: 220 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '55%', distributed: true } },
+                colors: ['#0071e3', '#5856d6', '#34c759', '#ff9500', '#ff3b30'],
+                xaxis: { categories: mc.age_groups, max: 18 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% enrolled'; } } },
+                annotations: { yaxis: [{ y: '45+', borderColor: '#ff9500', strokeDashArray: 0, label: { text: 'Me', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } }] }
+            }));
+        }
+
+        // SECTION 4: Amazon
+        function initAmazonCharts() {
+            var am = DATA.amazon_operations;
+
+            DiveDeep.renderChart('#chart-dd-amazon-workforce', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Employees (K)', data: am.amazon_workforce.employees_k }],
+                chart: { type: 'area', height: 280 },
+                colors: ['#ff9500'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 4 },
+                xaxis: { categories: am.amazon_workforce.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(1) + 'M'; } } },
+                tooltip: { y: { formatter: function(v) { return (v/1000).toFixed(2) + ' million'; } } },
+                annotations: { xaxis: [
+                    { x: 2020, borderColor: '#ff3b30', strokeDashArray: 4, label: { text: 'COVID hiring surge', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } },
+                    { x: 2023, borderColor: '#0071e3', strokeDashArray: 0, label: { text: 'I joined', style: { background: '#0071e3', color: '#fff', fontSize: '9px' } } }
+                ] }
+            }));
+
+            var sp = am.spain_ecommerce_logistics;
+            DiveDeep.renderChart('#chart-dd-parcels', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Parcels (M)', data: sp.parcels_millions }],
+                chart: { type: 'bar', height: 280 },
+                plotOptions: { bar: { borderRadius: 6, columnWidth: '55%' } },
+                colors: ['#0071e3'],
+                xaxis: { categories: sp.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(1) + 'B'; } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + 'M'; }, style: { fontSize: '10px', fontWeight: 600, colors: ['#fff'] } },
+                tooltip: { y: { formatter: function(v) { return v + ' million parcels'; } } }
+            }));
+        }
+
+        // SECTION 5: Personal
+        function initPersonalCharts() {
+            var p = DATA.personal.amazon_journey;
+
+            var annotations = p.milestones.map(function(ev, i) {
+                return {
+                    x: p.years[i],
+                    borderColor: '#0071e3',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev,
+                        orientation: 'horizontal',
+                        position: i % 2 === 0 ? 'top' : 'bottom',
+                        style: { background: '#222', color: '#f0f0f0', fontSize: '9px', padding: { left: 4, right: 4, top: 2, bottom: 2 } }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-mypath', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'My Age', data: p.ages }],
+                chart: { type: 'area', height: 320 },
+                colors: ['#0071e3'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 6, hover: { size: 8 } },
+                xaxis: { categories: p.years, labels: { rotate: -45, style: { colors: '#f0f0f0', fontSize: '10px' } } },
+                yaxis: { min: 43, max: 49, labels: { formatter: function(v) { return 'Age ' + v; } } },
+                annotations: { xaxis: annotations },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#0071e3">' + p.years[i] + '</strong><br>' +
+                            '<span style="color:#f0f0f0;font-weight:600">' + p.levels[i] + '</span> (Age ' + p.ages[i] + ')<br>' +
+                            '<span style="color:#888;font-size:11px">' + p.milestones[i] + '</span></div>';
+                    }
+                }
+            }));
+
+            // Career arc radar
+            var arc = DATA.personal.career_arc;
+            var arcValues = [9, 9, 2];
+
+            DiveDeep.renderChart('#chart-dd-career-arc', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Years', data: arcValues }],
+                chart: { type: 'bar', height: 280 },
+                plotOptions: { bar: { horizontal: false, columnWidth: '50%', borderRadius: 8, distributed: true } },
+                colors: ['#34c759', '#ff9500', '#0071e3'],
+                xaxis: { categories: arc.decades, labels: { style: { colors: '#f0f0f0' } } },
+                yaxis: { max: 12, labels: { formatter: function(v) { return v + ' yrs'; } } },
+                dataLabels: {
+                    enabled: true,
+                    formatter: function(v, opts) {
+                        var roles = arc.roles;
+                        return roles[opts.dataPointIndex];
+                    },
+                    style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] },
+                    offsetY: -5
+                },
+                legend: { show: false },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#0071e3">' + arc.decades[i] + '</strong><br>' +
+                            '<span style="color:#f0f0f0;font-weight:600">' + arc.roles[i] + '</span><br>' +
+                            '<span style="color:#888;font-size:11px">' + arc.skills_gained[i] + '</span></div>';
+                    }
+                }
+            }));
+        }
+
+        // SERIES TOGGLES
+        function initSeriesToggles() {
+            DiveDeep.initSeriesToggle('#chart-dd-ai-invest', '#toggle-ai');
+            DiveDeep.initSeriesToggle('#chart-dd-ds-demand', '#toggle-ds-demand');
+        }
+
+        // SCOPE CHANGE
+        function initScopeUpdates() {
+            DiveDeep.onScopeChange(function(scope, countries) {
+                var chartMap = {
+                    '#chart-dd-ai-invest': ['US','China','EU','UK','World'],
+                    '#chart-dd-ds-demand': ['ES','FR','DE','UK','US']
+                };
+
+                var toggleMap = {
+                    '#chart-dd-ai-invest': '#toggle-ai',
+                    '#chart-dd-ds-demand': '#toggle-ds-demand'
+                };
+
+                Object.keys(chartMap).forEach(function(sel) {
+                    var chart = DiveDeep.charts[sel];
+                    if (!chart) return;
+
+                    chartMap[sel].forEach(function(code) {
+                        var name = CN[code] || code;
+                        if (countries.indexOf(code) !== -1 || code === 'EU' || code === 'World' || code === 'China') {
+                            chart.showSeries(name);
+                        } else {
+                            chart.hideSeries(name);
+                        }
+                    });
+
+                    var toggleId = toggleMap[sel];
+                    if (toggleId) {
+                        var container = document.querySelector(toggleId);
+                        if (container) {
+                            container.querySelectorAll('.dd-series-btn').forEach(function(btn) {
+                                var seriesName = btn.dataset.series;
+                                var code = Object.keys(CN).find(function(k) { return CN[k] === seriesName; }) || seriesName;
+                                if (code === 'WLD') code = 'World';
+                                if (code === 'CN') code = 'China';
+                                if (countries.indexOf(code) !== -1 || code === 'EU' || code === 'World' || code === 'China') {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>

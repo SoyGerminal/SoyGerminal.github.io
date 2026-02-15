@@ -1,0 +1,765 @@
+/* ================================================================
+   DEEP DIVE — Shared Stylesheet
+   Extends root design system from ../styles.css
+   ================================================================ */
+
+/* --- Base overrides for deep-dive pages --- */
+body.dd-page {
+    background: var(--bg-primary);
+    min-height: 100vh;
+}
+
+body.dd-page::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ================================================================
+   DD-NAV — Sticky top bar
+   ================================================================ */
+.dd-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0 24px;
+}
+
+.dd-nav__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    gap: 16px;
+}
+
+.dd-nav__back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.dd-nav__back:hover {
+    color: var(--text-primary);
+}
+
+.dd-nav__back svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.dd-nav__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    overflow: hidden;
+}
+
+.dd-nav__chapter-num {
+    font-family: var(--font-mono);
+    color: var(--chapter-accent);
+    font-weight: 600;
+}
+
+.dd-nav__chapter-title {
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dd-nav__separator {
+    color: var(--text-muted);
+}
+
+.dd-nav__badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(199,125,255,0.1);
+    color: var(--chapter-accent);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.dd-nav__arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.dd-nav__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.dd-nav__arrow:hover {
+    border-color: var(--chapter-accent);
+    color: var(--text-primary);
+}
+
+.dd-nav__arrow.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.dd-nav__arrow svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ================================================================
+   DD-HERO — Full-width header
+   ================================================================ */
+.dd-hero {
+    position: relative;
+    padding: 80px 24px 60px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.dd-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 20%, rgba(var(--accent-rgb, 199,125,255),0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.dd-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dd-hero__number {
+    font-family: var(--font-mono);
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--chapter-accent);
+    opacity: 0.15;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.dd-hero__title {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.dd-hero__subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ================================================================
+   DD-SCOPE-TOGGLE — Global filter pills
+   ================================================================ */
+.dd-scope-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dd-scope-btn {
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-out);
+    font-family: var(--font-body);
+}
+
+.dd-scope-btn:hover {
+    border-color: var(--chapter-accent);
+    color: var(--text-primary);
+}
+
+.dd-scope-btn.active {
+    background: var(--chapter-accent);
+    border-color: var(--chapter-accent);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(199,125,255,0.3);
+}
+
+/* ================================================================
+   DD-SECTION — Content sections
+   ================================================================ */
+.dd-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.dd-section__header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.dd-section__number {
+    font-family: var(--font-mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--chapter-accent);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.dd-section__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.dd-section__intro {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 720px;
+    margin-bottom: 32px;
+}
+
+.dd-section + .dd-section {
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* ================================================================
+   DD-CHART-GRID — Responsive chart layout
+   ================================================================ */
+.dd-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.dd-chart-grid--full {
+    grid-template-columns: 1fr;
+}
+
+/* ================================================================
+   DD-CHART-CARD — Chart container
+   ================================================================ */
+.dd-chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 24px;
+    overflow: hidden;
+}
+
+.dd-chart-card--full {
+    grid-column: 1 / -1;
+}
+
+.dd-chart-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.dd-chart-card__title {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.dd-chart-card__chart {
+    min-height: 260px;
+}
+
+.dd-chart-card__chart--short {
+    min-height: 220px;
+}
+
+.dd-chart-card__chart--tall {
+    min-height: 320px;
+}
+
+/* ================================================================
+   DD-SERIES-TOGGLE — Per-chart series pills
+   ================================================================ */
+.dd-series-toggle {
+    display: flex;
+    gap: 4px;
+}
+
+.dd-series-btn {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dd-series-btn:hover {
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+.dd-series-btn.active {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+/* ================================================================
+   DD-KPI-CARD — KPI cards with scope update
+   ================================================================ */
+.dd-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.dd-kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.dd-kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.dd-kpi-card__value {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--chapter-accent);
+    text-shadow: 0 0 15px rgba(199,125,255,0.2);
+    margin-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.dd-kpi-card__label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dd-kpi-card__country {
+    display: block;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-family: var(--font-mono);
+}
+
+/* ================================================================
+   DD-LOCATION-CARD — Birth city info card
+   ================================================================ */
+.dd-location-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-top: 32px;
+    max-width: 600px;
+}
+
+.dd-location-card__map {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 80px;
+}
+
+.dd-location-card__map svg {
+    width: 100%;
+    height: 100%;
+}
+
+.dd-location-card__info {
+    flex: 1;
+}
+
+.dd-location-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.dd-location-card__region {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.dd-location-card__stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dd-location-card__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dd-location-card__stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dd-location-card__stat-value {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.dd-location-card__arrow {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.dd-location-card__change {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: #34c759;
+    background: rgba(52,199,89,0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+    .dd-location-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .dd-location-card__stats {
+        justify-content: center;
+    }
+}
+
+/* ================================================================
+   DD-FOOTER — Sources + navigation
+   ================================================================ */
+.dd-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.dd-footer__sources {
+    margin-bottom: 32px;
+}
+
+.dd-footer__sources h4 {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.dd-footer__sources ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.dd-footer__sources li {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.dd-footer__sources li a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.15);
+    text-underline-offset: 2px;
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.dd-footer__sources li a:hover {
+    color: var(--chapter-accent);
+    text-decoration-color: var(--chapter-accent);
+}
+
+.dd-sources-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.dd-source {
+    padding: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+}
+
+.dd-source__section {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--chapter-accent);
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+}
+
+.dd-source ul {
+    list-style: disc;
+    padding-left: 16px;
+}
+
+.dd-source li {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.dd-sources-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.02);
+    border-left: 3px solid var(--border-subtle);
+    border-radius: 0 6px 6px 0;
+}
+
+@media (max-width: 768px) {
+    .dd-sources-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dd-footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.dd-footer__back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.dd-footer__back:hover {
+    color: var(--chapter-accent);
+}
+
+.dd-footer__back svg {
+    width: 16px;
+    height: 16px;
+}
+
+.dd-footer__copyright {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ================================================================
+   SCROLL ANIMATION STATES (initial — GSAP animates from these)
+   ================================================================ */
+.dd-section,
+.dd-kpi-grid,
+.dd-chart-card {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.dd-hero__content {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* ================================================================
+   RESPONSIVE — 1024px
+   ================================================================ */
+@media (max-width: 1024px) {
+    .dd-chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================================================================
+   RESPONSIVE — 768px
+   ================================================================ */
+@media (max-width: 768px) {
+    .dd-hero {
+        padding: 60px 16px 40px;
+    }
+
+    .dd-section {
+        padding: 40px 16px;
+    }
+
+    .dd-nav__breadcrumb {
+        display: none;
+    }
+
+    .dd-nav__inner {
+        height: 48px;
+    }
+
+    .dd-section__header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .dd-chart-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .dd-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .dd-footer__nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ================================================================
+   RESPONSIVE — 480px
+   ================================================================ */
+@media (max-width: 480px) {
+    .dd-hero {
+        padding: 40px 12px 30px;
+    }
+
+    .dd-section {
+        padding: 32px 12px;
+    }
+
+    .dd-kpi-card {
+        padding: 14px 10px;
+    }
+
+    .dd-kpi-card__value {
+        font-size: 20px;
+    }
+
+    .dd-chart-card {
+        padding: 16px;
+    }
+
+    .dd-scope-toggle {
+        gap: 6px;
+    }
+
+    .dd-scope-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+
+/* ================================================================
+   PREFERS REDUCED MOTION
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .dd-section,
+    .dd-kpi-grid,
+    .dd-chart-card,
+    .dd-hero__content {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ================================================================
+   APEXCHARTS TOOLBAR OVERRIDES FOR DEEP DIVE
+   ================================================================ */
+.dd-chart-card .apexcharts-toolbar {
+    top: -4px !important;
+    right: 0 !important;
+}
+
+.dd-chart-card .apexcharts-toolbar svg {
+    fill: var(--text-muted) !important;
+}
+
+.dd-chart-card .apexcharts-toolbar .apexcharts-menu {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-medium) !important;
+}
+
+.dd-chart-card .apexcharts-toolbar .apexcharts-menu-item:hover {
+    background: rgba(255,255,255,0.06) !important;
+}

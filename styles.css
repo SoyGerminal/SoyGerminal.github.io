@@ -639,6 +639,103 @@ h1,h2,h3,h4,h5 { font-weight: 600; line-height: 1.2; }
     background: rgba(255,255,255,0.05);
 }
 
+/* Dive Deep Button */
+.chapter__dive-deep {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.dive-deep-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+    max-width: 480px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.dive-deep-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--chapter-accent);
+    border-radius: 16px 0 0 16px;
+    transition: width 0.3s var(--ease-out);
+}
+
+.dive-deep-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--chapter-accent);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 0 20px rgba(199,125,255,0.1);
+}
+
+.dive-deep-btn:hover::before {
+    width: 5px;
+}
+
+.dive-deep-btn__icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(199,125,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--chapter-accent);
+}
+
+.dive-deep-btn__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.dive-deep-btn__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dive-deep-btn__label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.dive-deep-btn__sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+.dive-deep-btn__arrow {
+    flex: 0 0 auto;
+    color: var(--text-muted);
+    transition: transform 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.dive-deep-btn__arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.dive-deep-btn:hover .dive-deep-btn__arrow {
+    transform: translateX(4px);
+    color: var(--chapter-accent);
+}
+
 /* Footnotes */
 .chapter__footnotes {
     background: var(--bg-card);
@@ -1220,6 +1317,7 @@ h1,h2,h3,h4,h5 { font-weight: 600; line-height: 1.2; }
 .chapter__context,
 .chapter__comparison,
 .chapter__footnotes,
+.chapter__dive-deep,
 .chapter__timeline-personal,
 .chapter__subsection,
 .closing__skills,
@@ -1249,6 +1347,7 @@ h1,h2,h3,h4,h5 { font-weight: 600; line-height: 1.2; }
     .chapter__context,
     .chapter__comparison,
     .chapter__footnotes,
+    .chapter__dive-deep,
     .chapter__timeline-personal,
     .chapter__subsection,
     .closing__skills,

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: The Designer (2002–2013) — Germinal Barrena</title>
+
+    <meta name="description" content="Interactive infographic: Spain's housing bubble, the 2008 financial crisis, and building a creative career through boom and bust. International comparisons.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="deep-dive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dd-page">
+
+    <!-- NAV -->
+    <nav class="dd-nav">
+        <div class="dd-nav__inner">
+            <a href="../index.html#chapter-5" class="dd-nav__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <div class="dd-nav__breadcrumb">
+                <span class="dd-nav__chapter-num">05</span>
+                <span class="dd-nav__separator">/</span>
+                <span class="dd-nav__chapter-title">The Designer</span>
+                <span class="dd-nav__separator">—</span>
+                <span class="dd-nav__badge">Deep Dive</span>
+            </div>
+            <div class="dd-nav__arrows">
+                <a href="chapter-4.html" class="dd-nav__arrow" title="Prev: Finding Direction">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+                <a href="chapter-6.html" class="dd-nav__arrow" title="Next: The Entrepreneur">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="dd-hero">
+        <div class="dd-hero__bg"></div>
+        <div class="dd-hero__content">
+            <div class="dd-hero__number">05</div>
+            <h1 class="dd-hero__title">The Designer</h1>
+            <p class="dd-hero__subtitle">From print to pixels — building a creative career through the biggest housing bubble and worst financial crisis in Spain's modern history.</p>
+            <div class="dd-scope-toggle">
+                <button class="dd-scope-btn" data-scope="spain">Spain</button>
+                <button class="dd-scope-btn" data-scope="europe">Europe</button>
+                <button class="dd-scope-btn" data-scope="world">World</button>
+                <button class="dd-scope-btn active" data-scope="all">All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: Housing Bubble -->
+    <section class="dd-section" id="housing-bubble">
+        <div class="dd-section__header">
+            <span class="dd-section__number">01</span>
+            <h2 class="dd-section__title">The Housing Bubble</h2>
+        </div>
+        <p class="dd-section__intro">Spain built 800,000 homes per year at its peak — more than France, Germany, and the UK combined. Housing prices nearly doubled in five years. Banks offered 110% mortgages. When it burst, construction employment collapsed from 2.8 million to 0.9 million workers.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="197" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Peak Price Index</span>
+                <span class="dd-kpi-card__country">Spain 2007 (2000=100)</span>
+            </div>
+            <div class="dd-kpi-card" data-value="760" data-suffix="K" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Homes Built/yr</span>
+                <span class="dd-kpi-card__country">Spain peak, 2006</span>
+            </div>
+            <div class="dd-kpi-card" data-value="62" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Mortgage Debt/GDP</span>
+                <span class="dd-kpi-card__country">Spain, 2007</span>
+            </div>
+            <div class="dd-kpi-card" data-value="2.8" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Construction Jobs</span>
+                <span class="dd-kpi-card__country">Spain peak, 2007</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Housing Price Index (2000=100)</h3>
+                    <div class="dd-series-toggle" id="toggle-housing">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-housing"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Housing Starts (thousands/year)</h3>
+                    <div class="dd-series-toggle" id="toggle-starts">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-starts"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Construction Employment (millions)</h3>
+                    <div class="dd-series-toggle" id="toggle-construction">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-construction"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Mortgage Debt as % of GDP (2007)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-mortgage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Economic Crisis -->
+    <section class="dd-section" id="economic-crisis">
+        <div class="dd-section__header">
+            <span class="dd-section__number">02</span>
+            <h2 class="dd-section__title">The Great Recession</h2>
+        </div>
+        <p class="dd-section__intro">Spain's GDP crashed -3.8% in 2009, then entered a double-dip recession in 2012. Unemployment soared to 26.1% — and youth unemployment hit a staggering 55.5%, the second worst in Europe after Greece. Government debt tripled from 36% to 96% of GDP in just six years.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="-3.8" data-suffix="%" data-decimals="1" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">GDP Crash 2009</span>
+                <span class="dd-kpi-card__country">Spain</span>
+            </div>
+            <div class="dd-kpi-card" data-value="26.1" data-suffix="%" data-decimals="1" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Unemployment</span>
+                <span class="dd-kpi-card__country">Spain, 2013 peak</span>
+            </div>
+            <div class="dd-kpi-card" data-value="55.5" data-suffix="%" data-decimals="1" style="--chapter-accent: #ff3b30">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Youth Jobless</span>
+                <span class="dd-kpi-card__country">15-24 age, 2013</span>
+            </div>
+            <div class="dd-kpi-card" data-value="96" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Debt/GDP</span>
+                <span class="dd-kpi-card__country">Spain 2013 (was 36%)</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">GDP Growth (%, 2002–2013)</h3>
+                    <div class="dd-series-toggle" id="toggle-gdp">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-gdp"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Unemployment Rate (%, 2002–2013)</h3>
+                    <div class="dd-series-toggle" id="toggle-unemployment">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-unemployment"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Youth Unemployment 2013 (%, 15–24)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-youth-unemp"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Government Debt (% of GDP)</h3>
+                    <div class="dd-series-toggle" id="toggle-debt">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-debt"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Print Industry -->
+    <section class="dd-section" id="print-industry">
+        <div class="dd-section__header">
+            <span class="dd-section__number">03</span>
+            <h2 class="dd-section__title">The Print Industry</h2>
+        </div>
+        <p class="dd-section__intro">The print and design industry was hit by a double blow: the financial crisis slashed client budgets, while digital advertising was eating print's share. Spain's print revenue fell 55% from peak to 2013. Over 30% of print shops closed their doors permanently.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Print Revenue Index (2007=100)</h3>
+                    <div class="dd-series-toggle" id="toggle-print">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-print"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Digital vs Print Ad Spend — Spain (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-digital-print"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Companies Closed 2008–2013 (% of sector, Spain)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-closed"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Brain Drain -->
+    <section class="dd-section" id="brain-drain">
+        <div class="dd-section__header">
+            <span class="dd-section__number">04</span>
+            <h2 class="dd-section__title">Brain Drain & Social Cost</h2>
+        </div>
+        <p class="dd-section__intro">The crisis forced tens of thousands of young Spaniards to emigrate — the country's first mass emigration since the 1960s. By 2013, over 73,000 Spaniards left annually, most under 35. The poverty rate climbed to 22.2%, the highest in Western Europe.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Spanish Emigration (2008–2013)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-emigration"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">At-Risk-of-Poverty Rate (%)</h3>
+                    <div class="dd-series-toggle" id="toggle-poverty">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-poverty"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Personal -->
+    <section class="dd-section" id="personal">
+        <div class="dd-section__header">
+            <span class="dd-section__number">05</span>
+            <h2 class="dd-section__title">Personal Connection</h2>
+        </div>
+        <p class="dd-section__intro">I joined Kopybasa at age 24 and left at 33 — nine years spanning the entire boom-bust cycle. I watched the print industry go from rush jobs to crickets practically overnight. When I left in December 2011, with Spain at 25% unemployment, I chose to build rather than look for a job.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="9" data-suffix=" yrs" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">At Kopybasa</span>
+                <span class="dd-kpi-card__country">Nov 2002 – Dec 2011</span>
+            </div>
+            <div class="dd-kpi-card" data-value="6" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Adobe Tools</span>
+                <span class="dd-kpi-card__country">Mastered by 2011</span>
+            </div>
+            <div class="dd-kpi-card" data-value="25" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Unemployment</span>
+                <span class="dd-kpi-card__country">When I left Kopybasa</span>
+            </div>
+            <div class="dd-kpi-card" data-value="35" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Age: Founded Co.</span>
+                <span class="dd-kpi-card__country">Clownfish, Apr 2013</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">My Career Path vs Spain's Events</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--tall" id="chart-dd-mypath"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Skills Mastery by 2011 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-skills"></div>
+            </div>
+        </div>
+
+        <div class="dd-location-card">
+            <div class="dd-location-card__icon">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                    <circle cx="24" cy="24" r="4" fill="currentColor" class="dd-location-card__pulse"/>
+                </svg>
+            </div>
+            <div class="dd-location-card__info">
+                <span class="dd-location-card__name">Kopybasa — Graphic Designer & Printer</span>
+                <span class="dd-location-card__detail">Nov 2002 – Dec 2011 &middot; 9 years</span>
+                <span class="dd-location-card__note">"The print industry went from 'we need it yesterday' rush jobs to crickets practically overnight."</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="dd-footer">
+        <div class="dd-footer__sources">
+            <h4>Data Sources &amp; References</h4>
+            <div class="dd-sources-grid">
+                <div class="dd-source">
+                    <span class="dd-source__section">Housing Bubble</span>
+                    <ul>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736152838&menu=resultados&idp=1254735976607" target="_blank" rel="noopener">INE — Estadistica de Hipotecas</a></li>
+                        <li><a href="https://www.bde.es/bde/es/areas/estabilida/" target="_blank" rel="noopener">Banco de Espana — Financial Stability Report</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Economy</span>
+                    <ul>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" target="_blank" rel="noopener">World Bank — GDP growth</a></li>
+                        <li><a href="https://ec.europa.eu/eurostat/web/labour-market" target="_blank" rel="noopener">Eurostat — Labour Force Survey</a></li>
+                        <li><a href="https://stats.oecd.org/" target="_blank" rel="noopener">OECD — Economic Surveys: Spain</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Print Industry</span>
+                    <ul>
+                        <li><a href="https://www.infoadex.es/" target="_blank" rel="noopener">AIMC/InfoAdex — Inversion Publicitaria en Espana</a></li>
+                        <li><a href="https://federacioneditores.org/" target="_blank" rel="noopener">FGEE — Print industry reports</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Social Impact</span>
+                    <ul>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177000&menu=resultados&idp=1254735573002" target="_blank" rel="noopener">INE — Estadistica de Migraciones</a></li>
+                        <li><a href="https://ec.europa.eu/eurostat/web/income-and-living-conditions" target="_blank" rel="noopener">Eurostat — Income and Living Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dd-sources-note">Some figures are estimates or approximations based on the closest available data point. International comparisons use standardized indicators where possible. Historical data may have been revised by source institutions since original publication.</p>
+        </div>
+        <div class="dd-footer__nav">
+            <a href="../index.html#chapter-5" class="dd-footer__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <span class="dd-footer__copyright">Germinal Barrena &copy; 2026</span>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="deep-dive-core.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        var DATA = null;
+        var CC = DiveDeep.countryColors;
+        var CN = DiveDeep.countryNames;
+
+        CN['EU'] = 'EU Avg';
+        CC['EU'] = '#86868b';
+        CC['GR'] = '#86868b';
+
+        fetch('../data/deep-dive-designer-2002-2013.json')
+            .then(function(r) { return r.json(); })
+            .then(function(json) {
+                DATA = json;
+                initPage();
+            })
+            .catch(function(err) {
+                console.error('Failed to load data:', err);
+                initPage();
+            });
+
+        function initPage() {
+            DiveDeep.initDiveDeep({
+                accentColor: '#34c759',
+                accentRgb: '52,199,89'
+            });
+
+            if (DATA) {
+                initHousingCharts();
+                initCrisisCharts();
+                initPrintCharts();
+                initBrainDrainCharts();
+                initPersonalCharts();
+                initScopeUpdates();
+            }
+
+            initSeriesToggles();
+        }
+
+        // SECTION 1: Housing Bubble
+        function initHousingCharts() {
+            var hb = DATA.housing_bubble;
+
+            // Housing price index
+            var hpiSeries = [];
+            ['ES','FR','DE','UK','US'].forEach(function(code) {
+                hpiSeries.push({ name: CN[code], data: hb.housing_price_index.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-housing', DiveDeep.getBaseChartConfig({
+                series: hpiSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 0 },
+                xaxis: { categories: hb.housing_price_index.years },
+                yaxis: { min: 80, max: 210, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return 'Index ' + v; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [
+                    { x: 2007, borderColor: '#ff3b30', strokeDashArray: 0, label: { text: 'Spain peak', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } },
+                    { x: 2008, borderColor: '#ff9500', strokeDashArray: 4, label: { text: 'Lehman', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } }
+                ] }
+            }), hpiSeries);
+
+            // Housing starts
+            var hsSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                hsSeries.push({ name: CN[code], data: hb.housing_starts.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-starts', DiveDeep.getBaseChartConfig({
+                series: hsSeries,
+                chart: { type: 'area', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: hb.housing_starts.years },
+                yaxis: { labels: { formatter: function(v) { return v + 'K'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString() + ' thousand'; } } },
+                legend: { position: 'bottom' }
+            }), hsSeries);
+
+            // Construction employment
+            var ceSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                ceSeries.push({ name: CN[code], data: hb.construction_employment.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-construction', DiveDeep.getBaseChartConfig({
+                series: ceSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: hb.construction_employment.years },
+                yaxis: { min: 0.5, max: 3.2, labels: { formatter: function(v) { return v.toFixed(1) + 'M'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1) + ' million'; } } },
+                legend: { position: 'bottom' }
+            }), ceSeries);
+
+            // Mortgage debt
+            var md = hb.mortgage_debt_gdp;
+            var mdColors = md.countries.map(function(c) { return c === 'ES' ? CC.ES : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-mortgage', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Debt/GDP %', data: md.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: mdColors,
+                xaxis: { categories: md.labels, max: 85 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% of GDP'; } } }
+            }));
+        }
+
+        // SECTION 2: Economic Crisis
+        function initCrisisCharts() {
+            var ec = DATA.economic_crisis;
+
+            // GDP growth
+            var gdpSeries = [];
+            ['ES','FR','DE','UK','US','EU'].forEach(function(code) {
+                gdpSeries.push({ name: CN[code] || code, data: ec.gdp_growth_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-gdp', DiveDeep.getBaseChartConfig({
+                series: gdpSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 0 },
+                xaxis: { categories: ec.gdp_growth_trend.years },
+                yaxis: { min: -7, max: 5, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% GDP growth'; } } },
+                legend: { position: 'bottom' },
+                annotations: {
+                    yaxis: [{ y: 0, borderColor: 'rgba(255,255,255,0.2)', strokeDashArray: 0 }],
+                    xaxis: [
+                        { x: 2008, borderColor: '#ff3b30', strokeDashArray: 0, label: { text: 'Lehman', style: { background: '#ff3b30', color: '#fff', fontSize: '9px' } } },
+                        { x: 2012, borderColor: '#ff9500', strokeDashArray: 4, label: { text: 'Bank bailout', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } }
+                    ]
+                }
+            }), gdpSeries);
+
+            // Unemployment
+            var unempSeries = [];
+            ['ES','FR','DE','UK','US','EU'].forEach(function(code) {
+                unempSeries.push({ name: CN[code] || code, data: ec.unemployment_trend.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-unemployment', DiveDeep.getBaseChartConfig({
+                series: unempSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 0 },
+                xaxis: { categories: ec.unemployment_trend.years },
+                yaxis: { min: 0, max: 30, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% unemployment'; } } },
+                legend: { position: 'bottom' }
+            }), unempSeries);
+
+            // Youth unemployment 2013
+            var yu = ec.youth_unemployment_peak;
+            var yuColors = yu.countries.map(function(c) { return c === 'ES' ? '#ff3b30' : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-youth-unemp', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Youth %', data: yu.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: yuColors,
+                xaxis: { categories: yu.labels, max: 65 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% youth unemployment'; } } }
+            }));
+
+            // Government debt
+            var debtSeries = [];
+            ['ES','FR','DE','UK','IT','EU'].forEach(function(code) {
+                debtSeries.push({ name: CN[code] || code, data: ec.government_debt_gdp.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-debt', DiveDeep.getBaseChartConfig({
+                series: debtSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','IT','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: ec.government_debt_gdp.years },
+                yaxis: { min: 30, max: 140, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% of GDP'; } } },
+                legend: { position: 'bottom' }
+            }), debtSeries);
+        }
+
+        // SECTION 3: Print Industry
+        function initPrintCharts() {
+            var pi = DATA.print_industry;
+
+            // Print revenue
+            var prSeries = [];
+            ['ES','FR','DE','UK'].forEach(function(code) {
+                prSeries.push({ name: CN[code], data: pi.print_revenue_index.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-print', DiveDeep.getBaseChartConfig({
+                series: prSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: pi.print_revenue_index.years },
+                yaxis: { min: 40, max: 105, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return 'Index ' + v; } } },
+                legend: { position: 'bottom' }
+            }), prSeries);
+
+            // Digital vs Print
+            var dp = pi.digital_vs_print_ad_spend;
+            DiveDeep.renderChart('#chart-dd-digital-print', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Print', data: dp.series.print_pct },
+                    { name: 'Digital', data: dp.series.digital_pct }
+                ],
+                chart: { type: 'area', height: 280, stacked: false },
+                colors: ['#86868b', '#34c759'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.1 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: dp.years },
+                yaxis: { min: 0, max: 75, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v + '% of ad spend'; } } },
+                annotations: { xaxis: [{ x: 2012, borderColor: '#34c759', strokeDashArray: 0, label: { text: 'Digital > Print', style: { background: '#34c759', color: '#fff', fontSize: '9px' } } }] }
+            }));
+
+            // Companies closed
+            var cl = pi.print_companies_closed;
+            var clColors = ['#ff3b30', '#ff9500', '#5856d6', '#0071e3'];
+
+            DiveDeep.renderChart('#chart-dd-closed', DiveDeep.getBaseChartConfig({
+                series: [{ name: '% Closed', data: cl.pct_closed_2008_2013 }],
+                chart: { type: 'bar', height: 220 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '55%', distributed: true } },
+                colors: clColors,
+                xaxis: { categories: cl.categories, max: 35 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% closed'; } } }
+            }));
+        }
+
+        // SECTION 4: Brain Drain
+        function initBrainDrainCharts() {
+            var bd = DATA.brain_drain;
+
+            // Emigration
+            var em = bd.emigration_trend;
+            DiveDeep.renderChart('#chart-dd-emigration', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Total Emigrants', data: em.series.ES_total },
+                    { name: 'Under 35', data: em.series.ES_under_35 }
+                ],
+                chart: { type: 'area', height: 280, stacked: false },
+                colors: ['#34c759', '#ff9500'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: em.years },
+                yaxis: { labels: { formatter: function(v) { return (v/1000).toFixed(0) + 'K'; } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString() + ' people'; } } }
+            }));
+
+            // Poverty rate
+            var pov = bd.poverty_rate;
+            var povSeries = [];
+            ['ES','FR','DE','UK','EU'].forEach(function(code) {
+                povSeries.push({ name: CN[code] || code, data: pov.series[code], countryCode: code });
+            });
+
+            DiveDeep.renderChart('#chart-dd-poverty', DiveDeep.getBaseChartConfig({
+                series: povSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 4 },
+                xaxis: { categories: pov.years },
+                yaxis: { min: 10, max: 25, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% at risk'; } } },
+                legend: { position: 'bottom' }
+            }), povSeries);
+        }
+
+        // SECTION 5: Personal
+        function initPersonalCharts() {
+            var p = DATA.personal.kopybasa_journey;
+
+            var annotations = p.spain_events.map(function(ev, i) {
+                return {
+                    x: p.years[i],
+                    borderColor: '#34c759',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev,
+                        orientation: 'horizontal',
+                        position: i % 2 === 0 ? 'top' : 'bottom',
+                        style: { background: '#222', color: '#f0f0f0', fontSize: '9px', padding: { left: 4, right: 4, top: 2, bottom: 2 } }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-mypath', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'My Age', data: p.ages }],
+                chart: { type: 'area', height: 320 },
+                colors: ['#34c759'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 6, hover: { size: 8 } },
+                xaxis: { categories: p.years, labels: { rotate: -45, style: { colors: '#f0f0f0', fontSize: '10px' } } },
+                yaxis: { min: 22, max: 37, labels: { formatter: function(v) { return 'Age ' + v; } } },
+                annotations: { xaxis: annotations },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#34c759">' + p.years[i] + '</strong><br>' +
+                            '<span style="color:#f0f0f0;font-weight:600">' + p.levels[i] + '</span> (Age ' + p.ages[i] + ')<br>' +
+                            '<span style="color:#888;font-size:11px">' + p.spain_events[i] + '</span></div>';
+                    }
+                }
+            }));
+
+            // Skills radar
+            var sk = DATA.personal.skills_timeline;
+            DiveDeep.renderChart('#chart-dd-skills', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Mastery 2011', data: sk.mastery_2011 }],
+                chart: { type: 'radar', height: 280 },
+                colors: ['#34c759'],
+                stroke: { width: 2 },
+                fill: { opacity: 0.25 },
+                markers: { size: 3 },
+                xaxis: { categories: sk.categories, labels: { style: { colors: '#f0f0f0', fontSize: '10px' } } },
+                yaxis: { show: false, max: 100 },
+                tooltip: { y: { formatter: function(v) { return v + '% mastery'; } } }
+            }));
+        }
+
+        // SERIES TOGGLES
+        function initSeriesToggles() {
+            DiveDeep.initSeriesToggle('#chart-dd-housing', '#toggle-housing');
+            DiveDeep.initSeriesToggle('#chart-dd-starts', '#toggle-starts');
+            DiveDeep.initSeriesToggle('#chart-dd-construction', '#toggle-construction');
+            DiveDeep.initSeriesToggle('#chart-dd-gdp', '#toggle-gdp');
+            DiveDeep.initSeriesToggle('#chart-dd-unemployment', '#toggle-unemployment');
+            DiveDeep.initSeriesToggle('#chart-dd-debt', '#toggle-debt');
+            DiveDeep.initSeriesToggle('#chart-dd-print', '#toggle-print');
+            DiveDeep.initSeriesToggle('#chart-dd-poverty', '#toggle-poverty');
+        }
+
+        // SCOPE CHANGE
+        function initScopeUpdates() {
+            DiveDeep.onScopeChange(function(scope, countries) {
+                var chartMap = {
+                    '#chart-dd-housing': ['ES','FR','DE','UK','US'],
+                    '#chart-dd-starts': ['ES','FR','DE','UK'],
+                    '#chart-dd-construction': ['ES','FR','DE','UK'],
+                    '#chart-dd-gdp': ['ES','FR','DE','UK','US','EU'],
+                    '#chart-dd-unemployment': ['ES','FR','DE','UK','US','EU'],
+                    '#chart-dd-debt': ['ES','FR','DE','UK','IT','EU'],
+                    '#chart-dd-print': ['ES','FR','DE','UK'],
+                    '#chart-dd-poverty': ['ES','FR','DE','UK','EU']
+                };
+
+                var toggleMap = {
+                    '#chart-dd-housing': '#toggle-housing',
+                    '#chart-dd-starts': '#toggle-starts',
+                    '#chart-dd-construction': '#toggle-construction',
+                    '#chart-dd-gdp': '#toggle-gdp',
+                    '#chart-dd-unemployment': '#toggle-unemployment',
+                    '#chart-dd-debt': '#toggle-debt',
+                    '#chart-dd-print': '#toggle-print',
+                    '#chart-dd-poverty': '#toggle-poverty'
+                };
+
+                Object.keys(chartMap).forEach(function(sel) {
+                    var chart = DiveDeep.charts[sel];
+                    if (!chart) return;
+
+                    chartMap[sel].forEach(function(code) {
+                        var name = CN[code] || code;
+                        if (countries.indexOf(code) !== -1 || code === 'EU') {
+                            chart.showSeries(name);
+                        } else {
+                            chart.hideSeries(name);
+                        }
+                    });
+
+                    var toggleId = toggleMap[sel];
+                    if (toggleId) {
+                        var container = document.querySelector(toggleId);
+                        if (container) {
+                            container.querySelectorAll('.dd-series-btn').forEach(function(btn) {
+                                var seriesName = btn.dataset.series;
+                                var code = Object.keys(CN).find(function(k) { return CN[k] === seriesName; }) || seriesName;
+                                if (countries.indexOf(code) !== -1 || code === 'EU') {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>

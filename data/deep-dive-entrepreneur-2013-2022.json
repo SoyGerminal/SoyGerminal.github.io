@@ -1,0 +1,179 @@
+{
+    "chapter": 6,
+    "title": "The Entrepreneur",
+    "period": "2013–2022",
+
+    "spain_recovery": {
+        "gdp_growth_trend": {
+            "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+            "series": {
+                "ES": [-1.4, 1.4, 3.8, 3.0, 2.9, 2.3, 2.0, -11.3, 5.5, 5.8],
+                "FR": [0.6, 1.0, 1.1, 1.1, 2.4, 1.8, 1.8, -7.9, 6.8, 2.5],
+                "DE": [0.4, 2.2, 1.7, 2.2, 2.7, 1.0, 1.1, -3.7, 2.6, 1.8],
+                "UK": [2.2, 2.9, 2.4, 1.9, 1.9, 1.3, 1.4, -11.0, 7.6, 4.3],
+                "US": [1.8, 2.3, 2.7, 1.7, 2.2, 2.9, 2.3, -2.8, 5.9, 2.1],
+                "EU": [0.3, 1.6, 2.3, 2.1, 2.8, 2.1, 1.8, -5.7, 5.4, 3.4]
+            },
+            "note": "Annual GDP growth (%)"
+        },
+        "unemployment_trend": {
+            "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+            "series": {
+                "ES": [26.1, 24.4, 22.1, 19.6, 17.2, 15.3, 14.1, 15.5, 14.8, 12.9],
+                "FR": [10.3, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4, 8.0, 7.9, 7.3],
+                "DE": [5.2, 5.0, 4.6, 4.2, 3.8, 3.4, 3.2, 3.8, 3.6, 3.1],
+                "UK": [7.6, 6.2, 5.4, 4.9, 4.4, 4.1, 3.8, 4.5, 4.5, 3.7],
+                "US": [7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7, 8.1, 5.4, 3.6],
+                "EU": [10.9, 10.2, 9.4, 8.6, 7.6, 6.8, 6.4, 7.1, 7.0, 6.2]
+            },
+            "note": "Total unemployment rate (%)"
+        },
+        "tourism_arrivals": {
+            "years": [2013, 2015, 2017, 2019, 2020, 2022],
+            "series": {
+                "ES": [60.7, 68.2, 81.8, 83.7, 19.0, 71.6],
+                "FR": [83.6, 84.5, 86.9, 90.9, 40.0, 79.4],
+                "IT": [47.7, 50.7, 58.3, 64.5, 25.2, 49.8]
+            },
+            "note": "International tourist arrivals (millions)"
+        }
+    },
+
+    "entrepreneurship": {
+        "new_companies_trend": {
+            "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+            "series": {
+                "ES": [93, 95, 101, 105, 108, 110, 113, 80, 98, 108],
+                "FR": [110, 115, 120, 130, 140, 150, 160, 130, 155, 165],
+                "DE": [120, 118, 115, 112, 110, 108, 105, 95, 100, 105],
+                "UK": [130, 140, 150, 155, 160, 165, 170, 125, 155, 160]
+            },
+            "note": "New companies created per year (thousands)"
+        },
+        "self_employed_trend": {
+            "years": [2013, 2015, 2017, 2019, 2021, 2022],
+            "series": {
+                "ES": [3050, 3100, 3180, 3260, 3280, 3340],
+                "FR": [2800, 2900, 3050, 3200, 3300, 3350],
+                "DE": [4200, 4150, 4100, 4050, 3950, 3900],
+                "UK": [4500, 4700, 4900, 5000, 4400, 4500]
+            },
+            "note": "Self-employed workers (thousands)"
+        },
+        "survival_rate_5yr": {
+            "years": [2013, 2015, 2017, 2019, 2021],
+            "series": {
+                "ES": [38, 41, 44, 47, 42],
+                "FR": [45, 48, 50, 52, 48],
+                "DE": [55, 56, 57, 58, 54],
+                "UK": [42, 44, 45, 46, 40]
+            },
+            "note": "5-year business survival rate (%)"
+        },
+        "autonomo_costs_2019": {
+            "countries": ["ES", "FR", "DE", "UK", "IT"],
+            "monthly_eur": [280, 420, 380, 160, 350],
+            "labels": ["Spain\n€280/mo", "France\n€420/mo", "Germany\n€380/mo", "UK\n€160/mo", "Italy\n€350/mo"],
+            "note": "Minimum monthly social security cost for self-employed, ~2019"
+        }
+    },
+
+    "covid_impact": {
+        "gdp_drop_2020": {
+            "countries": ["ES", "UK", "IT", "FR", "EU", "DE", "US"],
+            "values": [-11.3, -11.0, -9.0, -7.9, -5.7, -3.7, -2.8],
+            "labels": ["Spain", "UK", "Italy", "France", "EU Avg", "Germany", "USA"],
+            "note": "GDP change in 2020 (%)"
+        },
+        "sector_impact_spain": {
+            "categories": ["Hospitality", "Creative\nServices", "Retail", "Manufacturing", "E-Commerce"],
+            "values": [-50.2, -28.7, -15.3, -12.0, 36.0],
+            "note": "Sector revenue change in Spain 2020 (%)"
+        },
+        "lockdown_strictness": {
+            "countries": ["ES", "IT", "FR", "UK", "DE", "US"],
+            "days_strict": [98, 69, 55, 42, 28, 0],
+            "labels": ["Spain\n98 days", "Italy\n69 days", "France\n55 days", "UK\n42 days", "Germany\n28 days", "USA\nVaries"],
+            "note": "Days of strict national lockdown (first wave)"
+        },
+        "vaccination_rate_2021": {
+            "countries": ["ES", "FR", "DE", "UK", "IT", "US", "EU"],
+            "values": [92, 80, 75, 75, 85, 65, 78],
+            "labels": ["Spain", "France", "Germany", "UK", "Italy", "USA", "EU Avg"],
+            "note": "% of population fully vaccinated, end of 2021"
+        },
+        "erte_furlough": {
+            "peak_workers": 3400000,
+            "peak_month": "April 2020",
+            "businesses_closed": 100000,
+            "note": "Spain's ERTE furlough scheme"
+        }
+    },
+
+    "ecommerce_digital": {
+        "ecommerce_revenue": {
+            "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+            "series": {
+                "ES": [14, 17, 20, 25, 30, 36, 40, 52, 58, 63],
+                "FR": [51, 57, 65, 72, 82, 93, 100, 112, 129, 147],
+                "DE": [52, 59, 66, 73, 81, 90, 94, 106, 112, 117],
+                "UK": [96, 110, 125, 130, 140, 150, 158, 192, 210, 225]
+            },
+            "note": "E-commerce revenue (EUR billions)"
+        },
+        "ecommerce_share_retail": {
+            "years": [2013, 2016, 2019, 2020, 2022],
+            "series": {
+                "ES": [2.5, 4.0, 6.5, 10.0, 12.0],
+                "FR": [5.0, 7.5, 10.0, 14.5, 15.5],
+                "DE": [7.0, 9.5, 12.0, 16.0, 17.0],
+                "UK": [12.0, 15.0, 20.0, 28.0, 26.5]
+            },
+            "note": "E-commerce as % of total retail"
+        },
+        "organic_food_market": {
+            "years": [2013, 2015, 2017, 2019, 2021, 2022],
+            "series": {
+                "ES": [1.0, 1.5, 1.9, 2.2, 2.5, 2.8],
+                "FR": [4.4, 5.5, 8.0, 11.3, 12.7, 12.0],
+                "DE": [7.6, 8.6, 10.0, 11.9, 15.9, 15.3]
+            },
+            "note": "Organic food market size (EUR billions)"
+        }
+    },
+
+    "personal": {
+        "business_journey": {
+            "years": ["Apr 2013", "2013-14", "2015", "2016-19", "Mar 2020", "2020-21", "Sep 2022"],
+            "levels": ["Founded Clownfish", "Building Clients", "Founded Koralium", "Peak Activity", "COVID Lockdown", "Pandemic Pivot", "Wound Down"],
+            "ages": [35, 36, 37, 39, 42, 43, 44],
+            "spain_events": [
+                "26% unemployment, new parties",
+                "Early recovery begins",
+                "Podemos/Ciudadanos rise",
+                "Tourism boom, Catalonia crisis",
+                "State of alarm, 98-day lockdown",
+                "Vaccination, digital shift",
+                "Recovery, new chapter ahead"
+            ]
+        },
+        "dual_business_stats": {
+            "categories": ["Clownfish\nProjects", "Koralium\nSKUs", "Years\nActive", "Team\nMembers"],
+            "clownfish": [100, 0, 9, 4],
+            "koralium": [0, 500, 7, 6],
+            "note": "Key metrics for both businesses"
+        }
+    },
+
+    "sources": [
+        "INE — Contabilidad Nacional Trimestral (GDP), EPA (unemployment)",
+        "Eurostat — National Accounts, Labour Force Survey, Tourism Statistics",
+        "World Bank — World Development Indicators",
+        "CNMC — Comision Nacional de los Mercados: e-commerce reports",
+        "ONTSI — Observatorio Nacional de Tecnologia y Sociedad (digital economy)",
+        "Ministerio de Trabajo — Estadisticas de autonomos y empresas",
+        "ECDC — European Centre for Disease Prevention (COVID data)",
+        "MAPA — Ministerio de Agricultura: organic food market",
+        "SEPE — Servicio Publico de Empleo Estatal (ERTE statistics)"
+    ]
+}

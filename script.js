@@ -175,6 +175,7 @@
             '.chapter__context',
             '.chapter__comparison',
             '.chapter__footnotes',
+            '.chapter__dive-deep',
             '.chapter__timeline-personal',
             '.chapter__subsection',
             '.closing__skills',

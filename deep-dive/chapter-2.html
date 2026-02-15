@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: The Classroom Years (1983–1992) — Germinal Barrena</title>
+
+    <meta name="description" content="Interactive infographic: Spain's education system 1983–1992 compared to Europe. Enrollment, dropout rates, the LOGSE reform, and international comparisons.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="deep-dive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dd-page">
+
+    <!-- ============================================================ -->
+    <!-- NAV -->
+    <!-- ============================================================ -->
+    <nav class="dd-nav">
+        <div class="dd-nav__inner">
+            <a href="../index.html#chapter-2" class="dd-nav__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <div class="dd-nav__breadcrumb">
+                <span class="dd-nav__chapter-num">02</span>
+                <span class="dd-nav__separator">/</span>
+                <span class="dd-nav__chapter-title">The Classroom Years</span>
+                <span class="dd-nav__separator">—</span>
+                <span class="dd-nav__badge">Deep Dive</span>
+            </div>
+            <div class="dd-nav__arrows">
+                <a href="chapter-1.html" class="dd-nav__arrow" title="Prev: Born Into Democracy">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+                <a href="chapter-3.html" class="dd-nav__arrow" title="Next: Generation X">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <header class="dd-hero">
+        <div class="dd-hero__bg"></div>
+        <div class="dd-hero__content">
+            <div class="dd-hero__number">02</div>
+            <h1 class="dd-hero__title">The Classroom Years</h1>
+            <p class="dd-hero__subtitle">Spain's education system was transforming. Nine years of school through one of the most ambitious reform periods in European history.</p>
+            <div class="dd-scope-toggle">
+                <button class="dd-scope-btn" data-scope="spain">Spain</button>
+                <button class="dd-scope-btn" data-scope="europe">Europe</button>
+                <button class="dd-scope-btn" data-scope="world">World</button>
+                <button class="dd-scope-btn active" data-scope="all">All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: Education System -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="education-system">
+        <div class="dd-section__header">
+            <span class="dd-section__number">01</span>
+            <h2 class="dd-section__title">The Education System</h2>
+        </div>
+        <p class="dd-section__intro">Spain's EGB system (Educacion General Basica) educated over 5.5 million children through 8 years of compulsory schooling. As enrollment grew across all levels, the infrastructure struggled to keep pace — and Spain's pupil-to-teacher ratio was among the highest in Europe.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="8.2" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Total Students</span>
+                <span class="dd-kpi-card__country">Spain, all levels</span>
+            </div>
+            <div class="dd-kpi-card" data-value="27" data-suffix="K" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Schools</span>
+                <span class="dd-kpi-card__country">Public + Private</span>
+            </div>
+            <div class="dd-kpi-card" data-value="370" data-suffix="K" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Teachers</span>
+                <span class="dd-kpi-card__country">By 1992</span>
+            </div>
+            <div class="dd-kpi-card" data-value="26" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Pupils/Teacher</span>
+                <span class="dd-kpi-card__country">Spain primary, 1988</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Student Enrollment by Level (millions, 1983–1992)</h3>
+                    <div class="dd-series-toggle" id="toggle-enrollment">
+                        <button class="dd-series-btn active" data-series="EGB (Primary, ages 6–14)">EGB</button>
+                        <button class="dd-series-btn active" data-series="BUP/COU (Secondary)">BUP</button>
+                        <button class="dd-series-btn active" data-series="FP (Vocational)">FP</button>
+                        <button class="dd-series-btn active" data-series="University">Uni</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-enrollment"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Pupil-Teacher Ratio (1988)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-ptr"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">School Infrastructure: Public vs Private (thousands)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-schools"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: Spain vs Europe -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="spain-vs-europe">
+        <div class="dd-section__header">
+            <span class="dd-section__number">02</span>
+            <h2 class="dd-section__title">Spain vs Europe</h2>
+        </div>
+        <p class="dd-section__intro">Spain's dropout rate was nearly double the European average. Education spending lagged well behind its neighbors. Yet literacy had reached 96% — a dramatic improvement from just a generation earlier.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Dropout Rate Trend (%, 1983–1992)</h3>
+                    <div class="dd-series-toggle" id="toggle-dropout">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-dropout"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Education Spending (% GDP, 1983–1992)</h3>
+                    <div class="dd-series-toggle" id="toggle-spending">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-spending"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Literacy Rate ~1990 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-literacy"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Compulsory Education Age Range</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-compulsory"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: The Reform Era -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="reform-era">
+        <div class="dd-section__header">
+            <span class="dd-section__number">03</span>
+            <h2 class="dd-section__title">The Reform Era</h2>
+        </div>
+        <p class="dd-section__intro">Between 1983 and 1992, Spain enacted two major education laws (LODE and LOGSE), joined the EEC, and more than doubled its per-student spending. EU funding transformed school infrastructure and launched the Erasmus programme.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Spending per Student (USD PPP, 1983–1992)</h3>
+                    <div class="dd-series-toggle" id="toggle-per-student">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-per-student"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">EEC Impact: Before vs After (1984 vs 1990)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-eec"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Spain Education Reform Timeline (1983–1992)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-reform-timeline"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: Social Mobility -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="social-mobility">
+        <div class="dd-section__header">
+            <span class="dd-section__number">04</span>
+            <h2 class="dd-section__title">Social Mobility</h2>
+        </div>
+        <p class="dd-section__intro">Education was the great equalizer. University access nearly doubled in a decade. The generation born in the late 1970s — my generation — was dramatically more educated than their parents.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">University Access Trend (% of 18–24)</h3>
+                    <div class="dd-series-toggle" id="toggle-university">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-university"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Generational Shift: Parents vs Children</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-generation"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Female Share in Secondary Education (%)</h3>
+                    <div class="dd-series-toggle" id="toggle-female">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="EU Avg">EU</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-female"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: Personal -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="personal">
+        <div class="dd-section__header">
+            <span class="dd-section__number">05</span>
+            <h2 class="dd-section__title">Personal Connection</h2>
+        </div>
+        <p class="dd-section__intro">I entered the school system in 1983 and completed 8th EGB in 1992 — the entire span of Spain's reform decade. Here are the numbers behind my school years.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="9" data-suffix=" yrs" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">School Years</span>
+                <span class="dd-kpi-card__country">Preschool to 8th EGB</span>
+            </div>
+            <div class="dd-kpi-card" data-value="32" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Avg Class Size</span>
+            </div>
+            <div class="dd-kpi-card" data-value="11" data-suffix="K hrs" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Total School Hours</span>
+                <span class="dd-kpi-card__country">Approximate</span>
+            </div>
+            <div class="dd-kpi-card" data-value="175" data-suffix=" days" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">School Days/Year</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">My EGB Path: School Year vs Spain's Education Milestones</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--tall" id="chart-dd-mypath"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="dd-footer">
+        <div class="dd-footer__sources">
+            <h4>Data Sources &amp; References</h4>
+            <div class="dd-sources-grid">
+                <div class="dd-source">
+                    <span class="dd-source__section">Education System</span>
+                    <ul>
+                        <li><a href="https://www.educacionyfp.gob.es/servicios-al-ciudadano/estadisticas.html" target="_blank" rel="noopener">Ministerio de Educacion — Estadisticas de la Educacion en Espana</a> (enrollment, schools, teachers)</li>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176951&menu=resultados&idp=1254735572981" target="_blank" rel="noopener">INE — Censo de Poblacion</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">International Comparison</span>
+                    <ul>
+                        <li><a href="https://ec.europa.eu/eurostat/web/education-and-training" target="_blank" rel="noopener">Eurostat — Education and Training Statistics</a> (dropout, spending, literacy)</li>
+                        <li><a href="https://www.oecd.org/education/education-at-a-glance/" target="_blank" rel="noopener">OECD — Education at a Glance</a> (pupil-teacher ratio, spending per student)</li>
+                        <li><a href="https://data.worldbank.org/topic/education" target="_blank" rel="noopener">World Bank — Education indicators</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Reform Era</span>
+                    <ul>
+                        <li><a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1990-24172" target="_blank" rel="noopener">BOE — Ley Organica 1/1990 (LOGSE)</a></li>
+                        <li><a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1985-12978" target="_blank" rel="noopener">BOE — Ley Organica 8/1985 (LODE)</a></li>
+                        <li><a href="https://commission.europa.eu/education" target="_blank" rel="noopener">European Commission — Erasmus programme statistics</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Social Mobility</span>
+                    <ul>
+                        <li><a href="http://uis.unesco.org/" target="_blank" rel="noopener">UNESCO Institute for Statistics</a> (university access, gender parity)</li>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176918&menu=resultados&idp=1254735976608" target="_blank" rel="noopener">INE — Encuesta de Poblacion Activa</a> (educational attainment by generation)</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dd-sources-note">Some figures are estimates or approximations based on the closest available data point. International comparisons use standardized indicators where possible. Historical data may have been revised by source institutions since original publication.</p>
+        </div>
+        <div class="dd-footer__nav">
+            <a href="../index.html#chapter-2" class="dd-footer__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <span class="dd-footer__copyright">Germinal Barrena &copy; 2026</span>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================================ -->
+    <script src="deep-dive-core.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        var DATA = null;
+        var CC = DiveDeep.countryColors;
+        var CN = DiveDeep.countryNames;
+
+        // Extend country names for EU avg
+        CN['EU'] = 'EU Avg';
+        CC['EU'] = '#86868b';
+
+        fetch('../data/deep-dive-education-1983-1992.json')
+            .then(function(r) { return r.json(); })
+            .then(function(json) {
+                DATA = json;
+                initPage();
+            })
+            .catch(function(err) {
+                console.error('Failed to load data:', err);
+                initPage();
+            });
+
+        function initPage() {
+            DiveDeep.initDiveDeep({
+                accentColor: '#af52de',
+                accentRgb: '175,82,222'
+            });
+
+            if (DATA) {
+                initEducationCharts();
+                initComparisonCharts();
+                initReformCharts();
+                initMobilityCharts();
+                initPersonalCharts();
+                initScopeUpdates();
+            }
+
+            initSeriesToggles();
+        }
+
+        // ============================================================
+        // SECTION 1: Education System
+        // ============================================================
+        function initEducationCharts() {
+            var ed = DATA.education_system;
+
+            // Enrollment stacked area
+            var enrLabels = ed.enrollment_trend.labels;
+            var enrSeries = Object.keys(ed.enrollment_trend.series).map(function(key) {
+                return {
+                    name: enrLabels[key],
+                    data: ed.enrollment_trend.series[key]
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-enrollment', DiveDeep.getBaseChartConfig({
+                series: enrSeries,
+                chart: { type: 'area', height: 280, stacked: true },
+                colors: [CC.ES, '#af52de', CC.DE, CC.FR],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.5, opacityTo: 0.1 } },
+                stroke: { curve: 'smooth', width: 2 },
+                xaxis: { categories: ed.enrollment_trend.years },
+                yaxis: { labels: { formatter: function(v) { return v.toFixed(1) + 'M'; } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(2) + 'M students'; } } }
+            }));
+
+            // Pupil-teacher ratio grouped bar
+            var ptr = ed.pupil_teacher_ratio;
+            var ptrColors = ptr.countries.map(function(c) { return c === 'ES' ? CC.ES : (CC[c] || '#86868b'); });
+
+            DiveDeep.renderChart('#chart-dd-ptr', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Primary', data: ptr.primary },
+                    { name: 'Secondary', data: ptr.secondary }
+                ],
+                chart: { type: 'bar', height: 280 },
+                colors: ['#af52de', '#5eb0ff'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '60%', borderRadius: 4 } },
+                xaxis: { categories: ptr.labels },
+                yaxis: { min: 0, max: 30, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v + ' pupils per teacher'; } } }
+            }));
+
+            // School infrastructure
+            var infra = ed.school_infrastructure;
+
+            DiveDeep.renderChart('#chart-dd-schools', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Public Schools', data: infra.series.public_schools.map(function(v) { return v / 1000; }) },
+                    { name: 'Private Schools', data: infra.series.private_schools.map(function(v) { return v / 1000; }) },
+                    { name: 'Teachers (K)', data: infra.series.teachers_thousands.map(function(v) { return v; }) }
+                ],
+                chart: { type: 'bar', height: 220 },
+                colors: ['#af52de', '#5856d6', '#34c759'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '55%', borderRadius: 4 } },
+                xaxis: { categories: infra.years },
+                yaxis: { labels: { formatter: function(v) { return v >= 100 ? v.toFixed(0) + 'K' : v.toFixed(1) + 'K'; } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v >= 100 ? v.toFixed(0) + 'K' : (v * 1000).toLocaleString(); } } }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 2: Spain vs Europe
+        // ============================================================
+        function initComparisonCharts() {
+            var cmp = DATA.international_comparison;
+
+            // Dropout rate trend
+            var dropSeries = [];
+            ['ES','FR','DE','UK','IT','EU'].forEach(function(code) {
+                dropSeries.push({
+                    name: CN[code] || code,
+                    data: cmp.dropout_rate_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-dropout', DiveDeep.getBaseChartConfig({
+                series: dropSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','IT','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: cmp.dropout_rate_trend.years },
+                yaxis: { min: 5, max: 50, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% dropout'; } } },
+                legend: { position: 'bottom' },
+                annotations: { yaxis: [{ y: 20, borderColor: '#34c759', strokeDashArray: 4, label: { text: 'EU Target', style: { background: '#34c759', color: '#fff', fontSize: '9px' } } }] }
+            }), dropSeries);
+
+            // Education spending % GDP
+            var spendSeries = [];
+            ['ES','FR','DE','UK','US','EU'].forEach(function(code) {
+                spendSeries.push({
+                    name: CN[code] || code,
+                    data: cmp.education_spending_gdp.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-spending', DiveDeep.getBaseChartConfig({
+                series: spendSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: cmp.education_spending_gdp.years },
+                yaxis: { min: 2.5, max: 6.5, labels: { formatter: function(v) { return v.toFixed(1) + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1) + '% of GDP'; } } },
+                legend: { position: 'bottom' }
+            }), spendSeries);
+
+            // Literacy rate
+            var lit = cmp.literacy_rate_1990;
+            var litColors = lit.countries.map(function(c) { return c === 'ES' ? CC.ES : (CC[c] || '#888'); });
+
+            DiveDeep.renderChart('#chart-dd-literacy', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Literacy Rate', data: lit.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: litColors,
+                xaxis: { categories: lit.labels, min: 70, max: 100 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% adult literacy'; } } }
+            }));
+
+            // Compulsory education range bar
+            var comp = cmp.compulsory_education_age;
+
+            DiveDeep.renderChart('#chart-dd-compulsory', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Start Age', data: comp.start_age },
+                    { name: 'Years of Compulsory', data: comp.end_age.map(function(end, i) { return end - comp.start_age[i]; }) }
+                ],
+                chart: { type: 'bar', height: 280, stacked: true },
+                colors: ['rgba(255,255,255,0.06)', '#af52de'],
+                plotOptions: { bar: { horizontal: true, borderRadius: 4, barHeight: '55%' } },
+                xaxis: { categories: comp.labels, min: 0, max: 20 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '11px' } } },
+                dataLabels: {
+                    enabled: true,
+                    formatter: function(v, opts) {
+                        if (opts.seriesIndex === 0) return '';
+                        var i = opts.dataPointIndex;
+                        return comp.start_age[i] + '–' + comp.end_age[i];
+                    },
+                    style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] }
+                },
+                legend: { show: false },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        var label = comp.labels[i].replace('\n', ' ');
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#f0f0f0">' + label + '</strong><br>' +
+                            '<span style="color:#888">Ages:</span> <span style="color:#f0f0f0">' + comp.start_age[i] + ' to ' + comp.end_age[i] + '</span><br>' +
+                            '<span style="color:#888">Duration:</span> <span style="color:#f0f0f0">' + (comp.end_age[i] - comp.start_age[i]) + ' years</span>' +
+                            '</div>';
+                    }
+                }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 3: Reform Era
+        // ============================================================
+        function initReformCharts() {
+            var ref = DATA.reform_era;
+
+            // Spending per student
+            var spsSeries = [];
+            ['ES','FR','DE','UK','EU'].forEach(function(code) {
+                spsSeries.push({
+                    name: CN[code] || code,
+                    data: ref.spending_per_student.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-per-student', DiveDeep.getBaseChartConfig({
+                series: spsSeries,
+                chart: { type: 'area', height: 280 },
+                colors: ['ES','FR','DE','UK','EU'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2.5 },
+                xaxis: { categories: ref.spending_per_student.years },
+                yaxis: { labels: { formatter: function(v) { return '$' + v.toLocaleString(); } } },
+                tooltip: { y: { formatter: function(v) { return '$' + v.toLocaleString() + ' USD PPP'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1986, borderColor: '#af52de', strokeDashArray: 4, label: { text: 'EEC Entry', style: { background: '#af52de', color: '#fff', fontSize: '9px' } } }] }
+            }), spsSeries);
+
+            // EEC impact grouped bar
+            var eec = ref.eec_impact;
+
+            DiveDeep.renderChart('#chart-dd-eec', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Pre-EEC (1984)', data: eec.pre_eec_1984 },
+                    { name: 'Post-EEC (1990)', data: eec.post_eec_1990 }
+                ],
+                chart: { type: 'bar', height: 280 },
+                colors: ['#86868b', '#af52de'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '55%', borderRadius: 4 } },
+                xaxis: { categories: eec.categories },
+                yaxis: { labels: { formatter: function(v) { return v >= 1000 ? (v/1000).toFixed(1) + 'K' : v.toFixed(0); } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v.toLocaleString(); } } }
+            }));
+
+            // Reform timeline
+            var tl = ref.timeline;
+            var tlYears = tl.events.map(function(e) { return e.year; });
+            var tlValues = tl.events.map(function(e) { return e.type === 'law' ? 2 : 1; });
+            var tlAnnotations = tl.events.map(function(ev) {
+                return {
+                    x: ev.year,
+                    borderColor: ev.type === 'law' ? '#ff3b30' : '#af52de',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev.text,
+                        orientation: 'horizontal',
+                        style: {
+                            background: ev.type === 'law' ? '#ff3b30' : '#222',
+                            color: '#f0f0f0',
+                            fontSize: '9px',
+                            padding: { left: 4, right: 4, top: 2, bottom: 2 }
+                        }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-reform-timeline', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Events', data: tlValues }],
+                chart: { type: 'bar', height: 260 },
+                colors: tl.events.map(function(e) { return e.type === 'law' ? '#ff3b30' : '#af52de'; }),
+                plotOptions: { bar: { borderRadius: 6, columnWidth: '40%', distributed: true } },
+                xaxis: { categories: tlYears, labels: { style: { colors: '#f0f0f0', fontSize: '11px' } } },
+                yaxis: { show: false, max: 3 },
+                legend: { show: false },
+                dataLabels: { enabled: false },
+                annotations: { xaxis: tlAnnotations },
+                tooltip: {
+                    custom: function(opts) {
+                        var ev = tl.events[opts.dataPointIndex];
+                        var badge = ev.type === 'law' ? '<span style="color:#ff3b30;font-weight:600">LAW</span>' : '<span style="color:#af52de;font-weight:600">MILESTONE</span>';
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            badge + '<br>' +
+                            '<strong style="color:#f0f0f0">' + ev.year + '</strong>: ' +
+                            '<span style="color:#888">' + ev.text + '</span></div>';
+                    }
+                }
+            }));
+        }
+
+        // ============================================================
+        // SECTION 4: Social Mobility
+        // ============================================================
+        function initMobilityCharts() {
+            var mob = DATA.social_mobility;
+
+            // University access trend
+            var uniSeries = [];
+            ['ES','FR','DE','UK','EU'].forEach(function(code) {
+                uniSeries.push({
+                    name: CN[code] || code,
+                    data: mob.university_access_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-university', DiveDeep.getBaseChartConfig({
+                series: uniSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','EU'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 4 },
+                xaxis: { categories: mob.university_access_trend.years },
+                yaxis: { min: 10, max: 50, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% of 18–24 age group'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1990, borderColor: '#af52de', strokeDashArray: 4, label: { text: 'LOGSE', style: { background: '#af52de', color: '#fff', fontSize: '9px' } } }] }
+            }), uniSeries);
+
+            // Generational shift
+            var gen = mob.parents_education_1990;
+
+            DiveDeep.renderChart('#chart-dd-generation', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Parents (~1950)', data: gen.spain_parents },
+                    { name: 'Children (~1978)', data: gen.spain_children }
+                ],
+                chart: { type: 'bar', height: 280 },
+                colors: ['#86868b', '#af52de'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '55%', borderRadius: 4 } },
+                xaxis: { categories: gen.categories },
+                yaxis: { max: 50, labels: { formatter: function(v) { return v + '%'; } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v + '% of generation'; } } }
+            }));
+
+            // Female enrollment
+            var fem = mob.female_enrollment;
+            var femSeries = [
+                { name: 'Spain', data: fem.series.ES_female_pct, countryCode: 'ES' },
+                { name: 'France', data: fem.series.FR_female_pct, countryCode: 'FR' },
+                { name: 'EU Avg', data: fem.series.EU_female_pct, countryCode: 'EU' }
+            ];
+
+            DiveDeep.renderChart('#chart-dd-female', DiveDeep.getBaseChartConfig({
+                series: femSeries,
+                chart: { type: 'line', height: 220 },
+                colors: [CC.ES, CC.FR, CC.EU],
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 4 },
+                xaxis: { categories: fem.years },
+                yaxis: { min: 45, max: 55, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% female'; } } },
+                legend: { position: 'bottom' },
+                annotations: { yaxis: [{ y: 50, borderColor: 'rgba(255,255,255,0.15)', strokeDashArray: 4, label: { text: '50% parity', style: { background: '#222', color: '#888', fontSize: '9px' } } }] }
+            }), femSeries);
+        }
+
+        // ============================================================
+        // SECTION 5: Personal
+        // ============================================================
+        function initPersonalCharts() {
+            var p = DATA.personal.egb_journey;
+
+            // My EGB path as a timeline chart
+            var pathData = p.ages.map(function(age, i) {
+                return age;
+            });
+
+            var annotations = p.spain_events.map(function(ev, i) {
+                return {
+                    x: p.years[i],
+                    borderColor: '#af52de',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev,
+                        orientation: 'horizontal',
+                        position: i % 2 === 0 ? 'top' : 'bottom',
+                        style: {
+                            background: '#222',
+                            color: '#f0f0f0',
+                            fontSize: '9px',
+                            padding: { left: 4, right: 4, top: 2, bottom: 2 }
+                        }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-mypath', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'My Age', data: pathData }],
+                chart: { type: 'area', height: 320 },
+                colors: ['#af52de'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: {
+                    size: 6,
+                    hover: { size: 8 }
+                },
+                xaxis: { categories: p.years, labels: { rotate: -45, style: { colors: '#f0f0f0', fontSize: '10px' } } },
+                yaxis: { min: 3, max: 15, reversed: false, labels: { formatter: function(v) { return 'Age ' + v; } } },
+                annotations: { xaxis: annotations },
+                tooltip: {
+                    custom: function(opts) {
+                        var i = opts.dataPointIndex;
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#af52de">' + p.years[i] + '</strong><br>' +
+                            '<span style="color:#f0f0f0;font-weight:600">' + p.levels[i] + '</span> (Age ' + p.ages[i] + ')<br>' +
+                            '<span style="color:#888;font-size:11px">' + p.spain_events[i] + '</span></div>';
+                    }
+                }
+            }));
+        }
+
+        // ============================================================
+        // SERIES TOGGLES
+        // ============================================================
+        function initSeriesToggles() {
+            DiveDeep.initSeriesToggle('#chart-dd-enrollment', '#toggle-enrollment');
+            DiveDeep.initSeriesToggle('#chart-dd-dropout', '#toggle-dropout');
+            DiveDeep.initSeriesToggle('#chart-dd-spending', '#toggle-spending');
+            DiveDeep.initSeriesToggle('#chart-dd-per-student', '#toggle-per-student');
+            DiveDeep.initSeriesToggle('#chart-dd-university', '#toggle-university');
+            DiveDeep.initSeriesToggle('#chart-dd-female', '#toggle-female');
+        }
+
+        // ============================================================
+        // SCOPE CHANGE HANDLER
+        // ============================================================
+        function initScopeUpdates() {
+            DiveDeep.onScopeChange(function(scope, countries) {
+                var chartMap = {
+                    '#chart-dd-dropout': ['ES','FR','DE','UK','IT','EU'],
+                    '#chart-dd-spending': ['ES','FR','DE','UK','US','EU'],
+                    '#chart-dd-per-student': ['ES','FR','DE','UK','EU'],
+                    '#chart-dd-university': ['ES','FR','DE','UK','EU'],
+                    '#chart-dd-female': ['ES','FR','EU']
+                };
+
+                Object.keys(chartMap).forEach(function(sel) {
+                    var chart = DiveDeep.charts[sel];
+                    if (!chart) return;
+
+                    var allCountries = chartMap[sel];
+
+                    allCountries.forEach(function(code) {
+                        var name = CN[code] || code;
+                        if (countries.indexOf(code) !== -1 || code === 'EU') {
+                            chart.showSeries(name);
+                        } else {
+                            chart.hideSeries(name);
+                        }
+                    });
+
+                    // Update toggle buttons
+                    var toggleMap = {
+                        '#chart-dd-dropout': '#toggle-dropout',
+                        '#chart-dd-spending': '#toggle-spending',
+                        '#chart-dd-per-student': '#toggle-per-student',
+                        '#chart-dd-university': '#toggle-university',
+                        '#chart-dd-female': '#toggle-female'
+                    };
+
+                    var toggleId = toggleMap[sel];
+                    if (toggleId) {
+                        var container = document.querySelector(toggleId);
+                        if (container) {
+                            container.querySelectorAll('.dd-series-btn').forEach(function(btn) {
+                                var seriesName = btn.dataset.series;
+                                var code = Object.keys(CN).find(function(k) { return CN[k] === seriesName; }) || seriesName;
+                                if (countries.indexOf(code) !== -1 || code === 'EU') {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>

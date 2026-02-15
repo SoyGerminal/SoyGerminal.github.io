@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: Born Into Democracy (1978) — Germinal Barrena</title>
+
+    <meta name="description" content="Interactive infographic: Spain in 1978 compared to Europe and the World. Demographics, economy, health, politics and social data.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="deep-dive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dd-page">
+
+    <!-- ============================================================ -->
+    <!-- NAV -->
+    <!-- ============================================================ -->
+    <nav class="dd-nav">
+        <div class="dd-nav__inner">
+            <a href="../index.html#chapter-1" class="dd-nav__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <div class="dd-nav__breadcrumb">
+                <span class="dd-nav__chapter-num">01</span>
+                <span class="dd-nav__separator">/</span>
+                <span class="dd-nav__chapter-title">Born Into Democracy</span>
+                <span class="dd-nav__separator">—</span>
+                <span class="dd-nav__badge">Deep Dive</span>
+            </div>
+            <div class="dd-nav__arrows">
+                <span class="dd-nav__arrow disabled">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </span>
+                <a href="chapter-2.html" class="dd-nav__arrow" title="Next: The Classroom Years">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <header class="dd-hero">
+        <div class="dd-hero__bg"></div>
+        <div class="dd-hero__content">
+            <div class="dd-hero__number">01</div>
+            <h1 class="dd-hero__title">Born Into Democracy</h1>
+            <p class="dd-hero__subtitle">Spain 1978: A country in transformation. How did it compare to Europe and the World?</p>
+            <div class="dd-scope-toggle">
+                <button class="dd-scope-btn" data-scope="spain">Spain</button>
+                <button class="dd-scope-btn" data-scope="europe">Europe</button>
+                <button class="dd-scope-btn" data-scope="world">World</button>
+                <button class="dd-scope-btn active" data-scope="all">All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: Demographics -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="demographics">
+        <div class="dd-section__header">
+            <span class="dd-section__number">01</span>
+            <h2 class="dd-section__title">Demographics</h2>
+        </div>
+        <p class="dd-section__intro">In 1978, Spain had 36.7 million inhabitants — a young, growing nation. But how did its demographic profile compare with its European neighbors and the wider world?</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="36.7" data-suffix="M" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Population</span>
+                <span class="dd-kpi-card__country">Spain 1978</span>
+            </div>
+            <div class="dd-kpi-card" data-value="73.3" data-suffix="" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Life Expectancy</span>
+                <span class="dd-kpi-card__country">Spain 1978</span>
+            </div>
+            <div class="dd-kpi-card" data-value="17.2" data-suffix="‰" data-decimals="1">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Birth Rate</span>
+                <span class="dd-kpi-card__country">Spain 1978</span>
+            </div>
+            <div class="dd-kpi-card" data-value="656" data-suffix="K" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Births</span>
+                <span class="dd-kpi-card__country">Spain 1978</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Population Trend (1960–2024, millions)</h3>
+                    <div class="dd-series-toggle" id="toggle-population">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="Japan">JP</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-population"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Life Expectancy Trend (1960–2024)</h3>
+                    <div class="dd-series-toggle" id="toggle-life-exp">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="Italy">IT</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                        <button class="dd-series-btn active" data-series="Japan">JP</button>
+                        <button class="dd-series-btn active" data-series="World">WLD</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-life-exp"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Birth Rate Ranking 1978 (per 1,000)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-birth-rate"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Demographic Bubble 1978</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-bubble"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: Economy -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="economy">
+        <div class="dd-section__header">
+            <span class="dd-section__number">02</span>
+            <h2 class="dd-section__title">Economy</h2>
+        </div>
+        <p class="dd-section__intro">Spain's economy in 1978 was in turbulent waters. Inflation neared 20%, the oil crises had ravaged global growth, and Spain's GDP per capita lagged behind its European peers.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">GDP per Capita 1978 (USD)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-gdp"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Inflation 1973–1982 (%)</h3>
+                    <div class="dd-series-toggle" id="toggle-inflation">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-inflation"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Minimum Wage Comparison 1978 (approx. EUR/month)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-wage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: Health -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="health">
+        <div class="dd-section__header">
+            <span class="dd-section__number">03</span>
+            <h2 class="dd-section__title">Health</h2>
+        </div>
+        <p class="dd-section__intro">Spain's healthcare system was rapidly modernizing. Infant mortality had dropped dramatically since 1960, but still trailed Northern Europe. Life expectancy showed the gender gap common across all nations.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Infant Mortality Trend (per 1,000 births)</h3>
+                    <div class="dd-series-toggle" id="toggle-infant">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="World">WLD</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-infant-mortality"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Health System Indicators 1978</h3>
+                    <div class="dd-series-toggle" id="toggle-health">
+                        <button class="dd-series-btn active" data-series="Spain">ES</button>
+                        <button class="dd-series-btn active" data-series="France">FR</button>
+                        <button class="dd-series-btn active" data-series="Germany">DE</button>
+                        <button class="dd-series-btn active" data-series="UK">UK</button>
+                        <button class="dd-series-btn active" data-series="USA">US</button>
+                    </div>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-health-indicators"></div>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid dd-chart-grid--full">
+            <div class="dd-chart-card dd-chart-card--full">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Life Expectancy by Sex 1978</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-life-sex"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: Political -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="political">
+        <div class="dd-section__header">
+            <span class="dd-section__number">04</span>
+            <h2 class="dd-section__title">Political Context</h2>
+        </div>
+        <p class="dd-section__intro">1978 was the pivotal year. Spain was mid-transition from dictatorship to democracy — part of the "Third Wave" of democratization that swept Southern Europe and Latin America. The Constitution, approved on December 6, 1978, was the defining document.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Democracy Index 1978 (Polity Score)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-democracy"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Spain Transition Timeline (1975–1986)</h3>
+                </div>
+                <div class="dd-chart-card__chart" id="chart-dd-transition"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: Social -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="social">
+        <div class="dd-section__header">
+            <span class="dd-section__number">05</span>
+            <h2 class="dd-section__title">Social Indicators</h2>
+        </div>
+        <p class="dd-section__intro">Spain in 1978 was still catching up socially. Female workforce participation was among the lowest in Western Europe, though television had reached most households. The cultural transformation was just beginning.</p>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Women in Workforce 1978 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-women"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">TV Penetration 1978 (%)</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-tv"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: Personal -->
+    <!-- ============================================================ -->
+    <section class="dd-section" id="personal">
+        <div class="dd-section__header">
+            <span class="dd-section__number">06</span>
+            <h2 class="dd-section__title">Personal Connection</h2>
+        </div>
+        <p class="dd-section__intro">656,000 babies were born in Spain in 1978 — I was one of them. Born in Navalmoral de la Mata, a small town in Extremadura. Here are the numbers behind my birth cohort.</p>
+
+        <div class="dd-kpi-grid">
+            <div class="dd-kpi-card" data-value="656" data-suffix="K" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Total Births 1978</span>
+            </div>
+            <div class="dd-kpi-card" data-value="2.54" data-suffix="" data-decimals="2">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Fertility Rate</span>
+            </div>
+            <div class="dd-kpi-card" data-value="93" data-suffix="%" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Estimated Survivors</span>
+                <span class="dd-kpi-card__country">~610K alive in 2024</span>
+            </div>
+            <div class="dd-kpi-card" data-value="14500" data-suffix="" data-decimals="0">
+                <span class="dd-kpi-card__value">0</span>
+                <span class="dd-kpi-card__label">Navalmoral Pop.</span>
+                <span class="dd-kpi-card__country">1978</span>
+            </div>
+        </div>
+
+        <div class="dd-chart-grid">
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">1978 Birth Cohort: Male vs Female</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-cohort"></div>
+            </div>
+            <div class="dd-chart-card">
+                <div class="dd-chart-card__header">
+                    <h3 class="dd-chart-card__title">Birth Cohort: Then vs Now</h3>
+                </div>
+                <div class="dd-chart-card__chart dd-chart-card__chart--short" id="chart-dd-survivors"></div>
+            </div>
+        </div>
+
+        <div class="dd-location-card">
+            <div class="dd-location-card__map">
+                <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 20 Q30 10 50 15 Q70 5 90 20 Q100 30 95 45 Q100 55 90 65 Q75 75 55 70 Q35 75 25 65 Q15 55 15 40 Q10 30 20 20Z" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="rgba(255,255,255,0.02)"/>
+                    <circle cx="52" cy="38" r="4" fill="#ff3b30" opacity="0.8"/>
+                    <circle cx="52" cy="38" r="8" fill="none" stroke="#ff3b30" opacity="0.3" stroke-width="1">
+                        <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+            </div>
+            <div class="dd-location-card__info">
+                <h4 class="dd-location-card__name">Navalmoral de la Mata</h4>
+                <span class="dd-location-card__region">Caceres, Extremadura</span>
+                <div class="dd-location-card__stats">
+                    <div class="dd-location-card__stat">
+                        <span class="dd-location-card__stat-label">1978</span>
+                        <span class="dd-location-card__stat-value">14,500</span>
+                    </div>
+                    <span class="dd-location-card__arrow">&rarr;</span>
+                    <div class="dd-location-card__stat">
+                        <span class="dd-location-card__stat-label">2024</span>
+                        <span class="dd-location-card__stat-value">16,800</span>
+                    </div>
+                    <span class="dd-location-card__change">+16%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="dd-footer">
+        <div class="dd-footer__sources">
+            <h4>Data Sources &amp; References</h4>
+            <div class="dd-sources-grid">
+                <div class="dd-source">
+                    <span class="dd-source__section">Demographics</span>
+                    <ul>
+                        <li><a href="https://data.worldbank.org/indicator/SP.POP.TOTL" target="_blank" rel="noopener">World Bank — Population, total</a> (population trends 1960–2024)</li>
+                        <li><a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN" target="_blank" rel="noopener">World Bank — Life expectancy at birth</a></li>
+                        <li><a href="https://data.worldbank.org/indicator/SP.DYN.CBRT.IN" target="_blank" rel="noopener">World Bank — Birth rate, crude (per 1,000 people)</a></li>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177007&menu=resultados&idp=1254735573002" target="_blank" rel="noopener">INE — Movimiento Natural de la Poblacion</a> (Spain births 1978)</li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Economy</span>
+                    <ul>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" target="_blank" rel="noopener">World Bank — GDP per capita (current US$)</a></li>
+                        <li><a href="https://www.imf.org/en/Publications/WEO" target="_blank" rel="noopener">IMF — World Economic Outlook Database</a> (inflation rates 1973–1982)</li>
+                        <li><a href="https://www.ilo.org/global/statistics-and-databases" target="_blank" rel="noopener">ILO — Global Wage Database</a> (minimum wage comparisons)</li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Health</span>
+                    <ul>
+                        <li><a href="https://data.worldbank.org/indicator/SP.DYN.IMRT.IN" target="_blank" rel="noopener">World Bank — Mortality rate, infant (per 1,000 live births)</a></li>
+                        <li><a href="https://stats.oecd.org/Index.aspx?ThemeTreeId=9" target="_blank" rel="noopener">OECD Health Statistics</a> (hospital beds, doctors, health expenditure)</li>
+                        <li><a href="https://data.worldbank.org/indicator/SP.DYN.LE00.MA.IN" target="_blank" rel="noopener">World Bank — Life expectancy, male/female</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Political</span>
+                    <ul>
+                        <li><a href="https://www.systemicpeace.org/polityproject.html" target="_blank" rel="noopener">Center for Systemic Peace — Polity Project</a> (Polity IV democracy scores)</li>
+                        <li><a href="https://www.congreso.es/constitucion" target="_blank" rel="noopener">Congreso de los Diputados — Constitucion Espanola 1978</a></li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Social</span>
+                    <ul>
+                        <li><a href="https://ilostat.ilo.org/data/" target="_blank" rel="noopener">ILO — ILOSTAT</a> (female labour force participation)</li>
+                        <li><a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a> (EU-wide comparative indicators)</li>
+                    </ul>
+                </div>
+                <div class="dd-source">
+                    <span class="dd-source__section">Personal</span>
+                    <ul>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177007&menu=resultados&idp=1254735573002" target="_blank" rel="noopener">INE — Estadistica de Nacimientos</a> (birth cohort, sex breakdown)</li>
+                        <li><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176951&menu=resultados&idp=1254735572981" target="_blank" rel="noopener">INE — Padron Municipal</a> (Navalmoral de la Mata population)</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dd-sources-note">Some figures are estimates or approximations based on the closest available data point. International comparisons use standardized indicators where possible. Historical data may have been revised by source institutions since original publication.</p>
+        </div>
+        <div class="dd-footer__nav">
+            <a href="../index.html#chapter-1" class="dd-footer__back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Story
+            </a>
+            <span class="dd-footer__copyright">Germinal Barrena &copy; 2026</span>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================================ -->
+    <script src="deep-dive-core.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        // --- Load data ---
+        var DATA = null;
+        var CC = DiveDeep.countryColors;
+        var CN = DiveDeep.countryNames;
+
+        fetch('../data/deep-dive-birth-1978.json')
+            .then(function(r) { return r.json(); })
+            .then(function(json) {
+                DATA = json;
+                initPage();
+            })
+            .catch(function(err) {
+                console.error('Failed to load data:', err);
+                initPage();
+            });
+
+        function initPage() {
+            DiveDeep.initDiveDeep({
+                accentColor: '#5eb0ff',
+                accentRgb: '94,176,255'
+            });
+
+            if (DATA) {
+                initDemographicsCharts();
+                initEconomyCharts();
+                initHealthCharts();
+                initPoliticalCharts();
+                initSocialCharts();
+                initPersonalCharts();
+                initScopeUpdates();
+            }
+
+            initSeriesToggles();
+        }
+
+        // ============================================================
+        // DEMOGRAPHICS CHARTS
+        // ============================================================
+        function initDemographicsCharts() {
+            var d = DATA.demographics;
+
+            // Chart 1: Population trend
+            var popYears = d.population_trend.years;
+            var popSeries = [];
+            ['ES','FR','DE','UK','IT','US','JP'].forEach(function(code) {
+                popSeries.push({
+                    name: CN[code],
+                    data: d.population_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-population', DiveDeep.getBaseChartConfig({
+                series: popSeries,
+                chart: { type: 'area', height: 280, group: 'demographics' },
+                colors: ['ES','FR','DE','UK','IT','US','JP'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2 },
+                xaxis: { categories: popYears },
+                yaxis: { labels: { formatter: function(v) { return v < 1000 ? v.toFixed(0) + 'M' : (v/1000).toFixed(1) + 'B'; } } },
+                tooltip: { y: { formatter: function(v) { return v < 1000 ? v + ' million' : (v/1000).toFixed(1) + ' billion'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1978, borderColor: '#5eb0ff', strokeDashArray: 4, label: { text: '1978', style: { background: '#5eb0ff', color: '#fff', fontSize: '10px' } } }] }
+            }), popSeries);
+
+            // Chart 2: Life expectancy trend
+            var leYears = d.life_expectancy_trend.years;
+            var leSeries = [];
+            ['ES','FR','DE','UK','IT','US','JP','World'].forEach(function(code) {
+                leSeries.push({
+                    name: CN[code] || code,
+                    data: d.life_expectancy_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-life-exp', DiveDeep.getBaseChartConfig({
+                series: leSeries,
+                chart: { type: 'line', height: 280, group: 'demographics' },
+                colors: ['ES','FR','DE','UK','IT','US','JP','World'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2 },
+                xaxis: { categories: leYears },
+                yaxis: { min: 50, max: 90, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1) + ' years'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1978, borderColor: '#5eb0ff', strokeDashArray: 4, label: { text: '1978', style: { background: '#5eb0ff', color: '#fff', fontSize: '10px' } } }] }
+            }), leSeries);
+
+            // Chart 3: Birth rate ranking 1978
+            var br = d.birth_rate_1978;
+            var brColors = br.countries.map(function(c) { return c === 'ES' ? CC.ES : 'rgba(255,255,255,0.15)'; });
+
+            DiveDeep.renderChart('#chart-dd-birth-rate', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Birth Rate', data: br.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '65%', distributed: true } },
+                colors: brColors,
+                xaxis: { categories: br.labels },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '‰'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + ' births per 1,000 people'; } } }
+            }));
+
+            // Chart 4: Population bubble
+            var bubbleData = d.population_bubble_1978.series;
+            var bubbleSeries = bubbleData.map(function(item) {
+                return {
+                    name: CN[item.country],
+                    data: [[item.x, item.y, item.z]]
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-bubble', DiveDeep.getBaseChartConfig({
+                series: bubbleSeries,
+                chart: { type: 'bubble', height: 280 },
+                colors: bubbleData.map(function(item) { return CC[item.country]; }),
+                xaxis: { title: { text: 'Birth Rate (‰)', style: { color: '#888', fontSize: '11px' } }, min: 8, max: 18, tickAmount: 5 },
+                yaxis: { title: { text: 'Life Expectancy', style: { color: '#888', fontSize: '11px' } }, min: 70, max: 78, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                plotOptions: { bubble: { minBubbleRadius: 10, maxBubbleRadius: 40 } },
+                tooltip: {
+                    custom: function(opts) {
+                        var s = opts.seriesIndex;
+                        var name = bubbleSeries[s].name;
+                        var d = bubbleData[s];
+                        return '<div style="padding:8px 12px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;">' +
+                            '<strong style="color:#f0f0f0">' + name + '</strong><br>' +
+                            '<span style="color:#888">Birth Rate:</span> <span style="color:#f0f0f0">' + d.x + '‰</span><br>' +
+                            '<span style="color:#888">Life Exp:</span> <span style="color:#f0f0f0">' + d.y + '</span><br>' +
+                            '<span style="color:#888">Population:</span> <span style="color:#f0f0f0">' + d.z + 'M</span>' +
+                            '</div>';
+                    }
+                },
+                legend: { position: 'bottom' }
+            }));
+        }
+
+        // ============================================================
+        // ECONOMY CHARTS
+        // ============================================================
+        function initEconomyCharts() {
+            var eco = DATA.economy;
+
+            // Chart 5: GDP per capita 1978
+            var gdp = eco.gdp_per_capita_1978;
+            var gdpColors = gdp.countries.map(function(c) { return c === 'ES' ? CC.ES : CC[c]; });
+
+            DiveDeep.renderChart('#chart-dd-gdp', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'GDP per capita', data: gdp.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { borderRadius: 6, columnWidth: '60%', distributed: true } },
+                colors: gdpColors,
+                xaxis: { categories: gdp.labels },
+                yaxis: { labels: { formatter: function(v) { return '$' + (v/1000).toFixed(0) + 'K'; } } },
+                dataLabels: { enabled: true, formatter: function(v) { return '$' + v.toLocaleString(); }, style: { fontSize: '10px', colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return '$' + v.toLocaleString() + ' USD'; } } }
+            }));
+
+            // Chart 6: Inflation 1973-1982
+            var inf = eco.inflation_trend;
+            var infSeries = [];
+            ['ES','FR','DE','UK','US'].forEach(function(code) {
+                infSeries.push({
+                    name: CN[code],
+                    data: inf.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-inflation', DiveDeep.getBaseChartConfig({
+                series: infSeries,
+                chart: { type: 'line', height: 280 },
+                colors: ['ES','FR','DE','UK','US'].map(function(c) { return CC[c]; }),
+                stroke: { curve: 'smooth', width: 2.5 },
+                markers: { size: 3 },
+                xaxis: { categories: inf.years },
+                yaxis: { min: 0, max: 30, labels: { formatter: function(v) { return v + '%'; } } },
+                tooltip: { y: { formatter: function(v) { return v + '% inflation'; } } },
+                legend: { position: 'bottom' },
+                annotations: {
+                    xaxis: [
+                        { x: 1973, borderColor: '#ff9500', strokeDashArray: 4, label: { text: 'Oil Crisis I', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } },
+                        { x: 1979, borderColor: '#ff9500', strokeDashArray: 4, label: { text: 'Oil Crisis II', style: { background: '#ff9500', color: '#fff', fontSize: '9px' } } }
+                    ]
+                }
+            }), infSeries);
+
+            // Chart 7: Minimum wage comparison
+            var wage = eco.minimum_wage_1978;
+            var wageColors = wage.countries.map(function(c) { return CC[c]; });
+
+            DiveDeep.renderChart('#chart-dd-wage', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Min. Wage', data: wage.values }],
+                chart: { type: 'bar', height: 220 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: wageColors,
+                xaxis: { categories: wage.labels },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '11px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v > 0 ? '~€' + v : 'No min.'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v > 0 ? '~€' + v + '/month (equiv.)' : 'No statutory minimum wage'; } } }
+            }));
+        }
+
+        // ============================================================
+        // HEALTH CHARTS
+        // ============================================================
+        function initHealthCharts() {
+            var h = DATA.health;
+
+            // Chart 8: Infant mortality trend
+            var imYears = h.infant_mortality_trend.years;
+            var imSeries = [];
+            ['ES','FR','DE','UK','World'].forEach(function(code) {
+                imSeries.push({
+                    name: CN[code] || code,
+                    data: h.infant_mortality_trend.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-infant-mortality', DiveDeep.getBaseChartConfig({
+                series: imSeries,
+                chart: { type: 'area', height: 280 },
+                colors: ['ES','FR','DE','UK','World'].map(function(c) { return CC[c]; }),
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.3, opacityTo: 0.05 } },
+                stroke: { curve: 'smooth', width: 2 },
+                xaxis: { categories: imYears },
+                yaxis: { labels: { formatter: function(v) { return v.toFixed(0); } } },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1) + ' per 1,000 births'; } } },
+                legend: { position: 'bottom' },
+                annotations: { xaxis: [{ x: 1978, borderColor: '#5eb0ff', strokeDashArray: 4, label: { text: '1978', style: { background: '#5eb0ff', color: '#fff', fontSize: '10px' } } }] }
+            }), imSeries);
+
+            // Chart 9: Health indicators 1978 (grouped bar)
+            var hi = h.health_indicators_1978;
+            var hiSeries = [];
+            ['ES','FR','DE','UK','US'].forEach(function(code) {
+                hiSeries.push({
+                    name: CN[code],
+                    data: hi.series[code],
+                    countryCode: code
+                });
+            });
+
+            DiveDeep.renderChart('#chart-dd-health-indicators', DiveDeep.getBaseChartConfig({
+                series: hiSeries,
+                chart: { type: 'bar', height: 280 },
+                colors: ['ES','FR','DE','UK','US'].map(function(c) { return CC[c]; }),
+                plotOptions: { bar: { horizontal: false, columnWidth: '70%', borderRadius: 4 } },
+                xaxis: { categories: hi.categories },
+                yaxis: { labels: { formatter: function(v) { return v.toFixed(1); } } },
+                legend: { position: 'bottom' },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1); } } }
+            }), hiSeries);
+
+            // Life expectancy by sex
+            var ls = h.life_expectancy_by_sex_1978;
+
+            DiveDeep.renderChart('#chart-dd-life-sex', DiveDeep.getBaseChartConfig({
+                series: [
+                    { name: 'Male', data: ls.male },
+                    { name: 'Female', data: ls.female }
+                ],
+                chart: { type: 'bar', height: 220 },
+                colors: ['#0071e3', '#ff6b6b'],
+                plotOptions: { bar: { horizontal: false, columnWidth: '55%', borderRadius: 4 } },
+                xaxis: { categories: ls.labels },
+                yaxis: { min: 65, max: 82, labels: { formatter: function(v) { return v.toFixed(0); } } },
+                legend: { position: 'top', horizontalAlign: 'right' },
+                tooltip: { y: { formatter: function(v) { return v.toFixed(1) + ' years'; } } }
+            }));
+        }
+
+        // ============================================================
+        // POLITICAL CHARTS
+        // ============================================================
+        function initPoliticalCharts() {
+            var p = DATA.political;
+
+            // Chart 10: Democracy index (radial bar)
+            var dem = p.democracy_index_1978;
+            var demSeries = dem.values.map(function(v) { return (v / dem.max) * 100; });
+            var demColors = dem.countries.map(function(c) {
+                if (c === 'ES') return CC.ES;
+                if (c === 'PT') return CC.PT;
+                if (c === 'GR') return CC.GR;
+                return CC[c] || '#888';
+            });
+
+            DiveDeep.renderChart('#chart-dd-democracy', DiveDeep.getBaseChartConfig({
+                series: demSeries,
+                chart: { type: 'radialBar', height: 300 },
+                plotOptions: {
+                    radialBar: {
+                        offsetY: -10,
+                        hollow: { size: '25%' },
+                        track: { background: 'rgba(255,255,255,0.04)', strokeWidth: '100%' },
+                        dataLabels: {
+                            name: { fontSize: '12px', color: '#888' },
+                            value: { fontSize: '14px', color: '#f0f0f0', fontWeight: 600, formatter: function(v) { return Math.round(v / 10) + '/10'; } },
+                            total: { show: true, label: 'Spain', color: '#888', formatter: function() { return '4/10'; } }
+                        }
+                    }
+                },
+                colors: demColors,
+                labels: dem.labels,
+                legend: { show: true, position: 'bottom', labels: { colors: '#888' } }
+            }));
+
+            // Chart 11: Transition timeline
+            var tt = p.spain_transition_timeline;
+            var ttAnnotations = tt.events.map(function(ev) {
+                return {
+                    x: ev.year,
+                    borderColor: '#5eb0ff',
+                    strokeDashArray: 0,
+                    label: {
+                        text: ev.text,
+                        orientation: 'horizontal',
+                        style: { background: '#222', color: '#f0f0f0', fontSize: '9px', padding: { left: 4, right: 4, top: 2, bottom: 2 } }
+                    }
+                };
+            });
+
+            DiveDeep.renderChart('#chart-dd-transition', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Polity Score', data: tt.polity_score }],
+                chart: { type: 'area', height: 300 },
+                colors: ['#5eb0ff'],
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05, colorStops: [
+                    { offset: 0, color: '#ff3b30', opacity: 0.4 },
+                    { offset: 50, color: '#ff9500', opacity: 0.3 },
+                    { offset: 100, color: '#34c759', opacity: 0.4 }
+                ] } },
+                stroke: { curve: 'smooth', width: 3 },
+                markers: { size: 4 },
+                xaxis: { categories: tt.years },
+                yaxis: { min: -10, max: 10, labels: { formatter: function(v) { return v.toFixed(0); } }, title: { text: 'Polity Score', style: { color: '#888', fontSize: '11px' } } },
+                tooltip: { y: { formatter: function(v) { return 'Score: ' + v + ' / 10'; } } },
+                annotations: { xaxis: ttAnnotations }
+            }));
+        }
+
+        // ============================================================
+        // SOCIAL CHARTS
+        // ============================================================
+        function initSocialCharts() {
+            var s = DATA.social;
+
+            // Chart 12: Women in workforce
+            var wf = s.women_in_workforce_1978;
+            var wfColors = wf.countries.map(function(c) { return c === 'ES' ? CC.ES : CC[c]; });
+
+            DiveDeep.renderChart('#chart-dd-women', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'Women in Workforce', data: wf.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: wfColors,
+                xaxis: { categories: wf.labels, max: 55 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% of women in workforce'; } } }
+            }));
+
+            // TV penetration
+            var tv = s.tv_penetration_1978;
+            var tvColors = tv.countries.map(function(c) { return c === 'ES' ? CC.ES : CC[c]; });
+
+            DiveDeep.renderChart('#chart-dd-tv', DiveDeep.getBaseChartConfig({
+                series: [{ name: 'TV Penetration', data: tv.values }],
+                chart: { type: 'bar', height: 240 },
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '60%', distributed: true } },
+                colors: tvColors,
+                xaxis: { categories: tv.labels, min: 75, max: 100 },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + '%'; }, style: { fontSize: '11px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { show: false },
+                tooltip: { y: { formatter: function(v) { return v + '% households with TV'; } } }
+            }));
+        }
+
+        // ============================================================
+        // PERSONAL CHARTS
+        // ============================================================
+        function initPersonalCharts() {
+            var p = DATA.personal.birth_cohort;
+
+            // Cohort donut: male vs female
+            DiveDeep.renderChart('#chart-dd-cohort', DiveDeep.getBaseChartConfig({
+                series: [p.male_births / 1000, p.female_births / 1000],
+                chart: { type: 'donut', height: 240 },
+                labels: ['Male (338K)', 'Female (318K)'],
+                colors: ['#0071e3', '#ff6b6b'],
+                plotOptions: {
+                    pie: {
+                        donut: {
+                            size: '60%',
+                            labels: {
+                                show: true,
+                                total: {
+                                    show: true,
+                                    label: 'Total',
+                                    color: '#888',
+                                    formatter: function() { return '656K'; }
+                                },
+                                value: {
+                                    color: '#f0f0f0',
+                                    fontSize: '18px',
+                                    fontWeight: 700,
+                                    formatter: function(v) { return v + 'K'; }
+                                }
+                            }
+                        }
+                    }
+                },
+                dataLabels: { enabled: true, formatter: function(v) { return v.toFixed(1) + '%'; }, style: { fontSize: '12px', fontWeight: 600 } },
+                legend: { position: 'bottom', labels: { colors: '#888' } },
+                tooltip: { y: { formatter: function(v) { return v + 'K births'; } } }
+            }));
+
+            // Survivors: then vs now
+            var survivorPct = p.survival_rate_pct;
+            var deceasedPct = 100 - survivorPct;
+
+            DiveDeep.renderChart('#chart-dd-survivors', DiveDeep.getBaseChartConfig({
+                series: [{
+                    name: 'Births 1978',
+                    data: [p.total_births_1978 / 1000]
+                }, {
+                    name: 'Alive 2024',
+                    data: [p.estimated_survivors_2024 / 1000]
+                }, {
+                    name: 'Deceased',
+                    data: [(p.total_births_1978 - p.estimated_survivors_2024) / 1000]
+                }],
+                chart: { type: 'bar', height: 240 },
+                colors: ['#5eb0ff', '#34c759', '#ff3b30'],
+                plotOptions: { bar: { horizontal: true, borderRadius: 6, barHeight: '50%' } },
+                xaxis: { categories: ['1978 Birth Cohort'], labels: { formatter: function(v) { return v + 'K'; } } },
+                yaxis: { labels: { style: { colors: '#f0f0f0', fontSize: '12px' } } },
+                dataLabels: { enabled: true, formatter: function(v) { return v + 'K'; }, style: { fontSize: '12px', fontWeight: 600, colors: ['#fff'] } },
+                legend: { position: 'bottom', labels: { colors: '#888' } },
+                tooltip: { y: { formatter: function(v) { return v + 'K people'; } } }
+            }));
+        }
+
+        // ============================================================
+        // SERIES TOGGLES
+        // ============================================================
+        function initSeriesToggles() {
+            DiveDeep.initSeriesToggle('#chart-dd-population', '#toggle-population');
+            DiveDeep.initSeriesToggle('#chart-dd-life-exp', '#toggle-life-exp');
+            DiveDeep.initSeriesToggle('#chart-dd-inflation', '#toggle-inflation');
+            DiveDeep.initSeriesToggle('#chart-dd-infant-mortality', '#toggle-infant');
+            DiveDeep.initSeriesToggle('#chart-dd-health-indicators', '#toggle-health');
+        }
+
+        // ============================================================
+        // SCOPE CHANGE HANDLER
+        // ============================================================
+        function initScopeUpdates() {
+            DiveDeep.onScopeChange(function(scope, countries) {
+                // Update multi-series charts by showing/hiding series
+                var chartMap = {
+                    '#chart-dd-population': ['ES','FR','DE','UK','IT','US','JP'],
+                    '#chart-dd-life-exp': ['ES','FR','DE','UK','IT','US','JP','World'],
+                    '#chart-dd-inflation': ['ES','FR','DE','UK','US'],
+                    '#chart-dd-infant-mortality': ['ES','FR','DE','UK','World'],
+                    '#chart-dd-health-indicators': ['ES','FR','DE','UK','US']
+                };
+
+                Object.keys(chartMap).forEach(function(sel) {
+                    var chart = DiveDeep.charts[sel];
+                    if (!chart) return;
+
+                    var allCountries = chartMap[sel];
+
+                    allCountries.forEach(function(code) {
+                        var name = CN[code] || code;
+                        if (countries.indexOf(code) !== -1) {
+                            chart.showSeries(name);
+                        } else {
+                            chart.hideSeries(name);
+                        }
+                    });
+
+                    // Update toggle buttons visual state
+                    var toggleId = {
+                        '#chart-dd-population': '#toggle-population',
+                        '#chart-dd-life-exp': '#toggle-life-exp',
+                        '#chart-dd-inflation': '#toggle-inflation',
+                        '#chart-dd-infant-mortality': '#toggle-infant',
+                        '#chart-dd-health-indicators': '#toggle-health'
+                    }[sel];
+
+                    if (toggleId) {
+                        var container = document.querySelector(toggleId);
+                        if (container) {
+                            container.querySelectorAll('.dd-series-btn').forEach(function(btn) {
+                                var seriesName = btn.dataset.series;
+                                var code = Object.keys(CN).find(function(k) { return CN[k] === seriesName; }) || seriesName;
+                                if (countries.indexOf(code) !== -1) {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>
